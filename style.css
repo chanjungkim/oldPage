@@ -6348,4 +6348,8 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+  
+  .privacy-policy {
+   color: white
+  }
 }
