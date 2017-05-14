@@ -56,7 +56,15 @@
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.9&appId=311402482624313"; 
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+
+// Create a new instance of an audio object and adjust some of its properties
+var audio = new Audio();
+audio.src = './html/contents/How_it_Began.mp3';
+audio.controls = true;
+audio.loop = true;
+audio.autoplay = true;
+</script>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. That's ok, I anticipated that. But if you get the chance, please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
