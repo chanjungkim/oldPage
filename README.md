@@ -86,9 +86,9 @@ Check box<br>
 - [X] checked
 
 Table<br>
-Head 1 | Head 2
--------|-------
-First | Second
+Head 1 | Head 2<br>
+-------|-------<br>
+First | Second<br>
 
 Emoji<br>
 :wink:<br>
