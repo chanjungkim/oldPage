@@ -12,9 +12,11 @@ This is Chan's page.
 
 ## How to use .md file
 
-#### Two spaces or one enter to write in the next line.
+#### Two spaces, one enter, or br with square brackets to write in the next line. like this <br>
 
 ##### Up to 5#s
+
+###### 6# is gray and the same size with 5#s
 
 title
 ===
@@ -39,6 +41,12 @@ int main(){
   return 0;
 }
 ```
+
+```php
+//This is php source code block.
+<?php echo "Hello World!" ?>
+```
+
 ---
 
 ##### List
@@ -63,4 +71,28 @@ This is number lists:
 
 ![space is %20](images/android%20studio.jpg)
 
-<img src="images/bower.gif" width="100" height="50"> <!-- You can adjust Width and Height-->
+<img src="images/bower.gif" width="100" height="50"> <!-- You can adjust Width and Height... You can use HTML for .md-->
+
+---
+
+##### Others
+
+Black Quotes
+> indented
+> like this
+
+Check box
+- [ ] unchecked
+- [X] checked
+
+Table
+Head 1 | Head 2
+-------|-------
+First | Second
+
+Emoji
+::wink::
+
+~
+~
+@chanjungkim
