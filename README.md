@@ -10,23 +10,22 @@ html - practiced files.
 
 ---
 
-###How to use .md file
+### How to use .md file
 
-####Two spaces or one enter to write in the next line.
+#### Two spaces or one enter to write in the next line.
 
-#####Up to 5#s
+##### Up to 5#s
+
+title
+===
+
+Sub-title
+---
+
 
 *Itailic*
 
 **bold**
-
----
-
-This is title1
-===
-
-This is title2
----
 
 ---
 
@@ -54,3 +53,5 @@ This is number lists:
 3. C
 
 ---
+
+(http://cfile204.uf.daum.net/image/262CA537516BA2C83B6EAD)
