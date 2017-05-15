@@ -77,15 +77,15 @@ This is number lists:
 
 ##### Others
 
-Black Quotes
+Black Quotes<br>
 > indented
 > like this
 
-Check box
+Check box<br>
 - [ ] unchecked
 - [X] checked
 
-Table
+Table<br>
 Head 1 | Head 2
 -------|-------
 First  | Second
