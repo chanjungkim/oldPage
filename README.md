@@ -2,7 +2,7 @@
 
 ## This is Chan's page.
 
-![My picture](images/profile-2.jpg)
+<img src="images/profile-3.jpg" width="300" height="200" >
 
 * css - css files.<br>
 * html - practiced files.
