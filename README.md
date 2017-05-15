@@ -85,7 +85,8 @@ Check box<br>
 - [ ] unchecked
 - [X] checked
 
-Table<br>
+Table
+
  Head 1 | Head 2
  -------|-------
   First | Second
