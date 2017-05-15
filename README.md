@@ -2,6 +2,7 @@
 
 ## This is Chan's page.
 
+![My picture](images/profile2.jpg)
 
 * css - css files.<br>
 * html - practiced files.
