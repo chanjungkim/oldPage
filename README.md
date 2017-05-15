@@ -4,10 +4,11 @@
 
 <img src="images/profile-3.jpg" size="50%">
 
-* css - css files.<br>
+#### Contents
 * html - web based files I practiced.
-
-
+* images - image files.
+* js - JavaScript files.
+* css - css files.
 
 
 
