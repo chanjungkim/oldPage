@@ -2,10 +2,10 @@
 
 ## This is Chan's page.
 
-<div font color="yellow">
+<h5 font color="yellow">
 css - css files.<br>
 html - practiced files.
-</div>
+</h5>
 
 
 
