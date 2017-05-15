@@ -88,7 +88,7 @@ Check box<br>
 Table<br>
 Head 1 | Head 2
 -------|------
-First | Second
+First  | Second
 
 Emoji<br>
 :wink:<br>
