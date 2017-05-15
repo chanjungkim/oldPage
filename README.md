@@ -2,10 +2,9 @@
 
 ## This is Chan's page.
 
-<h5 color="yellow">
-css - css files.<br>
-html - practiced files.
-</h5>
+
+* css - css files.<br>
+* html - practiced files.
 
 
 
