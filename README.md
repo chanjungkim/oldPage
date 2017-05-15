@@ -5,7 +5,7 @@
 <img src="images/profile-3.jpg" size="50%">
 
 * css - css files.<br>
-* html - practiced files.
+* html - web based files I practiced.
 
 
 
