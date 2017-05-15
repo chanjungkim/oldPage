@@ -1,0 +1,26 @@
+<!-- jQeury 사용 - $(document).ready()
+- jQuery를 사용한 모든 웹페이지는 다음 코드롤 시작
+- jQuery의 이벤트 메서드는 여러 개의 함수를 연결 가능
+-->
+<!--hello_jQuery.html  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hello_jQuery</title>
+<script src="jquery-1.10.2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		alert('one');
+	});
+	
+	
+	// 위의 방식을 아래와 같이 간단한 형태로 사용 가능
+	$(function() {
+		alert('two');
+	});
+</script>
+</head>
+<body>
+</body>
+</html>

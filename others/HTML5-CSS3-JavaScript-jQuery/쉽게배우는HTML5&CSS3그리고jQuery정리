@@ -1,0 +1,33 @@
+#2. 뷰포트(viewport) : 모바일에서 원래 크기대로(혹은 다르게) 보이기 위한 글로벌 속성(global attribute)
+ex. <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+//device-width : 디바이스 너비, initial-scale : 원래 크기에서 확대(0.0 ~ 10.0)
+//일반적으로 이렇게 사용함.
+ex. <meta name="viewport" contant="user-scalable=yes"/>
+//손가락으로 확대/축소할 수 있도록 설정.(no는 비활성, 전자정부 권고)
+
+ref.뷰포트 VS 스크린
+스크린(화면 전체) > 뷰포트(브라우저 내 표시화면)
+
+#3. 검색 로봇 차단 : 웹 페이지가 검색되지 않도록 검색 로봇의 접근을 차단.
+ex. <meta name="robots" content="NOINDEX, NOFOLLOW">
+ex. <meta name="googlebot" content="NOINDEX, NOFOLLOW">
+
+#4. 페이지 새로 고침
+ex. <meta htt-equiv="refresh" content="30"> // 30초마다 새로 고침
+ex. <meta http-equiv="Refresh" content="0;url=test.html"> // 페이지 이동
+
+#5. <script>, <style> 맛보기
+<script>
+fuction test(){
+alert("test") //메시지 상자 출력
+}
+</script>
+
+<head>
+<style>
+body{background-color : blue;} // 마지막에 semi-colon
+</style>
+</head>
+
+#6. <body>
+html 문서 안에서 본문의 시작과 종료(화면에 보이는 내용)를 알림. 

@@ -1,0 +1,94 @@
+Methods
+
+Methods are functions that are stored as object properties.
+
+#1.
+// How to CREATE ?
+methodName : function() {
+code lines
+}
+
+#2.
+// How to ACCESS?
+objectName.methodName()'
+
+//Constructor function
+function person(name, age){
+this.name = name;
+this.age = age;
+this.changeName = function (name) {
+this.name = name;
+}
+}
+
+var p = new person("David", 21);
+p.changeName("John");
+//Now p.name equals to "john"
+
+#3.
+//(Object) constructor // this.property // this keyword refers to the current object. It's not variable but keyword.
+fuction person(name, age){
+this.name=name;
+this.age=age;
+this.yearOfBirth=bornYear;
+//Note that bornYear(method) doesn't have parentheses here and associating a method & an object.
+}
+//method
+function bornYear(){ 
+return 2016-this.age;
+}
+
+//'this' keyword is to access the age property of the object, which is going to call the method
+
+#3-1 Object : it is variable too, but it can contain many values.
+var person = { //contain more than two variables by curly braces
+name : "John", age:31, //assign with ':(colon)' and separate them by putting 'comma(,)'.
+favColor: "green", height:183 // no semi-colon at the end. 
+}; //semi-colon is here.
+//Property VS Property Value
+
+#3-2 How to access Object properties?
+objectName.propertyName || objectName['propertyName']
+
+ex.
+var person = {
+name:"John", age:31,
+favColor:"green", height:183 // No semi-colon;
+}; // Do not forget semi-colon here.
+var x = person.age;
+var y = person['age'];
+
+#3-3. length property
+objectName.propertyName.length
+
+#3-4. Creating Objects
+var p1 = new person("John", 42, "green");
+var p2 = new person("Amy", 21, "red");
+//p1, p2 are objects.
+
+document.write(p1.age);
+document.write(p2.name);
+
+#3-5. Object Initializers
+var John = {
+name : "John",
+age : 25
+};
+document.write(John.age);
+
+#4. call method.
+function person(name, age){
+this.name=name;
+this.age=age;
+this.yearOfBirth = bornYear;
+}
+function bornYear(){
+return 2016-this.age;
+}
+
+var p = new person("A", 22);
+document.write(p.yearOfBirth()); // all the method by the property name you specified in the constructor function, rather than the function name.  
+//Outputs 1994
+
+
+

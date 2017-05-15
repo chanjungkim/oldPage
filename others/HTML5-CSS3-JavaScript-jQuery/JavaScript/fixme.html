@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Big Background</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            background-image: url("elephant.jpg");
+            background-repeat: no-repeat;
+            background-position: fixed;
+            background-size: cover;
+        }
+
+        .top, .bottom {
+            display: flex;
+            justify-content: center;
+/*            border: 1px solid red;*/
+            height: 20%;
+        }
+        
+        .top:hover .arrow
+        , .bottom:hover .arrow
+        , .left:hover .arrow
+        , .right:hover .arrow {
+            opacity: 1;
+        }
+        
+        .middle {
+            display: flex;
+            justify-content: space-between;
+            /*border: 2px solid white;*/
+            height: 60%;
+        }
+
+        .left, .right {
+            display: flex;
+            align-items: center;
+        }
+
+        .arrow {
+            height: 100px;
+            opacity: 0;
+        }
+        
+        .pointup {
+            margin-top: 30px;
+            transform: rotate(-90deg);
+        }
+
+        .pointleft { transform: rotate(180deg); }
+        .pointdown { transform: rotate(90deg); }
+
+        .middleContent {
+            display: flex;
+            justify-content: flex-end;
+            width: 80%;
+        }
+        
+        .contentWrapper {
+            width: 50%;
+            background-color: rgba(0, 0, 0, .7);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .contentText {
+            color: white;
+        }
+        
+        .contentText h2 { margin: 0; }
+        
+        .contentButtons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        
+        input {
+            height: 2.5em;
+            background-color: darkgoldenrod;
+            color: white;
+            font-weight: bold;
+            border: 1px solid white;
+            border-radius: 3px;
+        }
+        
+        #bigPicture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #lightButton {
+            margin-top: 20%;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="#" class="top">
+<!--            <img class="arrow pointup" src="http://www.clker.com/cliparts/3/f/f/d/1194985689770236807arrow_-_next_01.svg.hi.png">-->
+        </a>
+        <div class="middle">
+            <div class="left">
+<!--                <img class="arrow pointleft" src="http://www.clker.com/cliparts/3/f/f/d/1194985689770236807arrow_-_next_01.svg.hi.png">-->
+            </div>
+            <div class="middleContent">
+                <div class="contentWrapper">
+                    <div class="contentText">
+                        <h2>The Jungle!</h2>
+                        <p>The air is electric with the buzzing of bartering and conversations. Negotiations in various languages with wild gestures and all manners of feigned delight and calculated disinterest. While brushing past the array of sounds and salty scents you realize for the first time that your pocket feels lighter. You've been pickpocketed. You wheel around, in desperate hope that the thief would be easy to spot, running away like in the movies. In reality, they could have run off in any direction.</p>
+                        
+                        <p>To the north you can smell the sickly sweet of the candy vendors.<br>
+                        To the east people seem to be coming and going with bolts of cloth.<br>
+                        To the west you can hear the racous chattering of hammers on anvils.<br>
+                        To the south is the gate from which you've entered the market.</p>
+                        
+                        <p>A child has come up you to, trying to sell you some manner of chewing gum.</p>
+                    </div>
+                    <div class="contentButtons">
+                        <input type="button" value="Tell the kid to beat it.">
+                        <input type="button" value="Ask the boy if he saw anyone steal your wallet.">    
+                    </div>
+                </div>
+            </div>
+            <a href="bigmain.html" class="right">
+                <img class="arrow" src="http://www.clker.com/cliparts/3/f/f/d/1194985689770236807arrow_-_next_01.svg.hi.png">
+            </a>
+        </div>
+        <div class="bottom">
+<!--            <img class="arrow pointdown" src="http://www.clker.com/cliparts/3/f/f/d/1194985689770236807arrow_-_next_01.svg.hi.png">-->
+        </div>
+        <div id="bigPicture">
+            <div id="lightButton">Turn on the lights!</div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("lightButton").addEventListener("click", function() {
+            document.getElementById("bigPicture").style.width = 0;
+        })
+    </script>
+</body>
+</html>

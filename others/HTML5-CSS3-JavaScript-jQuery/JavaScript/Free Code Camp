@@ -1,0 +1,430 @@
+Methods
+
+Methods are functions that are stored as object properties.
+
+#1.
+// How to CREATE ?
+methodName : function() {
+code lines
+}
+
+#2.
+// How to ACCESS?
+objectName.methodName()'
+
+//Constructor function
+function person(name, age){
+this.name = name;
+this.age = age;
+this.changeName = function (name) {
+this.name = name;
+}
+}
+
+var p = new person("David", 21);
+p.changeName("John");
+//Now p.name equals to "john"
+
+#3.
+//(Object) constructor // this.property // this keyword refers to the current object. It's not variable but keyword.
+fuction person(name, age){
+this.name=name;
+this.age=age;
+this.yearOfBirth=bornYear;
+//Note that bornYear(method) doesn't have parentheses here and associating a method & an object.
+}
+//method
+function bornYear(){ 
+return 2016-this.age;
+}
+
+//'this' keyword is to access the age property of the object, which is going to call the method
+
+#3-1 Object : it is variable too, but it can contain many values.
+var person = { //contain more than two variables by curly braces
+name : "John", age:31, //assign with ':(colon)' and separate them by putting 'comma(,)'.
+favColor: "green", height:183 // no semi-colon at the end. 
+}; //semi-colon is here.
+//Property VS Property Value
+
+#3-2 How to access Object properties?
+objectName.propertyName || objectName['propertyName']
+
+ex.
+var person = {
+name:"John", age:31,
+favColor:"green", height:183 // No semi-colon;
+}; // Do not forget semi-colon here.
+var x = person.age;
+var y = person['age'];
+
+#3-3. length property
+objectName.propertyName.length
+
+#3-4. Creating Objects
+var p1 = new person("John", 42, "green");
+var p2 = new person("Amy", 21, "red");
+//p1, p2 are objects.
+
+document.write(p1.age);
+document.write(p2.name);
+
+#3-5. Object Initializers
+var John = {
+name : "John",
+age : 25
+};
+document.write(John.age);
+
+#4. call method.
+function person(name, age){
+this.name=name;
+this.age=age;
+this.yearOfBirth = bornYear;
+}
+function bornYear(){
+return 2016-this.age;
+}
+
+var p = new person("A", 22);
+document.write(p.yearOfBirth()); // all the method by the property name you specified in the constructor function, rather than the function name.  
+//Outputs 1994
+
+
+#30. 
+.A-box{
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+.B-box{
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+#31. Clockwise Notation
+pading: 40px 20px 20px 40px;
+margin: 40px 20px 20px 40px;
+
+#32. Inharitance
+<style>
+  body {
+    background-color: black;
+    font-family: Monospace;
+    color: green;
+  }
+</style>
+<h1>Hello World!</h1>
+
+#33. Override
+If the same element comes the lastest is applied.
+.pink-text{
+}
+.blue-text{
+}
+=>only blue-text
+
+#34. Override: #ID VS .Class
+<h1 id="orange-text" class="pink-text blue-text">Hello World!</h1>
+
+#35. Override: In-line style 
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+
+#36. !important
+When yuo absolutely need to be sure that an element has specific CSS.
+  .pink-text {
+    color: pink !important;
+  }
+
+#37. Hex code : 0-9, A-F (16)
+color: #FF0000;
+color: #00FF00;
+color: #0000FF;
+
+#38. Abbreviated hex
+color: #F00;
+color: #0F0;
+color: #00F;
+
+#39. RGB values
+color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+
+#40. Responsive
+<div class="container-fluid">
+
+#41. Responsive Picture.
+<img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera. ">
+
+#42. Bootstrap Button
+<button class="btn">Like</button>
+
+#43. btn-block
+It takes up full width.
+*it still needs 'btn'
+<button class="btn btn-block">Like</button>
+
+#44. btn-primary
+*It still needs 'btn', 'btn-block'.
+<button class="btn btn-block btn-primary">Like</button>
+
+#45. btn-info
+<button class="btn btn-block btn-info">Info</button>
+
+#46. btn-danger
+*it shows it's destructive.
+<button class="btn btn-block btn-danger">Delete</button>
+
+#47. Ditch Custom CSS for Bootstrap
+*We can clean up our code and make our Cat Photo App look more conventional by using Bootstrap's built-in styles 
+<a href="#"><img class="img-responsive" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. "></a>
+
+#48.
+<p>Things cats <span class = "text-danger">love:</span></p>
+
+#49. Create a Custom Heading
+*Bootstrap's 12-column grid layout
+
+#50.
+*xs: extra small, 4: how many cols
+<div class="col-xs-4"> </div>
+
+#51. Font Awesome Icon (*.svg)
+<button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up">Like</i></button>
+*vector graphics
+*treat like fonts. : size(by px)
+
+#52. Icons.
+
+fa-thumbs-up, fa-info-circle
+fa-trash
+
+ <div class="col-xs-4">
+      <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i> Like</button>
+    </div>
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-info"><i class="fa fa-info-circle"></i> Info</button>
+    </div>
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-danger"><i class="fa fa-trash"></i> Delete</button>
+    </div>
+
+#53. Responsively Style Radio Buttons
+    <div class="row">
+    <div class="col-xs-6">
+    <label><input type="radio" name="indoor-outdoor"> Indoor</label>
+      </div>
+    <div class="col-xs-6">
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+    </div>
+    </div>
+*you can use this to checkbox too
+
+#54. Style Text Inputs as Form Controls
+*'fa-paper-plane' Font Awesome Icon
+*form-control
+    <input class="form-control" type="text" placeholder="cat photo URL" required>
+    <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane">Submit</i></button> 
+
+#55. Line up Form Elements
+Responsively with Bootstrap
+<div class="row">
+<div class="col-xs-7>
+<A>
+</div>
+<div class="col-xs-5">
+<B>
+</div>
+</div>
+
+#56.  Bootstrap class(directly use)
+<h3 class="text-primary text-center">jQuery Playground</h3>
+
+#57. Container-fluid
+*mobile-responsive
+<div class="container-fluid">
+<h3 class="text-primary text-center">jQuery Playground</h3>
+</div>
+
+#58. well(visaul sense of depth)
+
+<div class="container-fluid">
+  <h3 class="text-primary text-center">jQuery Playground</h3>
+  <div class="row">
+    <div class="col-xs-6">
+    <div class="well">
+    </div>
+    </div>
+    <div class="col-xs-6">
+    <div class="well">
+      </div>
+    </div>
+  </div>
+</div>
+
+#59. Default Bootstrap Button Style
+  <button class="btn btn-default"></button>
+
+#60. target, jQuery Selectors(easier)
+<button class="btn btn-default target"></button>
+
+#60. Giving ID
+<div class="well" id="left-well">
+<A>
+</div>
+<div class="well" id="right-well">
+<B>
+</div>
+
+#61. Corresponds to its id's selector
+      <h4>#left-well</h4>
+      <div class="well" id="left-well">
+        <button class="btn btn-default target" id="target1">#target1</button>
+        <button class="btn btn-default target" id="target2">#target2</button>
+        <button class="btn btn-default target" id="target3">#target3</button>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <h4>#right-well</h4>
+      <div class="well" id="right-well">
+        <button class="btn btn-default target" id="target4">#target4</button>
+        <button class="btn btn-default target" id="target5">#target5</button>
+        <button class="btn btn-default target" id="target6">#target6</button>
+      </div>
+
+#62. Comment
+<!--Only change code above this line-->
+
+JavaScript
+#1. 
++=, -=, *=, /=
+
+#2.
+var sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+
+#3. Concatenating Strings
+var myStr = "This is the start. "+"This is the end."
+
+#4. 
+strLength = strName.length;
+
+#5.
+name.push(element);
+//add element at the end.
+
+#6.
+name2=name.pop();
+//remove the last 
+
+name2=name.shift();
+//remove the first
+
+#7.
+name.unshift(element);
+//add element at first
+
+#8
+function testFun(param1, param2) {
+  console.log(param1, param2);
+}
+testFun();
+
+#9.
+function functionWithArgs(a, b) {
+  console.log(a + b);
+}
+
+functionWithArgs(5, 10);
+
+#10. strict equiality (type, number)
+===
+
+#11. strict inequality
+!==
+
+#12. switch, case, default
+
+switch(num){
+  case num1;
+    //contents
+    break;
+  case num2;
+    //contents
+    break;
+  case num3;
+    //contents
+    break;
+  ...
+  case numN;
+    //contents;
+    break;
+  default; // if에서 else 와 비슷.
+    //contents;
+}
+
+#13. 
+switch(num){
+    case num1:
+    case num2:
+    case num3:
+        //contents
+        result = "A";
+        break;
+    case num4:
+    case num5:
+        //contents
+        result = "B";
+        break;
+    ...
+    case numN:
+        //contents;
+        result = "Z";
+    break:
+  default; // if에서 else 와 비슷.
+    //contents;
+}
+
+/* We can write like this as well
+    case num1: case num2: case num3:
+        //contents
+        result = "A";
+        break;
+    case num4: case num5:
+        //contents
+        result = "B";
+        break;
+    ...
+*/
+
+#14. Returning Boolean Values from Functions
+
+function isEqual(a,b){
+    if( a === b ){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+//We can change this syntax into..
+
+function isEqual(a,b){
+    return "A"==="B"; // It will return 'true' or 'false' 
+}
+
+//Another example
+function A(a, b){
+    if(a < b){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+//INTO
+function A(a, b){
+    return a < b;
+}
+//It's much simple.
