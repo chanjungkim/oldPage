@@ -4,13 +4,13 @@ This is Chan's page.
 
 ---
 
-css - css files
+** css - css files **
 
-html - practiced files.
+** html - practiced files. **
 
 ---
 
-### How to use .md file
+## How to use .md file
 
 #### Two spaces or one enter to write in the next line.
 
@@ -22,12 +22,11 @@ title
 Sub-title
 ---
 
+##### Text
 
 *Itailic*
 
 **bold**
-
----
 
 This is `wrapping text`, *`example1`* / **`example2`** / ***`example3`***
 
@@ -42,6 +41,8 @@ int main(){
 ```
 ---
 
+##### List
+
 This is bullet points:
 * A
 * B
@@ -54,5 +55,12 @@ This is number lists:
 
 ---
 
-![ This is Image
-2](http://cfile204.uf.daum.net/image/262CA537516BA2C83B6EAD)
+##### Image
+
+![This is URL Image](http://cfile204.uf.daum.net/image/262CA537516BA2C83B6EAD)
+
+![](images/angular.gif)
+
+![space is %20](images/android%20studio.jpg)
+
+<img src="images/bower.gif" width="100" height="50"> <!-- You can adjust Width and Height-->
