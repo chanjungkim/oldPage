@@ -88,11 +88,9 @@ Check box
 Table
 Head 1 | Head 2
 -------|-------
-First | Second
+First  | Second
 
-Emoji
-::wink::
+Emoji<br>
+:wink:
 
-~
-~
-@chanjungkim
+@ chanjungkim
