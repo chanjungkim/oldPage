@@ -2,7 +2,7 @@
 
 ## This is Chan's page.
 
-<img src="images/profile-3.jpg" width="300" height="200" >
+<img src="images/profile-3.jpg" size="50%">
 
 * css - css files.<br>
 * html - practiced files.
