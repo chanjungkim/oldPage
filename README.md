@@ -47,7 +47,7 @@ int main(){
 <?php echo "Hello World!" ?>
 ```
 
-[Link](chanjungkim.github.io)
+[Link](http://chanjungkim.github.io)
 
 ---
 
