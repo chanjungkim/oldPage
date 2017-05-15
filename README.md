@@ -2,11 +2,16 @@
 
 ## This is Chan's page.
 
----
+<div color="blue">
+css - css files.<br>
+html - practiced files.
+</div>
 
-#### css - css files.
 
-#### html - practiced files.
+
+
+
+
 
 ---
 
