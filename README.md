@@ -2,7 +2,7 @@
 
 ## This is Chan's page.
 
-<div font color="blue">
+<div font color="yellow">
 css - css files.<br>
 html - practiced files.
 </div>
