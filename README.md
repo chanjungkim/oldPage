@@ -20,13 +20,17 @@ html - practiced files.
 
 **bold**
 
+---
+
 This is title1
 ===
 
 This is title2
 ---
 
-This is `wrapping text`, `*example1*` / `**example2**` / `***example3***`
+---
+
+This is `wrapping text`, *`example1`* / **`example2`** / ***`example3`***
 
 ```
 //This is source code block.
@@ -37,13 +41,16 @@ int main(){
   return 0;
 }
 ```
+---
 
-This is bullet points
+This is bullet points:
 * A
 * B
 * C
 
-This is number lists
+This is number lists: 
 1. A
 2. B
 3. C
+
+---
