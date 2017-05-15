@@ -98,4 +98,4 @@ Check box<br>
 :wink:<br>
 Reference: http://www.emoji-cheat-sheet.com
 
-@chanjungkim
+@[chanjungkim](https://www.linkedin.com/in/chanjungkim/)
