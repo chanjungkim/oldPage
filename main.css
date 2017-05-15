@@ -180,5 +180,5 @@ fieldset{padding:0;margin:0;border:0}legend{display:block;width:100%;padding:0;m
 h4 small{color:#333}
 .text-center{text-align: center;}.text-left{text-align: left}
 .secret{
-  color: white
+  color:#000;
 }
