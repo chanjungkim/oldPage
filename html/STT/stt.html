@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Speech to text converter in JS</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Made by Chanjung Kim">
+		<meta name="viewport" content="width=device-width">
+		<title>Speech To Text Converter</title>
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" />
 		<style type="text/css">
 			body{
@@ -53,7 +57,7 @@
 								interimTranscripts += transcript;
 							}
 						}
-						r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
+						r.innerHTML = finalTranscripts + '<span style="color:#F66">' + interimTranscripts + '</span>';
 					};
 					speechRecognizer.onerror = function (event) {
 					};
