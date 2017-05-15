@@ -47,6 +47,8 @@ int main(){
 <?php echo "Hello World!" ?>
 ```
 
+[Link](chanjungkim.github.io)
+
 ---
 
 ##### List
@@ -77,7 +79,8 @@ This is number lists:
 
 ##### Others
 
-Black Quotes<br>
+**Black Quotes
+
 > indented
 > like this
 
@@ -85,13 +88,13 @@ Check box<br>
 - [ ] unchecked
 - [X] checked
 
-Table
+**Table**
 
  Head 1 | Head 2
  -------|-------
   First | Second
 
-Emoji<br>
+**Emoji**
 :wink:<br>
 Reference: http://www.emoji-cheat-sheet.com
 
