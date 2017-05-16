@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hi, I am Abdel Raoof Olakara
-description: About Me page of Abdel Raoof
+title: Hi, I am Chanjung Kim
+description: About Me page of Chanjung Kim
 theme: purple
 ---
 
