@@ -12,8 +12,8 @@ This is my personal website and blog where I put down my thoughts, solutions to 
 
 Stackoverflow is a online community I hang around a lot during my free time. You can find me answering questions on Sencha's Ext Js , C# and Java. Here is my flair:
 
-<a href="http://stackexchange.com/users/62487">
-<img src="http://stackexchange.com/users/flair/62487.png?theme=clean" width="208" height="58" alt="profile for Abdel Olakara on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Abdel Olakara on Stack Exchange, a network of free, community-driven Q&amp;A sites">
+<a href="http://stackoverflow.com/users/7877391	">
+<img src="http://stackoverflow.com/users/flair/7877391.png?theme=clean" width="208" height="58" alt="profile for Abdel Olakara on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Abdel Olakara on Stack Exchange, a network of free, community-driven Q&amp;A sites">
 </a>
 
 
@@ -32,7 +32,7 @@ You are free to use or fork this theme. And any contribution to fixes of issues 
 
 ## Contact Me
 
-For short messages and quick replies, you can contact me via [Twitter](http://twitter.com/olakara) For anything longer feel free to use the comments section below and I'll reply you by email.
+For short messages and quick replies, you can contact me via [Linkedin](https://www.linkedin.com/in/chanjungkim) For anything longer feel free to use the comments section below and I'll reply you by email.
 
 ### Comments:
 
