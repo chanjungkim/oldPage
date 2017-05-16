@@ -1,195 +1,246 @@
+
 <!DOCTYPE html>
-<head>
-  <!--Facebook SDK-->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '311402482624313',
-      xfbml      : true,
-      version    : 'v2.9'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-      <!--Facebook SDK end-->
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Chanjung Kim</title>
-    <meta name="description" content="Chanjung Kim's website.">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="author" href="https://plus.google.com/u/0/+chanjungkim" />
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!--    <link rel="stylesheet" href="styles/bootstrap.css" />-->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-    <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    <meta name="theme-color" content="#d9534f">
-    
-    
+<html  lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   
-  </head>
+	<meta name="description" content="Tangled web dairy of Chanjung Kim">
+  
+  <meta name="author" content="Chanjung Kim">
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="canonical" href="http://chanjungkim.com/">
+  <title>
+    
+      Chanjung Kim &middot; Tangled web dairy of Chanjung Kim
+    
+  </title>
+
+  
+
+  <script type="application/ld+json">
+  {"@context":"http:\/\/schema.org","@type":"WebSite","url":"http:\/\/chajungkim.com\/","name":"Chajung Kim"}
+  </script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/colors.css">
+  <link rel="stylesheet" href="assets/css/github.css">
+  <link rel="stylesheet" href="assets/css/icomoon.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/controls.css">
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jekyll-search.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  
+  <!-- Add background-image -->
+    <script>
+
+    var backgroundImage = [];
+
+    backgroundImage[0]='bcg1.jpg';
+    backgroundImage[1]='bcg2.jpg';
+    backgroundImage[2]='bcg3.jpg';
+    backgroundImage[3]='bcg4.jpg';
+
+    var random=Math.floor(Math.random()*4);
+    document.write("<style>body {background: url("+"/assets/images/"+backgroundImage[random]+") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;color:#fff;background-color:#333;}</style>")
+
+    </script>
+  <link rel="stylesheet" href="assets/css/bcg.css">
+  
+
+  
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="128x128" href="assets/images/favicon-128.png">
+  <link rel="shortcut icon" href="assets/images/favicon-16.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
   <body>
-  <!--Facebook Comment Plugin-->
-      <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.9&appId=311402482624313"; 
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+                <div class="navbar navbar-default visible-xs">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Chanjung Kim</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        
+                          <li>
+                            <a href="/about/">About</a>
+                          </li>
+                        
+                          <li>
+                            <a href="/resume/">Resume</a>
+                          </li>
+                        
+                          <li>
+                            <a href="/blog/">Blog</a>
+                          </li>
+                        
+                          <li>
+                            <a href="/tags/">Tags</a>
+                          </li>
+                        
+                          <li>
+                            <a href="/archive/">Archive</a>
+                          </li>
+                        
+                    </ul>
+                </div>
+            </div>
 
-// Create a new instance of an audio object and adjust some of its properties
-var audio = new Audio();
-audio.src = './html/contents/How_it_Began.mp3';
-audio.controls = true;
-audio.loop = true;
-audio.autoplay = true;
-</script>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser.</p>
-    <![endif]-->
-    <!-- Content -->
-    <div class="container" view="">
-			<div class="header">
-			  <h1 class="text-muted name">Chanjung Kim</h1>
-			  <!-- <ul class="nav nav-pills nav-main">
-				<li class="active"><a href="#">Resume</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="mailto:fman1335@gmail.com">Contact</a></li>
-			  </ul> -->
+    <div class="container">
+
+	<header class="row">
+	  <div class="col-sm-6 col-md-12" style="margin-top:25px;margin-bottom:25px">
+	    <h1 id="pin">Chanjung Kim</h1>
+	  </div>
+	</header>
+	<nav>
+		<div class="row">
+ 			<div class="col-md-4 col-sm-6 col-xs-12">
+				<a href="about/" title="About Me">
+					<div class="tile purple profile">
+						<h2 class="title">About Me</h2>
+						<p>Hello World, I am Chanjung Kim.</p>
+					</div>
+				</a>
+		    </div>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="resume/" title="Resume" class="tile red">
+					<i class="icon-rems" style="font-size:8em"></i>
+				</a>
 			</div>
-		<!--Facebook Comment Plugin end-->
-
-		<div class="row banner">
-			<div class="col-md-4 text-center">
-			<img src="images/profile-2.jpg" class="img-rounded" alt="Chanjung Kim" width="50%"/>
-				<div 
-					class="fb-like"
-					data-share="true"
-					data-width="450"
-					data-show-faces="true">
-				</div>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="blog/" title="Blog"  class="tile orange">
+					<i class="icon-blog" style="font-size:8em"></i>
+				</a>
 			</div>
-		<div class="col-md-8 qualifications">
-			<h2 class="topless">Employment Status: <span class="label label-danger">Available</span></h2>
-			<p class="success">Searching for a company with something innovating in their field.</p>
-			<h3 class="topless">Qualifications</h3>
-			<ul>
-				<li> Studied Computer Science at school.</li>
-				<li> Highly motivated, reliable, and productive.</li>
-				<li> Able to work with endless patience.</li>
-			</ul>
-			
-			<h3>Education</h3>
-			<ul class="nav-stacked">
-				<li><strong>Sunchon National University</strong> - <a href="#">Multimedia Engineering</a> 2017</li>
-			</ul>
-			
-			<h3>Contact</h3>
-			<ul class="nav-stacked">
-				<li><a href="mailto:fman1335@gmail.com">fman1335@gmail.com</a></li>
-				<li><a href="tel:+821087431385">+82 10 8743 1385</a></li>
-				<li><a href="https://kr.linkedin.com/in/chanjungkim">LinkedIn</a></li>
-				<li><a href="http://facebook.com/chanjungkim00">Facebook</a></li>
-				<li><a href="https://plus.google.com/u/0/+chanjungkim">Google+</a></li>
-			</ul>
-		</div>
-    </div>
 
-
-    <div class="row">
-		<div class="col-md-4">
-			<h3>Languages and Experience</h3>
-			<ul>
-				<li>C</li>
-					<ul>Arduino</ul>
-				<li>C++</li>
-					<ul>openCV</ul>
-				<li>Java</li>
-					<ul>Android Studio</ul>
-				<li>C#</li>
-					<ul>Unity</ul>
-				<li>Python</li>
-				<li>HTML, CSS, JavaScript</li>
-				<li>PHP</li>
-				<li>SQL</li>
-					<ul>MS SQL</ul>
-			</ul>
-		</div>
-		<div class="col-md-8">
-			<h3>Work History</h3>
-			<h4><a target="_blank" href="http://www.sovico.co.kr/">Sovico</a> (<small>August</small> 2015)</h4>
-				<strong>Sound Assistant</strong>
-			<h4><a target="_blank" href="http://www.rokmc.mil.kr/">Republic of Korea Marine Corps</a> (<small>December</small> 2009)</h4>
-				<strong>Sergeant of Marines</strong>
-				<ul>
-					<li>Confidential.</li>
-				</ul>
+			<div class="col-md-4 col-sm-6 col-xs-12">
 				
-			<h4>Other Work</h4>
-			<ul>
-				<li><a href="https://www.youtube.com/watch?v=Aq9w8cTnWRQ&t">Smart Mirror</a> - Open source voice controlled mirror.</li>
-				<li><a href="https://www.youtube.com/watch?v=8peWS3zF810">Face Shifting</a> - A school project using openCV</li>
-				<li><a href="https://scratch.mit.edu/projects/116012336/">Hangul Challenge</a> - Korean Alphabet Game(Created in a weekend with MIT Scratch).</li>
-				<li><a href="https://play.google.com/store/apps/details?id=appinventor.ai_fman1335.Hangul&hl=ko">Korean Lab</a> - Korean Study app(Not completed).</li>
-				<li>Created simple chatting program using eclipse on Windows</li>
-				<li>Built up a room for blocking loud sound</li>
-				<li>Editing Vedio using Premiere Pro, Sony Vegas & Audition for <a href="https://www.youtube.com/channel/UC-P6IWIrT6ba8L_tVIadEWw">Korean teaching, Adverts, etc</a></li>
-				<li>Korean Teaching(Volunteering) using Social Network(<a href="https://www.facebook.com/studykoreanwithvolunteers/">Facebook</a>, <a href="https://twitter.com/KoreanHelper">Twitter</a>, <a href="https://www.instagram.com/korean_lab/">Instagram</a>, Kakaotalk, etc)</li>
-				<li>(Unofficial)CS50 Study Group Manager at <a href="https://discord.gg/pFjcwpa">discord</a>. Created CS50 bot and the other bots with open source.
-			</ul>
+				<a href="/blog/2017/03/18/upgrading-to-angular4" title="Latest Article">
+					<div class="tile red">
+						<h3 class="title">Latest Article</h3>
+						<h4 class="title">Upgarding to Angular 4!</h4>
+						<p> We have Release Candidate 5 released today and Angular 4...</p>
+					</div>
+				</a>
+				
+			</div>
+					
 		</div>
-    </div>
-      
-    <!-- secret area -->
-    <div class="secret">
-		<div><a href="./html/PrivacyPolicy.html" >Privacy Policy</a></div>
-		<div><a href="./html/koreanlab/contents/korean_book.html">Korean Book</a></div>
-		<div><a href="./html/contact.html">Contact</a></div>
-    </div>
+
+		<div class="row">
+
+			<div class="col-md-2 col-sm-3 col-xs-6">				
+
+				<a href="https://github.com/olakara" title="Github" class="tile darken">
+					<i class="icon-gthb" style="font-size:8em"></i>
+				</a>
+
+			</div>
+			
+			
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="http://stackoverflow.com/users/185655/abdel-raoof" title="StackOverflow" class="tile darken" >
+					<i class="icon-skow" style="font-size:8em;color:white"></i>
+				</a>
+			</div>
 
 
-    <div class="footer">
-   <!-- <div class="pull-right">
-			<p>Built with:</p>
-				<img src="images/yo.gif" alt="Yeoman">
-				<img src="images/grunt.gif" alt="Grunt">
-				<img src="images/bower.gif" alt="Bower">
-				<img src="images/sass.gif" alt="Sass">
-		</div> -->
-    </div>
 
-    </div>
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+					<a href="/blog/2015/08/09/continuous-integration-of-firebase-with-travis" title="Featured Article">
+						<div class="tile orange">
+							<h3 class="title">Featured Article</h3>
+							<h4 class="title">Continuous integration of Firebase with Travis CI</h4>
+							<p> I recently started working on a project and decided to...</p>
+						</div>
+					</a>
+					
+			</div>
 
-    <!-- Google Analytics -->
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-98206796-1', 'auto');
-		ga('send', 'pageview');
-	</script>
-	<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#chanjungkim" data-width="100%" data-numposts="10"></div>
-</body>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="feed.xml" title="RSS Feed" class="tile orange">
+					<i class="icon-rss" style="font-size:8em"></i>
+				</a>
+			</div>	
+		</div>
 
-<footer class="text-center">
-    <hr><p>Written and coded by </hr><a href="https://github.com/chanjungkim" target="_blank">Chanjung Kim</a>.</p>
-</footer>  
+		<div class="row" style="margin-bottom:25px">
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="https://twitter.com/olakara" title="Twitter" class="tile blue">
+					<i class="icon-twtr" style="font-size:8em"></i>
+				</a>
+			</div>
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="https://plus.google.com/100425464897246255887/" title="Google Plus"  class="tile orange">
+					<i class="icon-gpls" style="font-size:8em"></i>
+				</a>
+			</div>
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="https://www.facebook.com/olakara" title="Facebook" class="tile drk-blue">
+					<i class="icon-fcbk" style="font-size:8em"></i>
+				</a>
+			</div>
+
+			
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="https://ae.linkedin.com/in/olakara/" title="LinkedIn" class="tile blue">
+					<i class="icon-lkin" style="font-size:8em"></i>
+				</a>
+			</div>
+
+		</div>
+	</nav>
+</div>
+
+    <script>
+(function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-53220404-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+    <a href="#" class="scrollToTop icon ic-up"></a>
+  </body>
 </html>
