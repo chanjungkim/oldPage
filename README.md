@@ -2,11 +2,11 @@
 
 ## This is Chan's page.
 
-<img src="images/profile-3.jpg" size="50%">
+<img src="contents/profile-3.jpg" size="50%">
 
 #### Contents
 * html - web based files I practiced.
-* images - image files.
+* contents
 * js - JavaScript files.
 * css - css files.
 
@@ -75,11 +75,11 @@ This is number lists:
 
 ![This is URL Image](http://cfile204.uf.daum.net/image/262CA537516BA2C83B6EAD)
 
-![](images/angular.gif)
+![](contents/angular.gif)
 
-![space is %20](images/android%20studio.jpg)
+![space is %20](contents/android%20studio.jpg)
 
-<img src="images/bower.gif" width="100" height="50"> <!-- You can adjust Width and Height... You can use HTML for .md-->
+<img src="contents/bower.gif" width="100" height="50"> <!-- You can adjust Width and Height... You can use HTML for .md-->
 
 ---
 
