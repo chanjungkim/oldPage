@@ -1,0 +1,854 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>자유게시판</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://www.scnu.ac.kr/mbs/kr/js/jquery-latest.js" type="text/javascript"></script>
+    <link href="http://www.scnu.ac.kr/mbs/kr/css/editorr.css" rel="stylesheet" type="text/css">
+    <link href="http://www.scnu.ac.kr/mbs/kr/css/sub_layout.css" rel="stylesheet" type="text/css">
+    <link href="http://www.scnu.ac.kr/mbs/kr/css/board.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48756449-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	    <!--리스트시작 -->
+	    <form name="frm" method="get" action="/user/board/list.jsp">
+		<input name="boardId" value="5434" type="hidden">
+		<input name="spage" value="1" type="hidden">
+		<input name="search" value="" type="hidden">
+		<input name="column" value="" type="hidden">
+		<input name="boardType" value="01" type="hidden">
+		<input name="listType" value="01" type="hidden">
+		<input name="categoryDepth" value="" type="hidden">
+		<input name="categoryId" value="0" type="hidden">
+		<input name="mcategoryId" value="" type="hidden"/>
+		<input name="boardSeq" value="" type="hidden">
+		<input name="command" type="hidden">
+		<input name="chkBoxSeq" type="hidden">
+		<input name="chkBoxId" type="hidden">
+		<input name="chkBoxPos" type="hidden">
+		<input name="chkBoxDepth" type="hidden">
+		<input name="chkBoxFam_Seq" type="hidden">
+		<input name="id" value="kr_050301000000" type="hidden">
+		<input type="submit" value="이동" style="display:none;">
+
+		<table cellspacing="0" class="bbs-list" summary="게시판리스트">	
+		
+			
+		
+			<col style="width:60px;"/>
+		
+			<col style="width:auto;"/>
+		
+			<col style="width:70px;"/>
+		
+			<col style="width:80px;"/>
+		
+			<col style="width:60px;"/>
+		
+			<col style="width:30px;"/>
+		
+		
+		<thead>
+			<tr>
+				
+		      		<th scope="col" class="title_bg"  ><span>번호<span></th>
+		        
+		      		<th scope="col" class="title_bg"  ><span>제목<span></th>
+		        
+		      		<th scope="col" class="title_bg"  ><span>작성자<span></th>
+		        
+		      		<th scope="col" class="title_bg"  ><span>작성일<span></th>
+		        
+		      		<th scope="col" class="title_bg"  ><span>조회<span></th>
+		        
+		      		<th scope="col" class="title_bg"  ><span>파일<span></th>
+		        
+	       	</tr>
+		</thead>
+		<tbody>
+		
+		
+			<tr>
+		
+		
+				 	<td>
+				 		[공지]
+				 	</td>
+		
+				 	<td class="alignL  pl10">
+		
+						<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=441843&id=kr_050301000000">2017년 스포츠산업 전문인력 양성사업단 창업전문가과정 수...</a>
+				 	</td>
+		
+				 	<td>
+				 		<span>양우근</span>
+				 	</td>	
+		
+				 	<td>
+				 		<span>2017-05-01</span>
+				 	</td>	
+		
+				 	<td>
+				 		<span>189</span>
+				 	</td>	
+		
+				 	<td>
+		
+				 			-
+		
+				 	</td>
+		
+				</tr>
+		
+			<tr>
+		
+		
+				 	<td>
+				 		[공지]
+				 	</td>
+		
+				 	<td class="alignL  pl10">
+		
+						<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=441871&id=kr_050301000000">☆문화상품권 1만원권증정(수정)☆</a>
+				 	</td>
+		
+				 	<td>
+				 		<span>손문갑</span>
+				 	</td>	
+		
+				 	<td>
+				 		<span>2017-05-01</span>
+				 	</td>	
+		
+				 	<td>
+				 		<span>456</span>
+				 	</td>	
+		
+				 	<td>
+		
+				 			-
+		
+				 	</td>
+		
+				</tr>
+		
+			<tr>
+		
+		
+				 	<td>
+				 		[공지]
+				 	</td>
+		
+				 	<td class="alignL  pl10">
+		
+						<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=440859&id=kr_050301000000">총상금1000만원+아메리카교환권 증정</a>
+				 	</td>
+		
+				 	<td>
+				 		<span>손문갑</span>
+				 	</td>	
+		
+				 	<td>
+				 		<span>2017-04-24</span>
+				 	</td>	
+		
+				 	<td>
+				 		<span>594</span>
+				 	</td>	
+		
+				 	<td>
+		
+				 			-
+		
+				 	</td>
+		
+				</tr>
+		
+			<tr>
+		
+		
+				 	<td>
+				 		[공지]
+				 	</td>
+		
+				 	<td class="alignL  pl10">
+		
+						<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=85965&id=kr_050301000000">아르바이트/ 향림장터/ 하숙,자취 관련  글은 게시 불가</a>
+				 	</td>
+		
+				 	<td>
+				 		<span>_ 관리자</span>
+				 	</td>	
+		
+				 	<td>
+				 		<span>2012-04-05</span>
+				 	</td>	
+		
+				 	<td>
+				 		<span>51306</span>
+				 	</td>	
+		
+				 	<td>
+		
+				 			-
+		
+				 	</td>
+		
+				</tr>
+		
+			
+		
+				<tr>
+		
+		
+			 		<td><span>7694<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443527&mcategoryId=&id=kr_050301000000">★여름방학 토익, 토스 수강생 모집중★ 마.초 토익어학원</a>
+					<span><img src='/Web-home/manager/images/mbsPreview/icon_new.gif' alt='N' title='새글' /><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		안혜진
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-16
+			 		</td>
+		
+					<td>
+		
+			 		36
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7693<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443516&mcategoryId=&id=kr_050301000000">중국어회화 (중급반) 모집합니다!!!</a>
+					<span><img src='/Web-home/manager/images/mbsPreview/icon_new.gif' alt='N' title='새글' /><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		장수연
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-16
+			 		</td>
+		
+					<td>
+		
+			 		49
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7692<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443494&mcategoryId=&id=kr_050301000000">단기 면접 스터디 구합니다!</a>
+					<span><img src='/Web-home/manager/images/mbsPreview/icon_new.gif' alt='N' title='새글' /><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		박선영
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-16
+			 		</td>
+		
+					<td>
+		
+			 		47
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7691<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443482&mcategoryId=&id=kr_050301000000">축구동호회원 모집합니다.^^</a>
+					<span><img src='/Web-home/manager/images/mbsPreview/icon_new.gif' alt='N' title='새글' /><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		이종호
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-16
+			 		</td>
+		
+					<td>
+		
+			 		45
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7690<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443428&mcategoryId=&id=kr_050301000000">영어는 돈을 투자할 가치가 있다.(선착순-할인9만원)여름방...</a>
+					<span><img src='/Web-home/manager/images/mbsPreview/icon_new.gif' alt='N' title='새글' /><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		안혜진
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-15
+			 		</td>
+		
+					<td>
+		
+			 		92
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7689<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443427&mcategoryId=&id=kr_050301000000">여성 홈 서포트 다이어트 (무료진행) 1개월 이벤트</a>
+					<span><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		장성호
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-15
+			 		</td>
+		
+					<td>
+		
+			 		104
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7688<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443408&mcategoryId=&id=kr_050301000000">영어에 돈 쓰지 마세요. 영어의 진실을 낱낱이 까발려 드립...</a>
+					<span><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		장철희
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-15
+			 		</td>
+		
+					<td>
+		
+			 		173
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7687<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443375&mcategoryId=&id=kr_050301000000">용당동 트라이앵고 어학원 회화반 모집</a>
+					<span><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		김진실
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-15
+			 		</td>
+		
+					<td>
+		
+			 		80
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7686<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443373&mcategoryId=&id=kr_050301000000">여름방학 선착순 토익 강좌 수강생 모집! 마.초토익어학원</a>
+					<span><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		윤영주
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-15
+			 		</td>
+		
+					<td>
+		
+			 		82
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7685<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443372&mcategoryId=&id=kr_050301000000">★순천의료원 호스피스 교육 안내(등록마감일)★</a>
+					<span><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		김안위
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-15
+			 		</td>
+		
+					<td>
+		
+			 		47
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7684<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443369&mcategoryId=&id=kr_050301000000">♥2017 중소기업탐방 프로그램 참여자 모집!!♥</a>
+					<span><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		최혜빈
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-15
+			 		</td>
+		
+					<td>
+		
+			 		129
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7683<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443237&mcategoryId=&id=kr_050301000000">짐 옮겨드립니다 ~^^</a>
+					<span><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		김건우
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-14
+			 		</td>
+		
+					<td>
+		
+			 		194
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7682<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443212&mcategoryId=&id=kr_050301000000">★ 영어 스터디 및 영어 쌤 모임(순천,광양,여수) ★</a>
+					<span><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		이규민
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-14
+			 		</td>
+		
+					<td>
+		
+			 		98
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7681<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443200&mcategoryId=&id=kr_050301000000">계절학기듣는데 방구하시는분!</a>
+					<span><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		오은정
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-14
+			 		</td>
+		
+					<td>
+		
+			 		234
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				<tr>
+		
+		
+			 		<td><span>7680<span></td>
+		
+			 		<td class="alignL  pl10">
+		
+			 		
+					<a href="http://www.scnu.ac.kr/mbs/kr/jsp/board/view.jsp?spage=1&boardId=5434&boardSeq=443081&mcategoryId=&id=kr_050301000000">여름 계절학기 영어회화1 인원 모집 !</a>
+					<span><span>
+					
+			 		</td>
+		
+					<td>
+		
+			 		강누리
+			 		</td>
+		
+					<td>
+		
+			 		2017-05-12
+			 		</td>
+		
+					<td>
+		
+			 		122
+			 		</td>
+		
+					<td>
+		
+						 		-
+		
+				 	</td>
+		
+				</tr>
+		
+				
+		</tbody>
+		<!--리스트끝 -->
+		
+		</table>
+		</form>
+	
+	 
+		
+		<form name="form_list" method="get" action="write.jsp" onsubmit="return submit()">
+		  
+		<input name="boardId" value="5434" type="hidden" />
+		<input name="spage" value="1" type="hidden" />
+		<input name="search" value="" type="hidden" />
+		<input name="column" value="" type="hidden"/>
+		<input name="categoryDepth" value="" type="hidden"/>
+		<input name="categoryId" value="0" type="hidden"/>
+		<input name="boardType" value="01" type="hidden"/>
+		<input name="mcategoryId" value="" type="hidden"/>
+		<input name="listType" value="01" type="hidden"/>
+		<input name="boardSeq" value="" type="hidden"/>
+		<input name="command" type="hidden" value="write"/>
+		<input name="chkBoxSeq" type="hidden"/>
+		<input name="chkBoxId" type="hidden"/>
+		<input name="chkBoxPos" type="hidden"/>
+		<input name="chkBoxDepth" type="hidden"/>
+		<input name="chkBoxFamSeq" type="hidden"/>
+		<input name="id" value="kr_050301000000" type="hidden"/>
+		<input type="submit" value="이동" style="display:none;"/>
+		
+		
+		
+		<div class="bbs-buttons">
+		
+		
+		    <!--글쓰기 -->
+		 <a href="javascript:submit();" class="btn btn-on" ><span>글쓰기</span></a>
+		
+		</div>
+		
+		
+    	<div class="paginate">
+     		<a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=1 title="처음 목록으로 이동"><img alt='처음' src='/mbs/kr/images/board/pagin_prevmore.gif'></a><strong><span>1</span></strong><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=2><span>2<span></a><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=3><span>3<span></a><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=4><span>4<span></a><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=5><span>5<span></a><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=6><span>6<span></a><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=7><span>7<span></a><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=8><span>8<span></a><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=9><span>9<span></a><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=10><span>10<span></a><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=11 class='next' title="다음 목록으로 이동"><img alt='다음' src='/mbs/kr/images/board/pagin_next.gif'></a><a href=list.jsp?boardId=5434&search=&column=&categoryDepth=&categoryId=0&mcategoryId=&boardType=01&listType=01&command=list&id=kr_050301000000&spage=513 class='nextmore' title="마지막 목록으로 이동"><img alt='끝' src='/mbs/kr/images/board/pagin_nextmore.gif'></a>
+		</div>     
+		<!--페이지 -->
+		</form>
+		<div class="bbs-search">
+			<fieldset>
+				<legend>검색</legend>
+				<form name="searchform" method="get" action="list.jsp">
+					<input name="boardId" value="5434" type="hidden">
+					<input name="spage" value="1" type="hidden">
+					<input name="listType" value="01" type="hidden">
+					<input name="id" value="kr_050301000000" type="hidden">
+					
+	 				<select name="column" title="게시판 검색 항목설정">
+						
+						<option value="TITLE"  >제목</option>				
+						
+						<option value="USER_NAME"  >작성자</option>				
+						
+					</select>
+					
+					<input  class="txt" type="text" name="search" value="" title="검색어 입력" />
+				 <a href="javascript:preSubmit();"><img alt="검색" class="image" src="/mbs/kr/images/board/btn_search.gif" style="vertical-align:middle"></a>
+				</form>
+			</fieldset>			
+		</div>
+		<br /><br /><br /><br />
+
+
+
+	
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			
+
+        </div>  
+
+    </div>
+	<div id="quick_top"><a href="#header"><img src="/mbs/kr/images/common/quick_top.gif"></a></div>
+	 
+</div>
+<html>

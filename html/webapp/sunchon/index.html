@@ -57,6 +57,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
 		<script type="text/javascript">
+			<script>
+			function setURL(url){
+				document.getElementById('web-content').src = url;
+			}
+
 			// Create a new instance of an audio object and adjust some of its properties
 			var audio = new Audio();
 			audio.src = 'http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk';
@@ -71,8 +76,7 @@
 	<body>
 		<div>
 			<div class="scrollX">
-				<a href="https://appr.tc/r/0617503114" target="search_iframe">
-					<button type="button" id="head-button" >영상채팅</button></a>
+				<input id="head-button" type="button" name="영상채팅" onclick="https://appr.tc/r/0617503114"/>
 				<a href="https://m.facebook.com/groups/389480864567108?tsid=0.11827244283631444&source=typeahead" target="search_iframe">
 					<button type="button" id="head-button">외국인</button></a>
 				
@@ -89,7 +93,8 @@
 					<button type="button" id="more-button">more...</button></a>
 			</div>
 			<div>
-				<iframe src="http://www.scnu.ac.kr/mbs/mk/jsp/board/list.jsp?boardId=5361&id=mk_050201000000" id="web-content"width="400" height="500" name="search_iframe"></iframe>
+				<iframe id="web-content" src="http://www.scnu.ac.kr/mbs/mk/jsp/board/list.jsp?boardId=5361&id=mk_050201000000" width="400" height="500" name="search_iframe"></iframe>
+				
 			</div>
 		
 			<div>

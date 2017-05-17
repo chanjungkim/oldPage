@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change src value of iframe dynamically</title>
+    <script type="text/javascript">
+     function newSrc() {
+      var e = document.getElementById("MySelectMenu");
+      var newSrc = e.options[e.selectedIndex].value;
+      document.getElementById("MyFrame").src=newSrc;
+     }
+	function changeIframeUrl(url)
+	{
+		document.getElementById("main_frame").src = url;
+	}
+    </script>
+    <style type="text/css">
+      select {clear:both;}
+    </style>
+  </head>
+
+	<body>
+		<input value='Type' on= "changeIframeUrl('facebook.com')"></input><br>
+		<iframe src = "http://scnu.ac.kr" width="380" height="600" frameborder="0" border="0" scrolling="yes" bgcolor=#EEEEEE bordercolor="#FF000000" marginwidth="0" marginheight="0" name="main_frame" id="main_frame"></iframe> 
+
+		<iframe src="https://beamtic.com/" style="width:450px;height:450px;overflow:scroll;" id="MyFrame"></iframe>
+		<select id="MySelectMenu">
+		<option value="http://yahoo.com/">Yahoo</option>
+		<option value="http://www.google.com/custom">Google</option>
+		<option value="https://beamtic.com/">Beamtic</option>
+		</select>
+		<button onClick="newSrc();">Change Iframe Src</button>
+
+	</body>
+</html>
+
