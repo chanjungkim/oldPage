@@ -1,4 +1,0 @@
-@media all and (orientation: landscape) { }
-<link rel="stylesheet" type="text/css" href="my.css" media="screen and (color)" />
-@media print and (monochrome){ }
-@media screen and (color) { }
