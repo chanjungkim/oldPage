@@ -27,6 +27,10 @@
 	content: "\e926";
 }
 
+.icon-youtube:before {
+	content: "\ea62";
+}
+
 .icon-blog:before {
 	content: "\ea62";
 }

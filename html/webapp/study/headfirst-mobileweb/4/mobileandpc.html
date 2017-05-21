@@ -12,7 +12,7 @@
 		min-height: 25px;
 	}
 
-	@media screen and{
+	@media screen and (min-width:481px) {
 		body, .header, .navigation, .fooer{
 			width: 960px;
 			background-color: green;
@@ -27,22 +27,20 @@
 		}
 
 		#visit{
-			width: 320px;
+			width: 240px;
 			//float: left;
 			background-color: purple;
 		}
 		#points{
-			width: 320px;
+			width: 240px;
 			//float: right;
 			background-color: pink;
 		}
 		#main{
-			//margin: 10px 260px 0 250px;
-			width: 320px;
-			background-color: brown;
+			margin: 10px 260px 0 250px;
 		}
 	} 
-	@media screen and(){
+	@media screen and (max-width:480px) {
 		.column{
 			margin:10px 0;
 			border-bottom: 1px dashed #000;
