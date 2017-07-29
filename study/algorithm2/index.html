@@ -7,7 +7,7 @@
         <h1>세종대 스터디 모임</h1>
         <h4>모임장: 김영우</h4>
         <h4>멤버</h4>
-        <select name='fruits' size='6'>
+        <select id='fruits' name='fruits' size='6' onchange='fruits_selected()'>
             <option value='' selected>-- 선택 --</option>
             <option value='apple'>김영우</option>
             <option value='banana'>김성곤</option>
@@ -16,6 +16,20 @@
             <option value='lemon'>지소현</option>
             <option value='lemon'>지소현</option>
         </select>
+
+        <script>
+            function fruits_selected() {
+            	var obj = document.getElementById('fruits');
+            	var index = obj.selectedIndex;
+            	var value = obj.options[index].value;
+            	var text = obj.options[index].text;
+
+            	console.log( '------------------' );
+            	console.log( 'index = [' + index + ']' );
+            	console.log( 'value = [' + value + ']' );
+            	console.log( 'text = [' + text + ']' );
+            }
+        </script>
     <body>
     </body>
 </html>
