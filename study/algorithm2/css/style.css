@@ -1,10 +1,12 @@
-<style type="text/css">
-	body{
-		background: rgb(0, 0, 0);
-		color: rgb(255, 255, 255);
-	}
-	a{
-		text-decoration: none;
-		color: rgb(255, 255, 255);
-	}
-</style>
+body{
+	background: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
+a{
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
+select{
+	background: rgb(0, 0 , 0);
+	color: rgb(255, 255, 255);
+}
