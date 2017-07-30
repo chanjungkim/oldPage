@@ -4,7 +4,7 @@ body{
 }
 a{
 	text-decoration: none;
-	text-decoration: line-through;
+	text-decoration: underline;
 	color: rgb(255, 255, 255);
 }
 select{
