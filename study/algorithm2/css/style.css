@@ -1,4 +1,10 @@
-body{
-	background: black;
-	color: white;
-}
+<style type="text/css">
+	body{
+		background: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+	}
+	a{
+		text-decoration: none;
+		color: rgb(255, 255, 255);
+	}
+</style>
