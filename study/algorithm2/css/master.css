@@ -1,6 +1,7 @@
 body{
-	background: black;
+	background: white;
 	color: white;
+	margin: 0px;
 }
 a{
 	text-decoration: none;
@@ -14,6 +15,7 @@ select{
 #content{
 	background: black;
 	color: white;
+	margin: 13px;
 }
 
 #comment{

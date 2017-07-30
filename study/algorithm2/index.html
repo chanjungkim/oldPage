@@ -25,12 +25,13 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/master.css">
         <title>알고리즘 스터디 모임 at 세종대</title>
 
 
     </head>
     <body>
+        <div id="content">
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -42,31 +43,32 @@
         <!--<script type="text/javascript" src="./assets/js/check.js"></script>
         -->
         <div id="content">
-        <h4>모임장: <a href="https://gist.github.com/PrioKim">김영우</a><br>
-        멤버: <a href="https://github.com/KimSung-gon/BaekJoon_algorithm">김성곤</a> 김주성 <a href="https://github.com/chanjungkim/study/tree/master/Algorithm/BOJ">김찬중</a> <a href="https://gist.github.com/betorvalds/">김현지</a> 송이 <a href="https://github.com/SoHyunJiiiiiii/myCode/blob/master/algorithm/">지소현</a></h4>
-        <h6>
-        <a href="https://github.com/PrioKim/AlgoStudy">[스터디 히스토리]</a>     <a href="#">[스터디 문제집]</a>
-        </h6>
-        <select id='members' name='members' size="8" onchange='member_selected()'>
-            <option value='' selected> --- 선택 --- </option>
-            <option value='20170715'>1회(2017. 07. 15.)</option>
-            <option value='none'>2회(2017. 07. 22.)</option>
-            <option value='20170729'>3회(2017. 07. 29.)</option>
-            <option value='20170805'>4회(2017. 08. 05.)</option>
-            <option value='20170812'>5회(2017. 08. 12.)</option>
-            <option value='20170819'>6회(2017. 08. 19.)</option>
-            <option value='20170826'>7회(2017. 08. 26.)</option>
-            <option value='20170902'>8회(2017. 09. 02.)</option>
-            <option value='20170909'>9회(2017. 09. 09.)</option>
-            <option value='20170916'>10회(2017. 09. 16.)</option>
-            <option value='20170923'>11회(2017. 09. 23.)</option>
-            <option value='20170930'>12회(2017. 09. 30.)</option>
-            <option value='20171007'>13회(2017. 10. 07.)</option>
-            <option value='20171014'>14회(2017. 10. 14.)</option>
-            <option value='20171021'>15회(2017. 10. 21.)</option>
-        </select>
-        <iframe id="page" src="date/0.html" width="100%" height="500"></iframe>
-        <br>
+            <h4>모임장: <a href="https://gist.github.com/PrioKim">김영우</a><br>
+            멤버: <a href="https://github.com/KimSung-gon/BaekJoon_algorithm">김성곤</a> 김주성 <a href="https://github.com/chanjungkim/study/tree/master/Algorithm/BOJ">김찬중</a> <a href="https://gist.github.com/betorvalds/">김현지</a> 송이 <a href="https://github.com/SoHyunJiiiiiii/myCode/blob/master/algorithm/">지소현</a></h4>
+            <h6>
+            <a href="https://github.com/PrioKim/AlgoStudy">[스터디 히스토리]</a>     <a href="#">[스터디 문제집]</a>
+            </h6>
+            <select id='members' name='members' size="8" onchange='member_selected()'>
+                <option value='' selected> --- 선택 --- </option>
+                <option value='20170715'>1회(2017. 07. 15.)</option>
+                <option value='none'>2회(2017. 07. 22.)</option>
+                <option value='20170729'>3회(2017. 07. 29.)</option>
+                <option value='20170805'>4회(2017. 08. 05.)</option>
+                <option value='20170812'>5회(2017. 08. 12.)</option>
+                <option value='20170819'>6회(2017. 08. 19.)</option>
+                <option value='20170826'>7회(2017. 08. 26.)</option>
+                <option value='20170902'>8회(2017. 09. 02.)</option>
+                <option value='20170909'>9회(2017. 09. 09.)</option>
+                <option value='20170916'>10회(2017. 09. 16.)</option>
+                <option value='20170923'>11회(2017. 09. 23.)</option>
+                <option value='20170930'>12회(2017. 09. 30.)</option>
+                <option value='20171007'>13회(2017. 10. 07.)</option>
+                <option value='20171014'>14회(2017. 10. 14.)</option>
+                <option value='20171021'>15회(2017. 10. 21.)</option>
+            </select>
+            <iframe id="page" src="date/0.html" width="100%" height="500"></iframe>
+            <br>
+        </div>
         <script>
             function member_selected() {
             	var obj = document.getElementById('members');
