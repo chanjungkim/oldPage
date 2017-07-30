@@ -2,34 +2,54 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="mobile-web-app-capable" content="yes">
+
         <title>세종대 스터디 모임</title>
+        <link rel="stylesheet" href="/css/style.css">
+
     </head>
+    <body>
+        <script type="text/javascript" src="./assets/js/check.js"></script>
+        <script type="text/javascript" src="./assets/js/study.js"></script>
         <h1>세종대 스터디 모임</h1>
         <h4>모임장: 김영우</h4>
-        <h4>멤버</h4>
-        <select id='fruits' name='fruits' size='6' onchange='fruits_selected()'>
-            <option value='' selected>-- 선택 --</option>
-            <option value='apple'>김영우</option>
-            <option value='banana'>김성곤</option>
-            <option value='lemon'>김찬중</option>
-            <option value='lemon'>지소현</option>
-            <option value='lemon'>지소현</option>
-            <option value='lemon'>지소현</option>
+        <h4>멤버: 김성곤 김찬중 </h4>
+        <select id='members' name='members' size="8" onchange='member_selected()'>
+            <option value='' selected> --- 선택 --- </option>
+            <option value='1'>1회(2017. 07. 15.)</option>
+            <option value='2'>2회(2017. 07. 22.)</option>
+            <option value='20170729'>3회(2017. 07. 29.)</option>
+            <option value='4'>4회(2017. 07. 29.)</option>
+            <option value='5'>5회(2017. 07. 29.)</option>
+            <option value='6'>6회(2017. 07. 29.)</option>
+            <option value='7'>7회(2017. 07. 29.)</option>
+            <option value='8'>8회(2017. 07. 29.)</option>
+            <option value='9'>9회(2017. 07. 29.)</option>
+            <option value='10'>10회(2017. 07. 29.)</option>
+            <option value='11'>11회(2017. 07. 29.)</option>
+            <option value='12'>12회(2017. 07. 29.)</option>
+            <option value='13'>13회(2017. 07. 29.)</option>
+            <option value='14'>14회(2017. 07. 29.)</option>
+            <option value='15'>15회(2017. 07. 29.)</option>
         </select>
-
+        <iframe id="page" src=""></iframe>
         <script>
-            function fruits_selected() {
-            	var obj = document.getElementById('fruits');
+            function member_selected() {
+            	var obj = document.getElementById('members');
+                var page = document.getElementById('page');
             	var index = obj.selectedIndex;
             	var value = obj.options[index].value;
             	var text = obj.options[index].text;
 
-            	console.log( '------------------' );
-            	console.log( 'index = [' + index + ']' );
-            	console.log( 'value = [' + value + ']' );
-            	console.log( 'text = [' + text + ']' );
+                page_replace(page, index);
+            }
+            function page_replace(page, index) {
+                page.src="../../../PrioKim/AlgoStudy/blob/master/"+value+".md";
             }
         </script>
-    <body>
     </body>
 </html>
