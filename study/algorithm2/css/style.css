@@ -1,5 +1,5 @@
 body{
-	background: #705010;
+	background: black;
 	color: white;
 }
 a{
@@ -10,4 +10,7 @@ a{
 select{
 	background: rgb(0, 0 , 0);
 	color: rgb(255, 255, 255);
+}
+#comments{
+	background: rgb(230, 230, 230);
 }
