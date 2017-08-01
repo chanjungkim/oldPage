@@ -10,12 +10,19 @@
 		<link rel="stylesheet" href="../css/style.css">
 	</head>
 	<body>
-		<ul><h2>배운 내용 정리</h2>
-			<li><h3>1주</h3>
+<h3>1주</h3>
 				<ul>
 					<li>월</li>
 					<ol>
-						<li>JDK 설치</li>
+						<li>JDK 설치
+<code>
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/" id="green">다운로드</a>
+환경변수 설정:
+   1. 컴퓨터 > 속성(오른쪽 마우스) > 고급 시스템 설정 > 환경변수 > (~에 대한 변수: 한 계정 / 시스템 변수: 전체)
+   2. PATH: 자바설치 전 위치/java/bin/
+      JAVA_HOME: 자바설치 전 위치/java
+</code>
+						</li>
 						<li>Eclipse 설치</li>
 					</ol>
 					<li>화</li>
@@ -40,22 +47,84 @@ class Test01{
 
 public class Test01 {
 	public static void main(String[] args) {
-		// 한줄 주석
+		// 한 줄 주석
 		System.out.println("안녕하세요. 자바2일차입니다.");
 		/*
-		 * 두 줄 주석
+		 * 여러 줄 주석
 		 */
 		System.out.println("내일은 자바3일차 입니다.");
 	}
 }
 </code>
 						</li>
-						<pre><code ></code></pre>
-						<li>단축키</li>
+						<li>단축키
 <code>
-	내용 추가
+	# Java Editor 단축키
+
+	Ctrl + Shift + M : 특정 클래스 Import 시키기
+	Ctrl + Shift + O : 자동으로 Import 시키기
+	Ctrl + Shift + F : 코드 자동 정리
+	Ctrl + Shift + G : 특정 메써드나 필드를 Reference하고 있는 곳을 찾는다.
+	Ctrl + 1 : Quick Fix. 에러가 발생했을 경우 Quick Fix를 통해 쉽게 해결이 가능하다.
+	Ctrl + Shift + / : 블럭 주석 설정
+	Alt + Shift + UP : 커서를 기준으로 토큰단위 블럭지정
+	Alt + Shift + DOWN : 커서를 기준으로 토큰단위 블럭해제
+	CTRL + L : 특정 줄번호로 가기
+	Alt + Shift + J : 자동으로 주석 달기 (메소드나 멤버변수에 포커스 두고 실행)
+
+	# Window 이동
+
+	F10 : 메뉴창을 활성화
+	Ctrl + F8 : 다음 Perspective로 이동
+	Ctrl + N : 새로운 파일 및 프로젝트 생성.
+	Ctrl + Shift + Down : Java Editor에서 다음 member로 이동.
+	Ctrl + F7 : 다음 View로 이동.
+	Ctrl + Shift + F7 : 이전 View로 이동.
+	Alt + <- : 이전 작업 화면
+	Alt + -> : 다음 작업 화면
+	F12 : 컴파일 중 에러등으로 포커스가 다른데로 갔을 때 Editor 로 커서 이동
+	Ctrl + 1 : 컴파일 에러가 발생한 곳에서 Ctrl + 1을 누를 경우 컴파일 에러에 대한 해결책을 제시
+
+	# 디버깅 단축키
+
+	CTRL + Shift + B : 현 커서의 위치에 브레이크 포인터 설정/해제
+	F11 : 디버깅 시작
+	F8 : 디버깅 계속
+	F6 : 한줄씩 실행(Step Over)
+	F5 : 한줄씩 실행하되 함수일 경우 그 함수 내부로 들어감(Step Into)
+	CTRL + R : 현재 라인까지 실행(Run to Line)
+
+	# Refactoring 단축키
+
+	Shift + ALT + 알파벳 : Refactoring을 위한 단축키 임.
+
+	# RUN 단축키
+
+	Ctrl + F11 : 이전에 실행되었던 Run파일 실행.
 </code>
+</li>
+<li>메소드와 변수
+<code>
+public class Test03 {
+	// main은 method(function, 함수[상자 함 / 셀 수, 상자를 넣었을 때 무엇이 나오는 과정])
+	public static void main(String[] args) {
+		int x; // 첫 번째 정수를 저장할 변수 ( 변수는 무엇을 담을 수 있는 바구니 같은 것, 메모리 안의 공간)
+		int y; // 첫 번째 정수를 저장할 변수
+		int sum; // 첫 번째 정수를 저장할 변수
+
+		x=100;
+		y=100;
+		sum=x+y;
+
+		System.out.println(sum);
+
+		return;
+	}
+}
+</code>
+</li>
 					</ol>
+
 					<li>수</li>
 					<ol>
 						<li>무진행</li>
@@ -69,8 +138,7 @@ public class Test01 {
 						<li>무진행</li>
 					</ol>
 				</ul>
-			</li>
-			<li><h3>2주</h3>
+<h3>2주</h3>
 				<ul>
 					<li>월</li>
 					<ol>
@@ -93,8 +161,8 @@ public class Test01 {
 						<li>무진행</li>
 					</ol>
 				</ul>
-			</li>
-			<li><h3>3주</h3>
+
+<h3>3주</h3>
 				<ul>
 					<li>월</li>
 					<ol>
@@ -117,8 +185,7 @@ public class Test01 {
 						<li>무진행</li>
 					</ol>
 				</ul>
-			</li>
-			<li><h3>4주</h3>
+			<h3>4주</h3>
 				<ul>
 					<li>월</li>
 					<ol>
@@ -141,7 +208,5 @@ public class Test01 {
 						<li>무진행</li>
 					</ol>
 				</ul>
-			</li>
-		</ul>
 	</body>
 <html>
