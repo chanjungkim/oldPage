@@ -2,6 +2,11 @@ body{
 	background: black;
 	color: white;
 }
+code {
+  display: block;
+  white-space: pre-wrap;
+	color: green;
+}
 a{
 	text-decoration: none;
 	text-decoration: underline;
