@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html>
 	<head>
-       		<meta charset="utf-8">
-        	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-        	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        	<meta name="apple-mobile-web-app-capable" content="yes">
-        	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-        	<meta name="mobile-web-app-capable" content="yes">
-		<link rel="stylesheet" href="../css/master.css">
+        <!--Facebook SDK-->
+    <script>
+    	window.fbAsyncInit = function() {
+      	FB.init({
+        	appId      : '311402482624313',
+        	xfbml      : true,
+        	version    : 'v2.9'
+      	});
+      	FB.AppEvents.logPageView();
+    	};
+    	(function(d, s, id){
+       	var js, fjs = d.getElementsByTagName(s)[0];
+       	if (d.getElementById(id)) {return;}
+       	js = d.createElement(s); js.id = id;
+       	js.src = "//connect.facebook.net/en_US/sdk.js";
+       	fjs.parentNode.insertBefore(js, fjs);
+     	}(document, 'script', 'facebook-jssdk'));
+    </script>
+ 		<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  	<meta name="mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="./css/master.css">
 	</head>
 	<body>
-		<div class="reference">
-			<a href="http://roadbook.co.kr/126">예제 소스 및 퀴즈 해답 등의 자료 다운로드</a><br>
-			<a href="http://roadbook.zerois.net">질의 응답 사이트</a><br>
-			<a href="http://www.roadbook.co.kr"> 특별부록(온라인 쇼핑몰) 다운로드</a><br>
-		</div>
+		<select id='months' name='months' size="6" onchange='month_selected()'>
+                	<option value='1' selected>2017년 8월</option>
+                	<option value='2'>9월</option>
+               		<option value='3'>10월</option>
+               		<option value='4'>11월</option>
+                	<option value='5'>12월</option>
+                	<option value='6'>2018년 1월</option>
+		</select>
+		<iframe id="page" src="months/0.html" width="100%" height="500"></iframe>
+
+        	<script>
+            		function month_selected() {
+            			var obj = document.getElementById('months');
+                		var page = document.getElementById('page');
+            			var index = obj.selectedIndex;
+            			var value = obj.options[index].value;
+            			var text = obj.options[index].text;
+                		page_replace(page, index);
+            		}
+            		function page_replace(page, index) {
+               			page.src="months/"+index+".html";
+            		}
+        	</script>
+		<div class="fb-comments" id="comment" data-href="https://developers.facebook.com/docs/plugins/comments#androidstudy" data-width="100%" data-numposts="10"></div>
 	</body>
-<html>
+</html>
