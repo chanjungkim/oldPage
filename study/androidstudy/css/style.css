@@ -33,3 +33,14 @@ select{
 #green{
 	color:green;
 }
+.reference{
+	text-align: justify;
+	white-space: pre-wrap;
+	margin: 10px;
+	font-size: 20px;
+	color: #8888CC;
+}
+.reference a{
+	text-decoration: none;
+	color: #885533;
+}
