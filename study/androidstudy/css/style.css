@@ -1,4 +1,21 @@
 body{
-	background:black;
+	background: black;
 	color: white;
+}
+a{
+	text-decoration: none;
+	text-decoration: underline;
+	color: rgb(255, 255, 255);
+}
+select{
+	background: rgb(0, 0 , 0);
+	color: rgb(255, 255, 255);
+}
+#content{
+	background: black;
+	color: white;
+}
+
+#comment{
+	background: #FFFFFF;
 }
