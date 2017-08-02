@@ -15,7 +15,7 @@
 					<li>월</li>
 					<ol>
 						<li>JDK 설치
-<code>
+<code class="text">
 <a href="http://www.oracle.com/technetwork/java/javase/downloads/" id="green">다운로드</a>
 환경변수 설정:
    1. 컴퓨터 > 속성(오른쪽 마우스) > 고급 시스템 설정 > 환경변수 > (~에 대한 변수: 한 계정 / 시스템 변수: 전체)
@@ -23,21 +23,28 @@
       JAVA_HOME: 자바설치 전 위치/java
 </code>
 						</li>
-						<li>Eclipse 설치</li>
+							<li><a href="">Eclipse 설치</a>
+<code class="text">
+<a href="https://www.eclipse.org/downloads/?" id="green">다운로드</a>
+사용법:
+ 1. File > new > Project(Default로 Finish)
+ 2. 폴더 우클릭 > New > Class(사용할 클래스명만 적고 Default로 Finish)
+</code>
+							</li>
 					</ol>
 					<li>화</li>
 					<ol>
 						<li>Day02/
-						<code>
+<code class="java">
 class Test01{
 	public static void main(String[] args){
 		System.out.println("Hello, Java!");
 	}
 }
-						</code>
+</code>
 						</li>
 						<li>주석: Day02/
-<code>
+<code class="java">
 /**
  *
  * Java Doc
@@ -58,7 +65,7 @@ public class Test01 {
 </code>
 						</li>
 						<li>단축키
-<code>
+<code class="text">
 	# Java Editor 단축키
 
 	Ctrl + Shift + M : 특정 클래스 Import 시키기
@@ -104,7 +111,7 @@ public class Test01 {
 </code>
 </li>
 <li>메소드와 변수
-<code>
+<code class="java">
 public class Test03 {
 	// main은 method(function, 함수[상자 함 / 셀 수, 상자를 넣었을 때 무엇이 나오는 과정])
 	public static void main(String[] args) {
@@ -124,7 +131,7 @@ public class Test03 {
 </code>
 </li>
 <li>입력 받기: Scanner
-<code>
+<code class="java">
 import java.util.*;
 
 public class Test04 {
@@ -148,11 +155,109 @@ public class Test04 {
 }
 </code>
 </li>
-					</ol>
+<li>명명법
+	<code class="text">
+	class: 대문자로 시작 ex. Main
+	variable, method: 소문자로 시작 ex. main
 
+	공동: 연속 단어는 _나 대문자로 표기 ex. my_name, myName
+
+	camelCase: 낙타등 표기법 (낙타등과 같이 들쑥날쑥)
+	// 개발자 간의 기본적인 약속임
+	</code>
+</li>
+<li>자료형
+	<code class="text">
+	byte: 주로 뒷 부분 네트워크 통신에서 사용
+	int: 정수
+	double: 실수
+	char: 한 단어(유니코드, utf-8)  ex.'a', '1', '한'
+
+	*String은 기본자료형이 아닌 참조 자료형(대문자로 시작)
+	</code>
+</li>
+					</ol>
 					<li>수</li>
 					<ol>
-						<li>무진행</li>
+						<li>진법
+<code class="text">
+	<table border="1">
+		<tr>
+			<th> 구분 </th>
+			<th> 2진수 </th>
+			<th> 8진수 </th>
+			<th> 10진수 </th>
+		</tr>
+		<tr>
+			<td> 표현 가능 수 </td>
+			<td> 0, 1 </td>
+			<td> 0 ~ 7 (8개) </td>
+			<td> 0 ~ 9, A ~ F (16개) </td>
+		</tr>
+		<tr>
+			<td> 변환법 1 </td>
+			<td> 1010 1010 </td>
+			<td> (010)(10 1)(010) </td>
+			<td> (000010)(10 1010) </td>
+		</tr>
+		<tr>
+			<td> 변환법 2 </td>
+			<td> 2^8 </td>
+			<td> - </td>
+			<td> 16^2 </td>
+		</tr>
+		</table>
+</code>
+						</li>
+						<li>+연산자의 특징
+<code class="java">
+	System.out.println("20"+10);   // String + 수 => "20"10
+	int a = 10;
+	System.out.println(20+10);    // 30
+	System.out.println(20+a);     // 30
+	int n = -10;
+	System.out.println(+n);    // 10 (양수)
+</code>
+					</li>
+						<li>전위 연산자와 후위 연산자
+<code>
+public class Test01 {
+	public static void main(String[] args) {
+		int x = 100;
+		int y = 100;
+
+		System.out.println("x++: "+(x++)); // 한 줄 뒤에 1이 증가
+		System.out.println("++y: "+(++y)); // 같은 줄에서 1이 증가
+
+		System.out.println("x: "+x); // x와 y는 결국 같음
+		System.out.println("y: "+y);
+
+		System.out.println(100+200);
+		System.out.println("100"+200);
+	}
+}
+</code>
+<code>
+public class Test02{
+	public static void main(String[] args){
+		int a = 10, b, c, d, e, f;
+
+		b = a++ + 10;
+		c = --b * 2;
+		d = a + a++;
+		e = d-- - 5
+		f = a + b;
+
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+		System.out.println(e);
+		System.out.println(f);
+	}
+}
+</code>
+						</li>
 					</ol>
 					<li>목</li>
 					<ol>

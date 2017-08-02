@@ -12,6 +12,7 @@ code {
 	font-size: 9pt;
 	padding: 15px;
 }
+
 a{
 	text-decoration: none;
 	text-decoration: underline;
@@ -43,4 +44,7 @@ select{
 .reference a{
 	text-decoration: none;
 	color: #885533;
+}
+.text{
+	color: #BBBBBB;
 }
