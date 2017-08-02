@@ -237,16 +237,40 @@ public class Test01 {
 	}
 }
 </code>
+<br><br>
 <code>
 public class Test02{
 	public static void main(String[] args){
 		int a = 10, b, c, d, e, f;
 
-		b = a++ + 10;
-		c = --b * 2;
-		d = a + a++;
-		e = d-- - 5
-		f = a + b;
+		b = a++ + 10; // b: 20
+		c = --b * 2;  // a: 11 b: 19 c: 38
+		d = a + a++;  // a: 11 b: 19 c: 38 d : 22
+		e = d-- - 5   // a: 12 b: 19 c: 38 d : 22
+		f = a + b;    // a: 12 b: 19 c: 38 d : 21 f: 31
+
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+		System.out.println(e);
+		System.out.println(f);
+	}
+}
+</code>
+<br><br>
+<code>
+public class Test02{
+	public static void main(String[] args){
+		int a = 20, b, c, d, e, f;
+
+		b = a++ + 10;    // b: 30
+		c = --b * 2;     // a: 21     b: 29 c: 48
+		d = --a + a++;   // a: 20     b: 29 c: 48 d: 41
+		a = b++ + --c;   // a: 21, 76 b: 29 c: 47 d: 41
+		e = d-- - 5      // a: 76     b: 30 c: 47 d: 41
+		f = a++ + b;     // a: 76     b: 30 c: 47 d: 40 f: 106
+                     // a: 77
 
 		System.out.println(a);
 		System.out.println(b);
