@@ -246,7 +246,7 @@ public class Test02{
 		b = a++ + 10; // b: 20
 		c = --b * 2;  // a: 11 b: 19 c: 38
 		d = a + a++;  // a: 11 b: 19 c: 38 d : 22
-		e = d-- - 5   // a: 12 b: 19 c: 38 d : 22
+		e = d-- - 5;   // a: 12 b: 19 c: 38 d : 22
 		f = a + b;    // a: 12 b: 19 c: 38 d : 21 f: 31
 
 		System.out.println(a);
@@ -278,6 +278,48 @@ public class Test02{
 		System.out.println(d);
 		System.out.println(e);
 		System.out.println(f);
+	}
+}
+</code>
+						</li>
+						<li>논리 연산자
+<code>
+public class Test03 {
+	public static void main(String[] args) {
+		int a=1, b=1, c=10, d=100;
+
+		boolean r1 = (a>b);
+		boolean r2 = (b<=c);
+		boolean r3 = (b<=a);
+		boolean r4 = (c>=d);
+		boolean r5 = (a==b);
+		boolean r6 = (b!=c);
+
+		System.out.println(r1);
+		System.out.println(r2);
+		System.out.println(r3);
+		System.out.println(r4);
+		System.out.println(r5);
+		System.out.println(r6);
+	}
+}
+</code>
+<br><br>
+<code>
+
+public class Test04 {
+	public static void main(String[] args) {
+		int a=1, b=1, c=10, d=100;
+
+		boolean r1 = (a > b) && (b >= c);
+		boolean r2 = (c <= a ) || (a >= d);
+		boolean r3 = (a == c) || (b != a);
+		boolean r4 = !(d>c);
+
+		System.out.println(r1);
+		System.out.println(r2);
+		System.out.println(r3);
+		System.out.println(r4);
 	}
 }
 </code>
