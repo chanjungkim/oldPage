@@ -45,20 +45,24 @@ class Test01{
 						</li>
 						<li>주석: Day02/
 <code class="java">
+<span style="color:#92C3B7">
 /**
  *
  * Java Doc
  * @author Chanjung Kim
  *
  */
+</span>
 
 public class Test01 {
 	public static void main(String[] args) {
-		// 한 줄 주석
+		<span class="comment">// 한 줄 주석</span>
 		System.out.println("안녕하세요. 자바2일차입니다.");
+		<span class="comment">
 		/*
 		 * 여러 줄 주석
 		 */
+	 </span>
 		System.out.println("내일은 자바3일차 입니다.");
 	}
 }
@@ -113,11 +117,11 @@ public class Test01 {
 <li>메소드와 변수
 <code class="java">
 public class Test03 {
-	// main은 method(function, 함수[상자 함 / 셀 수, 상자를 넣었을 때 무엇이 나오는 과정])
+	<span class="comment">// main은 method(function, 함수[상자 함 / 셀 수, 상자를 넣었을 때 무엇이 나오는 과정])</span>
 	public static void main(String[] args) {
-		int x; // 첫 번째 정수를 저장할 변수 ( 변수는 무엇을 담을 수 있는 바구니 같은 것, 메모리 안의 공간)
-		int y; // 첫 번째 정수를 저장할 변수
-		int sum; // 첫 번째 정수를 저장할 변수
+		int x; <span class="comment">// 첫 번째 정수를 저장할 변수 ( 변수는 무엇을 담을 수 있는 바구니 같은 것, 메모리 안의 공간)</span>
+		int y; <span class="comment">// 첫 번째 정수를 저장할 변수</span>
+		int sum; <span class="comment">// 첫 번째 정수를 저장할 변수</span>
 
 		x=100;
 		y=100;
@@ -211,12 +215,12 @@ public class Test04 {
 						</li>
 						<li>+연산자의 특징
 <code class="java">
-	System.out.println("20"+10);   // String + 수 => "20"10
+	System.out.println("20"+10);   <span class="comment">// String + 수 => "20"10</span>
 	int a = 10;
-	System.out.println(20+10);    // 30
-	System.out.println(20+a);     // 30
+	System.out.println(20+10);    <span class="comment">// 30</span>
+	System.out.println(20+a);     <span class="comment">// 30</span>
 	int n = -10;
-	System.out.println(+n);    // 10 (양수)
+	System.out.println(+n);    <span class="comment">// 10 (양수)</span>
 </code>
 					</li>
 						<li>전위 연산자와 후위 연산자
@@ -226,14 +230,17 @@ public class Test01 {
 		int x = 100;
 		int y = 100;
 
-		System.out.println("x++: "+(x++)); // 한 줄 뒤에 1이 증가
-		System.out.println("++y: "+(++y)); // 같은 줄에서 1이 증가
+		System.out.println("x++: "+(x++)); <span class="comment">// 한 줄 뒤에 1이 증가</span>
+		System.out.println("++y: "+(++y)); <span class="comment">// 같은 줄에서 1이 증가</span>
 
-		System.out.println("x: "+x); // x와 y는 결국 같음
+		System.out.println("x: "+x); <span class="comment">// x와 y는 결국 같음</span>
 		System.out.println("y: "+y);
 
 		System.out.println(100+200);
 		System.out.println("100"+200);
+
+		<span class="comment">// int x = 100; 일 때, System.out.println(x++ + x++) 의 결과는? 201
+		계산 후 증가</span>
 	}
 }
 </code>
@@ -243,11 +250,11 @@ public class Test02{
 	public static void main(String[] args){
 		int a = 10, b, c, d, e, f;
 
-		b = a++ + 10; // b: 20
-		c = --b * 2;  // a: 11 b: 19 c: 38
-		d = a + a++;  // a: 11 b: 19 c: 38 d : 22
-		e = d-- - 5;   // a: 12 b: 19 c: 38 d : 22
-		f = a + b;    // a: 12 b: 19 c: 38 d : 21 f: 31
+		b = a++ + 10; <span class="comment">// b: 20</span>
+		c = --b * 2;  <span class="comment">// a: 11 b: 19 c: 38</span>
+		d = a + a++;  <span class="comment">// a: 11 b: 19 c: 38 d : 22</span>
+		e = d-- - 5;  <span class="comment">// a: 12 b: 19 c: 38 d : 22</span>
+		f = a + b;    <span class="comment">// a: 12 b: 19 c: 38 d : 21 f: 31</span>
 
 		System.out.println(a);
 		System.out.println(b);
@@ -264,13 +271,13 @@ public class Test02{
 	public static void main(String[] args){
 		int a = 20, b, c, d, e, f;
 
-		b = a++ + 10;    // b: 30
-		c = --b * 2;     // a: 21     b: 29 c: 48
-		d = --a + a++;   // a: 20     b: 29 c: 48 d: 41
-		a = b++ + --c;   // a: 21, 76 b: 29 c: 47 d: 41
-		e = d-- - 5      // a: 76     b: 30 c: 47 d: 41
-		f = a++ + b;     // a: 76     b: 30 c: 47 d: 40 f: 106
-                     // a: 77
+		b = a++ + 10;    <span class="comment">// b: 30</span>
+		c = --b * 2;     <span class="comment">// a: 21     b: 29 c: 48</span>
+		d = --a + a++;   <span class="comment">// a: 20     b: 29 c: 48 d: 41</span>
+		a = b++ + --c;   <span class="comment">// a: 21, 76 b: 29 c: 47 d: 41</span>
+		e = d-- - 5      <span class="comment">// a: 76     b: 30 c: 47 d: 41</span>
+		f = a++ + b;     <span class="comment">// a: 76     b: 30 c: 47 d: 40 f: 106
+                     // a: 77</span>
 
 		System.out.println(a);
 		System.out.println(b);
@@ -365,7 +372,7 @@ public class Test03 {
 
 		System.out.print("점수를 입력하세요: ");
 		score = sc.nextInt();
-
+<span class="comment">
 		/*  // 지저분하다.
 			if(score >= 70) {
 				grade = 'A';
@@ -377,7 +384,7 @@ public class Test03 {
 				}
 			}
 		*/
-
+</span>
 		if(score >= 70) {
 			grade = 'A';
 		}else if(score >= 40) {
@@ -431,8 +438,8 @@ public class Test05 {
 			System.out.println("예비"+100+count+"번 입니다.");
 		}
 		else System.out.println("탈락입니다.");
-
-		// if, else if, else이 한 줄만 포함한다면 {, }는 생략 가능
+<span clas="comment">
+		// if, else if, else이 한 줄만 포함한다면 {, }는 생략 가능 </span>
 		sc.close();
 	}
 }
@@ -465,7 +472,7 @@ public class Test06 {
 		sc.close();
 	}
 }
-
+<span class="comment">
 /*
 실수 불가능, 범위없고 특정값만
 char도 가능하다.
@@ -480,12 +487,13 @@ default:
 	break;
 }
 */
+</span>
 </code>
 <br>Switch-case응용<br>
 <code class="java">
 import java.util.Scanner;
 
-<span style="color:red;">// 달력(윤년 포함) 계산하는 법!</span>
+<span class="comment">// 달력(윤년 포함) 계산하는 법!</span>
 public class Test11 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -512,7 +520,7 @@ public class Test11 {
 			}else {
 				days = 28;
 			}
-		}// end switch-case
+		}<span class="comment">// end switch-case</span>
 
 		System.out.println("해당 월은 "+days+"일까지 있습니다.");
 
@@ -532,7 +540,7 @@ public class Mission02 {
 		int score = sc.nextInt();
 		int a = 0;
 		char d;
-		a = score/10;           <span style="color:#92B3B7">// Trick</span>
+		a = score/10;           <span class="comment">// Trick</span>
 
 		switch(a) {
 		case 9 :
@@ -554,7 +562,7 @@ public class Mission02 {
 			d = 'F';
 			break;
 		}
-		// 자바에서는 case 90 ... 100 과 같은 연산 불가능
+		<span class="comment">// 자바에서는 case 90 ... 100 과 같은 연산 불가능</span>
 
 		System.out.println("당신의 학점은 "+d+"입니다.");
 		sc.close();
