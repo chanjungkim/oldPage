@@ -485,6 +485,7 @@ default:
 <code class="java">
 import java.util.Scanner;
 
+<span style="color:red;">// 달력(윤년 포함) 계산하는 법!</span>
 public class Test11 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -531,7 +532,7 @@ public class Mission02 {
 		int score = sc.nextInt();
 		int a = 0;
 		char d;
-		a = score/10;
+		a = score/10;           <span style="color:#92B3B7">// Trick</span>
 
 		switch(a) {
 		case 9 :
