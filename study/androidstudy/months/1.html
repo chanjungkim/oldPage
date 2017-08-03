@@ -220,7 +220,7 @@ public class Test04 {
 </code>
 					</li>
 						<li>전위 연산자와 후위 연산자
-<code>
+<code class="java">
 public class Test01 {
 	public static void main(String[] args) {
 		int x = 100;
@@ -238,7 +238,7 @@ public class Test01 {
 }
 </code>
 <br><br>
-<code>
+<code class="java">
 public class Test02{
 	public static void main(String[] args){
 		int a = 10, b, c, d, e, f;
@@ -259,7 +259,7 @@ public class Test02{
 }
 </code>
 <br><br>
-<code>
+<code class="java">
 public class Test02{
 	public static void main(String[] args){
 		int a = 20, b, c, d, e, f;
@@ -283,7 +283,7 @@ public class Test02{
 </code>
 						</li>
 						<li>논리 연산자
-<code>
+<code class="java">
 public class Test03 {
 	public static void main(String[] args) {
 		int a=1, b=1, c=10, d=100;
@@ -305,8 +305,7 @@ public class Test03 {
 }
 </code>
 <br><br>
-<code>
-
+<code class="java">
 public class Test04 {
 	public static void main(String[] args) {
 		int a=1, b=1, c=10, d=100;
@@ -327,7 +326,155 @@ public class Test04 {
 					</ol>
 					<li>목</li>
 					<ol>
-						<li>무진행</li>
+						<li>조건문 if-else
+<code class="java">
+import java.util.Scanner;
+
+public class Test01 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int score;
+		char grade;
+
+		System.out.print("점수를 입력하세요: ");
+		score = sc.nextInt();
+
+		if(score>=50) {
+			grade = 'A';
+		} else {
+			grade = 'F';
+		}
+		System.out.println(grade);
+
+		sc.close();
+	}
+}
+
+</code>
+						</li>
+						<li>조건문 else if문의 등장
+<code class="java">
+import java.util.Scanner;
+
+public class Test03 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int score;
+		char grade;
+
+		System.out.print("점수를 입력하세요: ");
+		score = sc.nextInt();
+
+		/*  // 지저분하다.
+			if(score >= 70) {
+				grade = 'A';
+			} else {
+				if(score >= 40) {
+					grade = 'B';
+				} else {
+					grade = 'C';
+				}
+			}
+		*/
+
+		if(score >= 70) {
+			grade = 'A';
+		}else if(score >= 40) {
+			grade = 'B';
+		}else {
+			grade = 'C';
+		}
+
+		System.out.println("당신의 학점은 "+grade+"입니다.");
+
+		sc.close();
+	}
+}
+</code>
+						</li>
+						<li> else if 응용
+<code class="java">
+import java.util.Scanner;
+
+public class Test05 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int count = 0;
+		System.out.println("시험 종류를 입력하시오.: ");
+		String test = sc.next();
+		System.out.println("성적을 입력하시오.: ");
+		int a = sc.nextInt();
+		System.out.println("이름을 입력하시오.: ");
+		String name = sc.next();
+		System.out.println("엄마 이름을 입력하시오.: ");
+		String momName = sc.next();
+
+		if( a == 100) {
+			System.out.println("차석입니다.");
+		}
+		else if( a < 99) {
+			if( a < 99 )
+				if( name == "정유라" )
+					if( test == "수능"){
+						if( momName == "최순실")
+							System.out.println("수석입니다.");
+						else {
+							System.out.println("합격입니다.");
+						}
+					}
+			System.out.println("탈락입니다.");
+		}
+		else if( a < 90 ){
+			count++;
+			System.out.println("예비"+100+count+"번 입니다.");
+		}
+		else System.out.println("탈락입니다.");
+
+		// if, else if, else이 한 줄만 포함한다면 {, }는 생략 가능
+		sc.close();
+	}
+}
+</code>
+						</li>
+						<li>Switch-case문
+<code class="java">
+public class Test06 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("숫자를 입력하시오.: ");
+		int n = sc.nextInt();
+
+		switch(n){
+		case 0:
+			System.out.println("없음");
+			break;
+		case 1:
+			System.out.println("하나");
+			break;
+		case 2:
+			System.out.println("둘");
+			break;
+		default:
+			System.out.println("많음");
+			break;
+		}
+
+		sc.close();
+	}
+}
+</code>
+						<br>While문<br>
+<code class="java">
+
+</code>
+						<br>For문<br>
+<code class="java">
+
+</code>
+						</li>
 					</ol>
 					<li>금</li>
 					<ol>
