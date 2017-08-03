@@ -1,5 +1,9 @@
 a{
 	text-decoration: none;
 	text-decoration: underline;
-	color: rgb(255, 255, 255);
+	color: #555555;
+}
+textarea{
+	background-color:#ffffff;
+	color:white;
 }

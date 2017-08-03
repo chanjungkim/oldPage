@@ -572,17 +572,115 @@ public class Mission02 {
 
 								<li>While 반복문: 여러 번 반복해야하지만, 언제 끝날 지 모를 때
 <code class="java">
-while(){
+public class Test08 {
+	public static void main(String[] args) {
+		int i = 1;
 
+		while(i<=5) {                 <span class="comment"> // while(1) 와 같은 건 허용되지 않는다.</span>
+			i++;
+			System.out.println("i: "+i);
+		}
+	}
 }
-
+<span class="comment">
+// i: 2, 3, 4, 5, 6
+</span>
 <span style="#92C3B7">/* Do-While  <span class="comment">//조건 상관 없이 일단 do를 한 번 실행한 뒤 조건을 본다.</span>
 do{
 	<span class="commnet">// 내용</span>
 }while; <span class="comment">// 세미콜론 잊지말 것!</span>
 </span>
 </code>
+<br>구구단 1
+<code class="java">
+import java.util.Scanner;
 
+public class Test09 {
+	public static void main(String[] args) {
+		int i = 1;
+		int dan;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("몇 단?: ");
+		dan = sc.nextInt();
+
+		System.out.println("--구구단 시작--");
+		while(i<=9) {
+			System.out.println(dan + "x" + i + "=" + (dan*i));
+			i++;
+		}
+		System.out.println("--구구단 종료--");
+
+		sc.close();
+	}
+}
+</code>
+<br>유클리드 알고리즘
+<code>
+<span class="comment">
+세 개의 변수가 필요함.
+1. 두 수 가운데 큰 수를 x, 작은 수를 y라 한다.
+2. y가 0이면 공약수는 x와 같다.
+3. r <- x % y
+4. x <- y
+5. y <- r
+6. 단계 2로 되돌아간다.
+
+// 예시 ( 1246, 48 )
+	<table border="1">
+		<tr>
+			<th> x </th>
+			<th> y </th>
+			<th> r </th>
+		</tr>
+		<tr>
+			<td> 1246 </td>
+			<td> 48 </td>
+			<td> 46 </td>
+		</tr>
+		<tr>
+			<td> 48 </td>
+			<td> 46 </td>
+			<td> 2 </td>
+		</tr>
+		<tr>
+			<td> 46 </td>
+			<td> 2 </td>
+			<td> 0 </td>
+		</tr>
+		<tr>
+			<td> 2 </td>
+			<td> 0 </td>
+			<td> - </td>
+		</tr>
+	</table>
+</span>
+import java.util.Scanner;
+
+public class Test10 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("숫자 1: ");
+		int x = sc.nextInt();
+
+		System.out.print("숫자 2: ");
+		int y = sc.nextInt();
+		int r = 0;
+
+		while( y!=0 ) {
+			r = x % y;
+			x = y;
+			y = r;
+			r = x;
+		}
+
+		System.out.println("최대 공약수는 "+r+"입니다.");
+
+		sc.close();
+	}
+}
+</code>
 								</li>
 								<li>For 반복문: 횟수가 명확할 때, 특정 번 반복할 떄
 <code class="java">
