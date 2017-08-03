@@ -1,26 +1,5 @@
-body{
-	background: #FFFFFF;
-	color: white;
-	margin: 10px;
-}
 a{
 	text-decoration: none;
 	text-decoration: underline;
 	color: rgb(255, 255, 255);
-}
-select{
-	background: rgb(0, 0 , 0);
-	color: rgb(255, 255, 255);
-}
-#content{
-	background: black;
-	color: white;
-	margin-left: 10px;
-	padding-left: 10px;
-	margin-top: 5px;
-	padding-top: 5px; 
-}
-
-#comment{
-	background: #FFFFFF;
 }
