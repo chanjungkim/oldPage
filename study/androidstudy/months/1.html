@@ -481,6 +481,44 @@ default:
 }
 */
 </code>
+<br>Switch-case응용<br>
+<code class="java">
+import java.util.Scanner;
+
+public class Test11 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("몇 년?: ");
+		int year = sc.nextInt();
+
+		System.out.print("몇 월?: ");
+		int month = sc.nextInt();
+
+		int days = 0;
+
+		switch(month) {
+		case 1: case 3: case 5: case 7:
+		case 8: case 10: case 12:
+			days = 31;
+			break;
+		case 4: case 6: case 9: case 11:
+			days = 30;
+			break;
+		case 2:
+			if((year%4==0 && (year%400==0)) || (year %400==0)) {
+				days = 29;
+			}else {
+				days = 28;
+			}
+		}// end switch-case
+
+		System.out.println("해당 월은 "+days+"일까지 있습니다.");
+
+		sc.close();
+	}
+}
+</code>
 						<br>While문<br>
 <code class="java">
 
