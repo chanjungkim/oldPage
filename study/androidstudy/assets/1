@@ -1,25 +1,27 @@
-@Override
-protected void onCreate(Bundle savedInstanceState){
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_main);
+public class MainActivity extends AppCompatActivity{
+  @Override
+  protected void onCreate(Bundle savedInstanceState){
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+  }
+
+  public void onBUtton1Clicked(View v){
+    Toast.makeText(this, "버튼이 눌렸어요.", Toast.LENGTH_Long).show();
+    // Toast메시지가 나옴.
+
+    /*
+    Intent intent = new Intent(this, MenuActivity.class);
+    startActivity();   // 클릭 시 연결된 Activity(MenuActivity)로 넘어감
+    */
+  }
+
+  public void onButton2Clicked(View v){
+    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"));
+    startAcitivy(intent);
+  } // Uri.parse 안에 URL을 넣으면 자동으로 브라우저 선택 창이 뜸
+
+  public void onButton3CLicked(View v){
+    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1000-1000"));
+    startActivity(intent);
+  } // Uri.parse 안에 tel:전화번호만으로도 연결된 앱이 달라짐.
 }
-
-public void onBUtton1Clicked(View v){
-  Toast.makeText(this, "버튼이 눌렸어요.", Toast.LENGTH_Long).show();
-  // Toast메시지가 나옴.
-
-  /*
-  Intent intent = new Intent(this, MenuActivity.class);
-  startActivity();   // 클릭 시 연결된 Activity(MenuActivity)로 넘어감
-  */
-}
-
-public void onButton2Clicked(View v){
-  Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"));
-  startAcitivy(intent);
-} // Uri.parse 안에 URL을 넣으면 자동으로 브라우저 선택 창이 뜸
-
-public void onButton3CLicked(View v){
-  Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1000-1000"));
-  startActivity(intent);
-} // Uri.parse 안에 tel:전화번호만으로도 연결된 앱이 달라짐.
