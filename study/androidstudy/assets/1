@@ -1,4 +1,4 @@
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity{ // 화면을 위한 것
   @Override
   protected void onCreate(Bundle savedInstanceState){
     super.onCreate(savedInstanceState);
