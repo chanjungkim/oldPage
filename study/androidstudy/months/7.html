@@ -31,7 +31,103 @@
 				</ol>
 				<li>금</li>
 				<ol>
-					<li>무진행</li>
+					<li>안드로이드 플랫폼 기본 아키텍쳐
+<code class="text">
+	<img src="http://cfile7.uf.tistory.com/image/221EC333557DA71E0AF35C" alt="안드로이드 플랫폼 기본 아키텍쳐">
+	<span class="comment">https://en.wikipedia.org/wiki/Android_(operating_system)#/media/File:Android-System-Architecture.svg
+</span>
+
+기본 앱 > 애플리케이션 프레임웍 > 안드로이드 런타임 > 시스템 라이브러리 > 리눅스 커널
+
+__Linux Kernel [Core]__
+일반적인 Linux 커널 + 모바일 디바이스에 최적화된 기능(전력 관리, 안드로이드에 최적화된 Binder IPC (프로세스간 커뮤니케이션) 등)
+
+__System Library [커널 위]__
+C로 구현된 네이티브 라이이브러리들.
+Open GL: 3차원 그래픽을 위한 것
+SQL Lite DB: 로컬 데이터 베이스
+WebKit: 웹 브라우징
+Media Framework: 멀티미디어 재생
+
+이 시스템 라이브러리들은 내부적으로 JNI 인터페이스를 통해서 자바 코드로부터 호출되게 된다.
+
+__Android Runtime [시스템 라이브러리 위]__
+달빅(Dalvik)이라는 이름의 JVM이 올라간다.
+이 코어 자바 라이브러리들이 올라가게 된다. (java.*, javax.* ,org.* ...등)
+
+
+__Application Framework [ 안드로이드 런타임 위 ]__
+안드로이드 런타임 까지 기본 JVM과 자바 라이브러리가 올라갔다면 애플리케이션 개발 프레임웍은 라이브러리이다.
+자바 위에, JEE 나 스프링,Hibernate와 같은 프레임웍이 있는 것 같이 애플리케이션 개발용 프레임웍이 올라가 있다.
+
+-Package manager
+어떤 애플리케이션들이 설치되어 있는지를 관리
+
+-Windows manager
+윈도우 화면을 관리 (윈도우: 네비게이션바, 다이얼로그 형식으로 나오는 윈도우 등등)
+
+-View manager
+라디오 버튼이나, 탭, 버튼 등의 기본 그래픽 컴포넌트 관리
+
+-Resource manager
+컴파일이 되지 않는 Resource를 관리
+예를 들어 폰 애플리케이션에 같이 패키징된 string, 이미지 파일등을 관리한다.
+(안드로이드 프로젝트상 res 내에 있는 것을 관리하는 듯)
+
+-Activity manager
+안드로이드의 Activity 관리
+이 액티버티는 안드로이드 앱의 화면 하나에 해당(?)하는 것으로,
+이 액티버터의 생성 및 소멸까지의 Life Cycle(생명 주기)을 관리
+
+-Contents provider
+데이터 저장소에 대한 추상화된 계층
+이 계층을 통하여 데이터를 저장할 수 있고, (이 저장소를 다른 애플리케이션에게 공유하여 애플리케이션 간에) 데이타를 공유할 수 도 있다.
+
+-Location manager
+위치 관련 서비스 기능을 제공
+
+-Notification manager
+Notification bar에 중요한 이벤트를 보여주는 기능 제공 (푸쉬 시스템도 여기서 관리 하나?)
+
+__기본 앱 [최상위]__
+기본적으로 폰에 프리로드 되어 설치되는 애플리케이션들이 존재
+(연락처, 메신져, 브라우져, 카메라등의 기본적인 애플리케이션 등)
+</code>
+					</li>
+					<li>안드로이드 프로그래밍 구조의 기본
+<code class="text">
+__안드로이드 애플리케이션의 주요 구성 요소(크게 4가지)__
+- Activity
+메인이 되는 컴포넌트
+모바일 앱의 특성상, 모바일앱은 하나의 UI가 떠서 사용자로 부터 입력을 받고, 출력을 담당한다.
+( Activity = 하나의 화면 인터페이스 )
+
+- Service
+백그라운드에서 도는 컴포넌트로 UI가 없이 동작
+( 음악 플레이 처럼 화면이 없는 상태에서 백그라운드로 동작 )
+
+- BroadCastReceiver
+이벤트를 처리하는 컴포넌트로, 안드로이드의 Intent를 받아 처리
+이 Intent는 Pub/Sub형태로 바인딩되며 특정 intent가 발생하면 이를 subscribe하는 BroadCastReceiver가 이를 받아서 처리
+
+- ContentsProvider
+ContentsProvider는 일종의 Database를 추상화 해놓은 개념으로 단순히 데이타를 저장하는 것 뿐만 아니라, 저장된 데이타를 다른 앱간에 공유하는 기능도 지원한다.
+
+__안드로이드 빌드 & 배포 프로세스__
+<img src="http://cfile21.uf.tistory.com/image/2410DF425586BB7C282FA3" alt="안드로이드 빌드&배포 프로세스">
+빌드 > 컴파일 작업 수행 > 리소스를 포함하여 *.apk라는 파일로 패키징
+
+( 패키징: *.dex(코드를 컴파일한 내용) + *.arsc(컴파일된 리소스 파일) + 컴파일 되지 않은 리소스 (무엇일까?)가 같이 저장
++ AndoridManifest.xml(안드로이드 애플리케이션의 설정을 지정)이 저장됨 )
+
+> apk 파일을 Signing한다.
+( Signing: 키를 이용하여 이 APK에 서명을 하는 작업
+apk가 타인에 의해서 위변조 되는 것을 방지하고, 내가 이 애플리케이션을 만들었다는 표시를 하는 과정
+
+출처: http://bcho.tistory.com/1038 [조대협의 블로그]
+</code>
+
+					</li>
 				</ol>
 			</ul>
 		<h3>2주</h3>
