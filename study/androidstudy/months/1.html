@@ -693,14 +693,108 @@ for(int i = 0 ; i < n ; i++){
 					</ol>
 					<li>금</li>
 					<ol>
-						<li>무진행</li>
+						<li>시험
+<code class="text">
+JDK와 JRE의 차이?
+</code>
+						</li>
 					</ol>
 				</ul>
 			<h3>2주</h3>
 				<ul>
 					<li>월</li>
 					<ol>
-						<li>무진행</li>
+						<li>Class와 객체
+<code class="text">
+	[객체지향 내용 정리]
+	클래스 : 객체를 만들기 위한 설계도. 필드부분과 메소드 부분으로 설계됨.
+	객체 : 클래스의 설계가 반영되어 실제 메모리가 할당된 독립적인 개체.
+	필드 : 멤버변수라고도 불리며 객체가 존재하는 동안 그안에 계속 유지되는 변수
+	메소드 : 함수. 명령어의 집합, 묶음. 객체 안에 존재하는 작은 부품.
+		       참조변수를 이용해 호출할 때 실행됨.
+	가비지컬렉터 : new 키워드로 Heap 영역에 생성된 객체를 참조하는 변수가
+			          하나도 존재하지 않는 경우 해당 객체를 소멸시키는 역할
+</code>
+<code class="java">
+<span class="comment">// package는 보통 소문자로(대문자인경우도 있다!)</span>
+package lab01;
+
+<span class="comment">// main함수가 없다.</span>
+public class BankAccount {
+	int balance;
+	void deposit(int amount) {
+		balance+=amount;
+	}
+	void withdraw(int amount) {
+		if(this.balance < 0 | this.balance < amount) {
+			System.out.println("잔고가 부족합니다. 거래 취소됨.");
+		}else {
+			balance-=amount;
+		}
+	}
+	int getBalance() {
+		System.out.println(balance);
+
+		return balance;
+	}
+	double addInterest(int amount) {
+		double interest = amount + ((double)amount*0.075);
+
+		return interest;
+	}
+}
+</code>
+<br>
+<code class="java">
+package lab01;
+
+public class BankAccountTest{
+<span class="comment">// main함수가 있다.</span>
+	public static void main(String[] args) {
+		BankAccount b = new BankAccount();
+
+		b.balance=500;
+		b.getBalance();
+		b.withdraw(60);
+		b.getBalance();
+		b.addInterest(b.balance);
+		b.getBalance();
+
+	}
+}
+</code>
+<br>
+<code class="text">
+	class는 설계도면
+	object(객체)는 실제만들어진 것
+	instance는 메모리에서 사용중인 것 (객체와 동의어라고 봐도 상관 무)
+
+	Object obj = new Object();
+	와 같은 형식으로 객체 생성
+
+	obj. 와 같이 점으로 obj 객체의 멤버(변수/함수)에 접근 가능하다.
+</code>
+						</li>
+						<li> 참조형 타입인 String의 다른 면모
+<code class="text">
+	대문자로 시작하는 String는 사실 클래스이다.
+	String str = new String();
+	로 객체 생성 가능하며
+	str.와 같이 점을 찍으면 멤버 메소드에 접근이 가능하다.
+</code>
+<code>
+	str.charAt(int);
+	str.equals(str2);
+	str.equalsIgnoreCase(str2); <span class="comment">// 대소구분 안하고 비교</span>
+	str.length();
+	str.concat(); <span class="comment">// 합치기</span>
+	str.contains();
+	str.isEmpty();
+	str.toUpperCase();
+	str.toLowerCase();
+	Integer.toString();
+</code>
+						</li>
 					</ol>
 					<li>화</li>
 					<ol>
