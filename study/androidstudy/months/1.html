@@ -833,7 +833,17 @@ JVM구조
 <img src="http://cfile25.uf.tistory.com/image/2540294C5654207F26E12E" alt="JVM 구조" width="50%" height="50%">
 기본자료형(원시형) 변수는 (땅값이 똥값인) Stack영역에
 참조형(참조타입) 변수(=객체)는 Heap영역이나 Method영역에 객체 주소를 가진다.
-<img src="http://cfile24.uf.tistory.com/image/216AE04C5654207F0AA967" alt="Runtime Data Areas" width="50%" height="50%">Runtime Data Areas</a>
+-----------------------------------------------------
+변수 분류 기준
+1. 무엇을 저장하는가?
+=>데이터 ---------------------> 기본자료형 변수
+=>(객체의) 주소 --------------> 참조(클래스) 자료형 변수
+
+2. 어디에 선언하는가?
+=> 클래스 내부 ---------------> 멤버변수(=인스턴스 변수)
+=> (클래스 안의 메소드 내부) --> 지역변수
+------------------------------------------------------
+<img src="http://cfile24.uf.tistory.com/image/216AE04C5654207F0AA967" alt="Runtime Data Areas" width="50%" height="50%">
 ->
 Stack: 기본형
 각 Thread마다 하나씩 존재, Thread가 시작될 때 할당
@@ -843,9 +853,10 @@ FILO(선입후출) 구조, push와 pop사용
 Heap:  new 연산자로 생성된는 객체, 배열
 런타임 시 동적으로 할당하여 사용하는 영역
 힙영역에서 생성된 객체와 배열은 Stack 영역의 변수나 다른 객체의 필드에서 참조
+
 자세히:
-<a href="http://nakim02.blog.me/220994588558">일반적인 메모리 구조(C언어에서)</a>
-<a href="http://hoonmaro.tistory.com/19">자바 메모리 구조</a>
+<a href="http://nakim02.blog.me/220994588558">[일반적인 메모리 구조(C언어에서)]</a>
+<a href="http://hoonmaro.tistory.com/19">[자바 메모리 구조]</a>
 </code>
 						</li>
 						<li>배열
