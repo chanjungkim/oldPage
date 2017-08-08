@@ -715,6 +715,7 @@ JDK와 JRE의 차이?
 	가비지컬렉터 : new 키워드로 Heap 영역에 생성된 객체를 참조하는 변수가
 			          하나도 존재하지 않는 경우 해당 객체를 소멸시키는 역할
 </code>
+<br>
 <code class="java">
 <span class="comment">// package는 보통 소문자로(대문자인경우도 있다!)</span>
 package lab01;
@@ -782,6 +783,7 @@ public class BankAccountTest{
 	로 객체 생성 가능하며
 	str.와 같이 점을 찍으면 멤버 메소드에 접근이 가능하다.
 </code>
+<br>
 <code>
 	str.charAt(int);
 	str.equals(str2);
@@ -795,16 +797,83 @@ public class BankAccountTest{
 	Integer.toString();
 </code>
 						</li>
+						<li>문자 다루기 - char <-> int
+<code class="text">
+<img src="../assets/photo.jpg" alt="char과 int">
+</code>
+						</li>
 					</ol>
 					<li>화</li>
 					<ol>
 						<li>Review
-<code class="java">
+<code class="text">
 객체?
 참조변수(클래스변수)
 클래스
 가비지컬렉터 ; 시점은 알 수 없음
 null이란? ex. String s = null;   // s는 주소 저장 변수, null = 주소 없음, 빔
+
+JVM구조
+<img src="http://cfile25.uf.tistory.com/image/2540294C5654207F26E12E" alt="JVM 구조">
+기본자료형(원시형) 변수는 (땅값이 똥값인) Stack영역에
+참조형(참조타입) 변수(=객체)는 Heap영역이나 Method영역에 객체 주소를 가진다.
+<a href="http://cfile24.uf.tistory.com/image/216AE04C5654207F0AA967">Runtime Data Areas</a>
+->
+Stack: 기본형
+각 Thread마다 하나씩 존재, Thread가 시작될 때 할당
+FILO(선입후출) 구조, push와 pop사용
+메소드 정보, 지역변수, 매개변수, 연산 중 발생하는 임시 데이터 저장
+
+Heap:  new 연산자로 생성된는 객체, 배열
+런타임 시 동적으로 할당하여 사용하는 영역
+힙영역에서 생성된 객체와 배열은 Stack 영역의 변수나 다른 객체의 필드에서 참조
+자세히:
+<a href="http://nakim02.blog.me/220994588558">일반적인 메모리 구조(C언어에서)</a>
+<a href="http://hoonmaro.tistory.com/19">자바 메모리 구조</a>
+</code>
+						</li>
+						<li>배열
+<code class="text">
+메모리 공간에 n크기의 배열은
+[0][1][2]...[n-1]
+index 0부터 n-1까지 존재함.
+
+int[] arr = new int[5];
+과 같이 5크기의 배열을 생성 (배열은 객체이다.)
+index는 0부터 4까지 존재
+
+arr.length는 길이를 알 수 있음.
+배열은 길이를 정의하고 사용하기 때문에 바로 길이를 알 수 있다.
+length는 arr의 멤버 변수다.(String은 str.length()와 같은 멤버 메소드이다.)
+</code>
+<code class="java">
+	<span class"comment">(자바 배열 선언의 예)</span>
+	int[] arr = {10, 30, 20};
+
+</code>
+<br>
+<code class="java">
+package test02;
+
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		int sum = 0;
+		for(int i = 0 ; i < n ; i++) {
+			arr[i] = sc.nextInt();
+			sum+=arr[i];
+		}
+
+		System.out.println(sum);
+
+		sc.close();
+	}
+}
 </code>
 						</li>
 					</ol>
