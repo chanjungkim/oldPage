@@ -997,7 +997,130 @@ public class Test {
 					</ol>
 					<li>수</li>
 					<ol>
-						<li>무진행</li>
+						<li>Setter 와 Getter
+<code class="text">
+[객체지향 정보은닉]
+* 클래스의 멤버변수 접근지정자는 대부분 private으로 선언함
+* private은 객체외부에서 참조변수로 접근했을 때 보이지 않음
+* 객체 내부의 private 변수에 값을 설저하고 싶을 때?        ---> 설정자 Setter 메소드 사용!
+* 객체 내부의 private 변수의 값을 외부에서 받아보고 싶을 때 ---> 접근자 getter 메소드 사용!
+</code>
+<br>
+<code class="java">
+package test01;
+
+public class Date {
+	private int year = 2017;
+	private String month = "1월";
+	private int day = 1;
+
+	public void setDay(int d) {
+		if(d<=31 && d>=1) {
+			day = d;
+		} else {
+			System.out.println("부정합한 day정보 입니다.");
+		}
+	}
+
+	public void setMonth(String n) {
+		month = n;
+	}
+
+	public void setYear(int y) {
+		year = y;
+	}
+
+	public int getYear(int y) {
+		return year;
+	}
+
+	public String getMonth() {
+		return month;
+	}
+
+	public int setDay() {
+		return day;
+	}
+
+	public void printDate() {
+		System.out.println(year+"-"+month+"-"+day);
+	}
+}
+</code>
+<br>
+<code class="java">
+package test01;
+
+public class Test {
+	public static void main(String[] args) {
+		Date today = new Date();
+
+		today.setDay(5);
+		today.setYear(2011);
+		today.printDate();
+	}
+}
+</code>
+						</li>
+						<li>메소드 오버로딩
+<code class="text">
+하나의 클래스 내부에 같은 이름의 메소드를 2개 이상 설계해 놓는 기법
+!! 주의사항: 매개변수 타입, 매개변수 갯수, 리턴 타입 중 하나라도 달라야함(완벽히 똑같은 메소드 중복은 불가함)
+</code>
+<br>
+<code>
+package test03;
+
+public class Car {
+	private String color = "WHITE";
+	private String model = "Sonata";
+	private int speed = 0;
+
+	public void speedUp() {
+		speed+=10;
+	}
+
+	public void speedUP(int s) {    <span class="comment">// 오버 로딩의 예: 매개 변수가 다르다.</span>
+		speed+=s;
+	}
+
+	public void printCarInfo() {
+		System.out.println("차종:"+model+"/현재속도"+speed);
+	}
+}
+</code>
+<br>
+<code>
+package test03;
+
+public class Test {
+	public static void main(String[] args) {
+		Car c = new Car();
+
+		c.printCarInfo();
+
+		c.speedUp();
+		c.printCarInfo();
+		c.speedUp();
+		c.printCarInfo();
+		c.speedUp();
+		c.printCarInfo();
+	}
+}
+</code>
+						</li>
+						<li>UML 다이어그램
+<code class="text">
+<img src="../assets/UML.jpg" alt="UML" width="50%" height="50%">
+<img src="../assets/UMLClassDiagram.jpg" alt="UML Class Diagram" width="50%" height="50%">
+<img src="../assets/UMLDiagram.jpg" alt="UML Diagram" width="50%" height="50%">
+
+public: +
+private: -
+변수와 메소드(반환형, 매개변수)만 작성
+
+</code>
+						</li>
 					</ol>
 					<li>목</li>
 					<ol>
