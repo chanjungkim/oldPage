@@ -142,7 +142,94 @@ apk가 타인에 의해서 위변조 되는 것을 방지하고, 내가 이 애�
 					</ol>
 					<li>수</li>
 					<ol>
-						<li>무진행</li>
+						<li> 멘토링 과제01
+<code class="text">
+미션:
+1. 하나의 버튼이 있는 A, B화면이 존재.
+2. A화면에서 B화면으로 넘어감.
+3. B화면으로 넘어가면 숫자가 0부터 카운트해서 올라감.
+4. B화면에서 A화면으로 넘어가면 B화면에 나왔던 마지막 숫자가 보여짐.
+---------------------------------------------------------------
+</code>
+<code class="java">
+public class MainActivity extends AppCompatActivity {
+    static String count;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("counter");
+        TextView textView = (TextView)findViewById(R.id.textView3);
+        textView.setText(message);
+    }
+
+    public void onStartButtonClicked(View v){
+        // Toast.makeText(getApplicationContext(), "시작 버튼을 눌렀어요.", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+
+        startActivity(intent);
+    }
+}
+</code>
+<code class="java">
+public class MenuActivity extends AppCompatActivity {
+
+    int count = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_menu);
+
+        // 아이디가 textView인 TextView에 1000ms당 conut를 1씩 증가시킨 후 textView의 내용을 업데이트 시킨다.
+        final TextView textView = (TextView)findViewById(R.id.textView);
+
+        Thread t = new Thread(){
+          @Override
+            public void run(){                 // Thead 사용
+              while(!isInterrupted()){
+                  try {
+                      Thread.sleep(1000);       // 1000ms = 1 second
+
+                      runOnUiThread(new Runnable() {      // Runnable 객체 생성
+                          @Override
+                          public void run() {           // run 메소드에서 1씩 증가한 결과를 텍스트 뷰에 업데이트 시킴.
+                              count++;
+
+                              textView.setText(String.valueOf(count));
+                          }
+                      });
+
+                  } catch (InterruptedException e) {      // 예외 처리
+                      e.printStackTrace();
+                  }
+              }
+          }
+        };
+        t.start();
+        // end: 일반적인 Thread 사용법
+    }
+
+    public void onBackButtonClicked(View v){
+        Toast.makeText(getApplicationContext(), "뒤로가기 버튼을 눌렀어요.", Toast.LENGTH_LONG).show();
+
+        // MainActivity로 count값을 String으로 넘겨준다.
+        Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+        intent.putExtra("counter", String.valueOf(count));
+        // end
+
+        startActivity(intent);
+    }
+</code>
+<code class="text">
+--------------------------------
+배워야하는 것들:
+1. intent(p.260, p.269)
+2. Thread - Runnable 객체(p.543)
+</code>
+						</li>
 					</ol>
 					<li>목</li>
 					<ol>
