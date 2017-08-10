@@ -1142,6 +1142,10 @@ Location: http://objectaid.com/update/current
 그리고 객체의 toString을 덮어쓰기(overriding)하면 다른 형식의 문자열을 리턴할 수 있다.
 문자열이 기대되는 곳에서 문자열이 아닌 객체를 사용하면 시스템은 암시적으로 toString을 호출한다.
 자바스크립트에서는 prototype을 이용해 객체의 메소드를 덮어쓰기(override)할 수 있다.
+
+자바에서는 System.out.println(객체명)을 쓰면 바로 출력이 가능하다.
+toString이란 이름은 이미 정해져 있는 이름이다.
+(=System.out.println(객체명.toString()))
 </code>
 <br>
 <code class="java">
@@ -1172,7 +1176,7 @@ public class BankAccountTest{
 		BankAccount ba = new BankAccount();
 		ba.deposit(500);
 		ba.withdraw(200);
-		System.out.println(ba);
+		System.out.println(ba);  <span class="comment">toString메소드가 있기 때문에 ba만 사용</span>
 	}
 }
 </code>
@@ -1334,6 +1338,81 @@ public class Car {
 		System.out.println("속도:"+speed+"/차종:"+model+"/색상:"+color);
 	}
 }
+</code>
+						</li>
+						<li>정적 변수 - static 사용법
+<code class="text">
+객체 개별 다른 데이터를 가지고 있으면 따로 만들어야하지만,
+객체 생성을 여러 번해도 해당 그룹에 공통된 데이터가 있으면 static 변수로 사용.
+학생 - 학생 수
+</code>
+<br>
+<code class="java">
+package test04;
+
+public class Student {
+	<span class="comment">// instant field</span>
+	private String name;
+	private String phone;
+	private int age;
+
+	private static int numOfStudent=0;
+	<span class="comment">//</span>
+	public Student(String name, String phone, int age) {
+		this.name = name;
+		this.phone = phone;
+		this.age = age;
+
+		numOfStudent++;   <span class="comment">// 객체가 생성될 때마다 +1됨. static 변수이기 때문에 1씩 쌓이게됨.</span>
+	}
+
+	public static int getNumOfStudent() {
+		return numOfStudent;
+	}
+
+	public String toString() {
+		return "이름: "+name+" 전화번호: "+phone+" 나이: "+age;
+	}
+}
+</code>
+<br>
+<code>
+package test04;
+
+public class Test {
+	public static void main(String[] args) {
+
+		<span class="comment">//System.out.println("학생 수: "+Student.numOfStudent); private으로 해서 사용 불가능</span>
+		System.out.println("학생 수: "+Student.getNumOfStudent()); <span class="comment">// 객체 생성하지 않아도 쓸 수 있다.(단, 클래스명.변수명);<span>
+
+		Student s = new Student("양유진", "01075640626", 20); <span class="comment">// s객체 생성</span>
+
+		System.out.println(s.toString());
+		System.out.println(s); <span class="comment">// 객체 이름만 넣어도 출력이 된다.</span>
+
+		Student s1 = new Student("홍길동", "11111111", 30);
+		Student s2 = new Student("홍길똥", "22222222", 20);
+		Student s3 = new Student("홍길중", "33333333", 70);
+
+		<span class="comment">//System.out.println("학생 수: "+Student.numOfStudent); private으로 해서 사용 불가능
+		//System.out.println("학생 수: "+s1.numOfStudent); 객체마다 .numOfStudent를 해줘야함 -> numOfStudent를 static으로 바꿈</span>
+		System.out.println("학생 수: "+Student.getNumOfStudent()); <span class="comment">// 결과 4</span>
+	}
+}
+</code>
+<br>
+
+						</li>
+						<li>드디어 알게되는 main의 비밀
+<code class="text">
+main은 static이 붙어있다.
+</code>
+						</li>
+						<li>드디어 알게되는 final의 비밀
+<code class="text">
+상수에 public static과 final을 같이 쓰는게 일반적이다.
+왜냐하면 같은 값을 항상 같는 상수는 객체 생성할 때마다 가지고 있을 필요가 없기 때문이다.(메모리 절약)
+public으로 하는 이유는 어차피 변경이 불가능하기 때문에 누구나 쉽게 그냥 접근해도 상관없기 때문이다.(불필요한 접근 제거) 
 </code>
 						</li>
 					</ol>
