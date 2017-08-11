@@ -1438,7 +1438,47 @@ public으로 하는 이유는 어차피 변경이 불가능하기 때문에 누�
 					</ol>
 					<li>금</li>
 					<ol>
-						<li>무진행</li>
+						<li>객체 배열
+<code class="java">
+Car[] cars = new Car[5];
+cars[0] = new Car();
+cars[1] = new Car();
+cars[2] = new Car();
+cars[3] = new Car();
+cars[4] = new Car();
+</code>
+<						</li>
+						<li>이중 배열(중첩 배열)
+<code class="java">
+int[][] arr1 = new int[2][4];
+int[][] arr2 = {{1, 2, 3, 4}, {5, 6, 7, 8}};
+</code>
+						</li>
+						<li>얕은 복사와 깊은 복사 (Shallow copy & Deep copy)
+<code class="java">
+int[] a = {1, 2, 3, 4, 5}
+int[] b = new int[a.length];
+b = a; <span class="comment">// 사본이 아님. 주소를 전달하여 서로 연결됨. -> <span style="color:red;">얕은 복사</span></span>
+<span class="comment">// 복사를 하려면...? 다음과 같이 for문을 사용해야한다. -> <span style="color:red;">깊은 복사</span></span>
+for( int i = 0 ; i < a.length ; i++) b[i] = a[i];
+</code>
+						</li>
+						<li>Call By Reference & Call By Value
+<code class="text">
+파라미터 값을 넘겨줄 때,
+실제 연결된 주소를 넘겨주어 필드 변수에 영향을 주는 것을 <span style="color:red;">Call By Reference</span>라고 하고,
+지역 변수로 존재하여 필드 변수에 영향을 주지 않는다면 <span style="color:red;">Call By Value</span>라고 한다.
+</code>
+						</li>
+						<li>시험 틀린 것/헷갈리는 것
+<code class="text">
+*배열이 아니더라도 자바에서는 초기화 하지 않으면 기본값이 설정됨.
+*인스턴스 필드 = 상태 변수, 상태를 나타내기 때문에.
+*컴파일 -> 바이트 코드 -> 클래스 코드 -> (객체를 만나면 인스턴스를 위한 메모리 할당)
+*str.substring(4)는 str의 4째 인덱스부터 마지막 인덱스까지의 String을 의미
+*같은 클래스 내에서라도 public static 이라고 선언하지 않은 메소드는 자신을 생성하지 않고서는 method를 사용할 수 없다.
+</code>
+						</li>
 					</ol>
 				</ul>
 
@@ -1446,11 +1486,11 @@ public으로 하는 이유는 어차피 변경이 불가능하기 때문에 누�
 				<ul>
 					<li>월</li>
 					<ol>
-						<li>무진행</li>
+						<li>휴일... 고로 <a href="./7.html">안드로이드</a></li>
 					</ol>
 					<li>화</li>
 					<ol>
-						<li>무진행</li>
+						<li>휴일... 고로 <a href="./7.html">안드로이드</a></li>
 					</ol>
 					<li>수</li>
 					<ol>
