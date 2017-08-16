@@ -1681,6 +1681,22 @@ class ClassB{
 이때는 오버라이딩이 아니라 ClassB만을 위한 메소드가 되어, A.methodFour / B.methodFour 과 같이 따로 따로 사용이 가능하다. 이때 서로 연관이 없어지는데, 이때 가린다(hide)고 표현한다.</span>
 </code>
 						</li>
+						<li>Ctrl + Space(*)의 비밀과 Generate Getters and Setters
+<code class="text">
+main은 main 후 *
+System.out.println는 syso 후 *
+를 사용해왔었다.
+
+안드로이드 스튜디오를 사용해본 적이 있는 사람이라면 annotation이 자동으로 되는 걸 알 수 있다.
+그것을 Eclipse에서는 어떻게 사용할까? 즉, 자동으로 오버라이딩을 하려면 어떻게 해야할까?
+답은 간단하다. 부모 클래스의 메소드의 이름을 다른 것들과 구분되게 앞글자만 적은 후 *를 해주면,
+목록에 뜨게 되고 그것을 선택하면 자동으로 @Override와 함께 메소드가 불러와진다.
+
+이와 같은 방법으로 getter와 setter도 만들 수 있다.
+한 두개 일때는 *로 간편하게 할 수 있지만, 변수가 많을 때는 Source > Generate Getters and Setters를 사용하면
+손쉽게 Getter와 Setter를 만들 수 있다.
+</code>
+						</li>
 						</li>
 					</ol>
 					<li>목</li>
