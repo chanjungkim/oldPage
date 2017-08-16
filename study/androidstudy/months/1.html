@@ -1113,8 +1113,9 @@ public class Test {
 }
 </code>
 						</li>
-						<li>UML 다이어그램
+						<li>UML(Unified Modeling Language) 다이어그램
 <code class="text">
+<img src="../assets/umlLogo.png" alt="UML Logo" width="50%" height="50%">
 <img src="../assets/UML.jpg" alt="UML" width="50%" height="50%">
 <img src="../assets/UMLClassDiagram.jpg" alt="UML Class Diagram" width="50%" height="50%">
 <img src="../assets/UMLDiagram.jpg" alt="UML Diagram" width="50%" height="50%">
@@ -1494,7 +1495,193 @@ for( int i = 0 ; i < a.length ; i++) b[i] = a[i];
 					</ol>
 					<li>수</li>
 					<ol>
-						<li>무진행</li>
+						<li>휴일 기념 Review
+<code class="text">
+	[객체지향 특성]
+	1. 캡슐화(Encapsulation)
+	2. 정보은닉(Information Hiding)
+	3. 상속(Inheritance) : 기존에 작성된 클래스를 활용해서 현재 작성하고자
+		하는 클래스가 상속(extends)받아 부모 클래스의 멤버(필드+메소드)
+		를 활용할 수 있게 하는 기법
+	4. 다형성 (Polymorphism)
+	-----------------------------------------------------------------------
+	[상속 주의사항]
+	1. 부모의 private멤버(필드+메소드)에는 접근 불가능.
+	   - 없는건 아님. 받긴 받았는데 접근이 불가능
+	   - 자식 클래스에서 해당 멤버를 사용하려면 getter/setter를 쓰거나?
+	   - 부모가 private 말고 protected 해놨으면 자식이 사용 가능!
+	2. 오버라이딩 할때 접근지정자 축소는 불가능
+	3. 오버라이딩 할때 static 변경 불가.
+	4. 생성자 규칙!
+	   - 자바에서 객체를 생성할 때에는 반.드.시 생성자 메소드를 호출해야 함!
+	   - 자식 객체를 생성할 때는 당연히 자식 클래스의 생성자를 호출해야 함.
+	   - 자식 클래스의 생성자는 반.드.시 부모 생성자를 먼.저 호출한 후
+	     나머지 초기화 작업을 수행해야 함!
+	   - 만약? 자식생성자에서 부모생성자를 명시적으로 호출하지 않을 경우??
+	     컴파일러가 super(); 를 자동으로 끼워넣음!
+	     부모클래스에 매개변수 없는 생성자가 없으면 ? 에러남~
+	-----------------------------------------------------------------------
+	[오버라이딩]
+	 : 상속할 때! 부모클래스에서 받은 메소드의 내부를 자식버전으로 재정의함.
+	 : 문법 - 부모클래스의 메소드형식(반환형, 메소드이름, 매개변수) 그.대.로
+		유지시켜야 오버라이딩으로 인정됨.
+	 : 이 때 상속받은 부모버전 메소드 사라지는거 아님! super로 호출 가능!
+
+	[@Override 애노테이션]
+	 : 컴파일러한테 현재 자식 클래스에서 메소드 새로 추가가 아닌 오버라이딩
+	   하고 있음을 명확하게 알림.
+	-----------------------------------------------------------------------
+	[super 참조변수의 용도]
+	1. 상속받아온 부모의 멤버(필드+메소드)와 현재 자식 클래스의 멤버 이름이
+	   겹치는 경우 부모를 콕 찍어서 사용할 때 super.멤버이름
+	2. 자식클래스 생성자에서 부모생성자를 명시적으로 호출할 때
+</code>
+						</li>
+						<li> 예제
+<code class="java">
+package pro07;
+
+public class Student {
+	private String name;
+	private String studentNumber;
+	private String department;
+	private String grade;
+	private String totalCredit;
+
+	public Student() {
+		this("홍길동", "20091922", "기계과", "4", "136");
+	}
+	public Student(String name, String studentNumber, String department, String grade, String totalCredit) {
+		this.name = name;
+		this.studentNumber = studentNumber;
+		this.department = department;
+		this.grade = grade;
+		this.totalCredit = totalCredit;
+	}
+	public void setName(String name){
+		this.name = name;
+	}
+	public void setStudentNumber(String studentNumber) {
+		this.studentNumber = studentNumber;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	public void setTotalCredit(String totalCredit) {
+		this.totalCredit = totalCredit;
+	}
+	public String getName() {
+		return name;
+	}
+	public String getStudentNumber() {
+		return studentNumber;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public String getGrade(){
+		return grade;
+	}
+	public String getTotalCredit() {
+		return totalCredit;
+	}
+	public String toString() {
+		return "이름: "+this.name+"\n학번: "+this.studentNumber+"\n전공: "+this.department+"\n학년: "+this.grade+"\n총점: "+this.totalCredit;
+	}
+}
+
+</code>
+<br>
+<code class="java">
+package pro07;
+
+public class UnderGraduate extends Student{
+	private String clubName;
+
+	public UnderGraduate() {
+		this("홍길동", "20091922", "기계과", "4", "136", "야구부");
+	}
+	public UnderGraduate(String name, String studentNumber, String department, String grade, String totalCredit, String clubName) {
+		super(name, studentNumber, department, grade, totalCredit);
+		this.clubName = clubName;
+	}
+	public String toString() {
+		return "이름: "+super.getName()+"\n학번: "+super.getStudentNumber()+"\n전공: "+super.getDepartment()+"\n학년: "+super.getGrade()+"\n총점: "+super.getTotalCredit()+"\n소속 동아리: "+this.clubName;
+	}
+}
+</code>
+<br>
+<code class="java">
+package pro07;
+
+public class Graduate extends Student{
+	private String taType; // 교육조교, 연구 조교
+	private double scolarshipRatio;
+
+	public Graduate() {
+		this("홍길동", "00000000", "기계공학", "2학년", "82학점", "교육조교", 0.5);
+	}
+	public Graduate(String name, String studentNumber, String department, String grade, String totalCredit, String taType, double scolarshipRatio) {
+		super(name, studentNumber, department, grade, totalCredit);
+		this.taType = taType;
+		this.scolarshipRatio = scolarshipRatio;
+	}
+
+	public String toString() {
+		return "이름: "+super.getName()+"\n조교 타입: "+this.taType+"\n장학금 비율"+this.scolarshipRatio+"\n학번: "+super.getStudentNumber()+"\n전공: "+super.getDepartment()+"\n학년: "+super.getGrade()+"\n총점: "+super.getTotalCredit();
+	}
+}
+</code>
+<br>
+<code class="java">
+package pro07;
+
+public class Test {
+	public static void main(String[] args) {
+		<span class="comment">// 직접 생성자에 대입 가능... 매개변수 타입과 수맞춰서</span>
+		Student st = new Student();
+		Graduate gSt = new Graduate();
+		UnderGraduate uSt = new UnderGraduate();
+
+		System.out.println(st);
+		System.out.println("------------------");
+		System.out.println(gSt);
+		System.out.println("------------------");
+		System.out.println(uSt);
+	}
+}
+</code>
+<br>
+						<li>주의 사항: <span style="color:red;">Static을 남용하지 말자!</span>
+<code class="java">
+<span class="comment">다음 중 컴파일 에러나는 부분은?</span>
+class ClassA{
+	public void methodOne(int i){}
+	public void methodTwo(int i){}
+	public static void methodThree(int i){}
+	public static void methodFour(int i){}
+}
+------------------------------------------
+class ClassB{
+	public static void methodOne(int i){}
+	public void methodTwo(int i){}
+	public void methodThree(int i){}
+	public static methodFour(int i){}
+}
+</code>
+<code class="text">
+1. 정적 메소드로 인스턴스 메소드를 재정의할 수 없다
+<span class="comment">부모 클래스가 static으로 선언한 메소드는 자식 클래스에서 static없이 오버라이딩 불가능하다.</span>
+2. 서브 클래스에서 똑같은 정적 메소드를 정의하는 경우, 가린다고(Hide)한다.
+이 경우에 서브 클래스 객체에서 호출되면 서브 클래스의 정적 메소드가 호출되고 만약 슈퍼 클래스 객체에서 호출되면 슈퍼 클래스의 정적 메소드가 호출된다.
+<span class="comment">1번은 자식 클래스에서 static없이 오버라이딩이 불가능하다고 했다. 하지만 자식 클래스에서 같은 이름으로 static을 붙여 메소드를 정의할 수 있다.
+이때는 오버라이딩이 아니라 ClassB만을 위한 메소드가 되어, A.methodFour / B.methodFour 과 같이 따로 따로 사용이 가능하다. 이때 서로 연관이 없어지는데, 이때 가린다(hide)고 표현한다.</span>
+</code>
+						</li>
+						</li>
 					</ol>
 					<li>목</li>
 					<ol>
