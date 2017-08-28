@@ -16,8 +16,49 @@
 				<ol>
 					<li>Thread란?
 <code class="text">
-== Multi-tasking ==
-여러 개의 애플리케이션을 동시에 실행하여서 컴퓨터 시스템의 성능을 높이기 위한 기법
+Thread란 일꾼이다. 여러가지 Thread로 하나의 작업 동시에 할 수 있다.
+Thread를 따로 정의하지 않으면 Main Thread만 작업함.
+- Multi-tasking: 여러 개의 애플리케이션을 동시에 실행하여서 컴퓨터 시스템의 성능을 높이기 위한 기법
+</code>
+<code class="java">
+package test01;
+
+public class CountThread extends Thread{
+	@Override
+	public void run() {
+		for(int i = 0 ; i < 20 ; i++) {
+			System.out.println("CountThread 작업중: 0"+i);
+
+			try {
+				Thread.sleep(500);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+</code>
+<br>
+<code class="java">
+package test01;
+
+public class Test {
+	public static void main(String[] args) {
+		String msg = "메인쓰레드";
+
+		CountThread t = new CountThread(); // 일꾼 고용
+		t.start(); <span class="comment">// main 혼자만이 아닌 Thread와 동시 작업</span>
+		for(int i = 20 ; i > 0 ; i--) {
+			System.out.println(msg+":"+i);
+
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
 </code>
 					</li>
 					<li>Thread 사용방법 2가지
@@ -32,6 +73,73 @@ Thread 객체를 생성할 때 Thread가 동작해야할 객체를 생성자의 
 start()로 Thread시작한다.
 </code>
 					</li>
+					<li>하나의 객체에 2개 이상의 Thread 사용하기
+<code class="">
+package test02;
+
+public class CountThread implements Runnable{         // Runnable 인터페이스 사용
+	@Override
+	public void run() {
+		for(int i = 0 ; i < 20 ; i++) {
+			System.out.println("인터페이스 버전 쓰레드: 0"+i);
+
+			try {
+				Thread.sleep(500);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
+</code>
+<br>
+<code class="">
+package test02;
+
+public class CountThread2 implements Runnable{       // 두 번 째 쓰래드
+	@Override
+	public void run() {
+		for(int i = 0 ; i < 20 ; i++) {
+			System.out.println("인터페이스 버전 쓰레드: 0"+i);
+
+			try {
+				Thread.sleep(500);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
+</code>
+<br>
+<code class="java">
+package test02;
+
+public class Test {
+	public static void main(String[] args)  {
+		CountThread t = new CountThread();
+		Thread tt = new Thread(t);
+
+		<span class="comment">//tt.start();   // 동시작업</span>
+
+		tt.run();     <span class="comment">// 순차작업. CountThread 이후 메인쓰레드 시작</span>
+
+		for(int i = 10 ; i > 0 ; i--) {
+			System.out.println("메인:"+i);
+
+			try {
+			Thread.sleep(1000);
+			}
+			catch(InterruptedException e){
+				e.printStackTrace();
+			}
+		}
+	}
+}
+</code>
+					</li>
 					<li>Thread 사용시 문제점!!! -> synchronized로 해결
 <code class="java">
 package test05;
@@ -41,14 +149,14 @@ public class BankAccount {
 
 	public void deposit(int money) {
 		balance += money;
-		if(balance<0) {
+		if(balance < 0) {
 			System.out.println("잔액 마이너스!!?: "+balance);
 		}
 	}
 
 	public void withdraw(int money) {
 		balance -= money;
-		if(balance<0) {
+		if(balance < 0) {
 			System.out.println("잔액 마이너스!!?: "+balance);
 		}
 	}
@@ -113,14 +221,14 @@ public class BankAccount {
 
 	public synchronized void deposit(int money) {
 		balance += money;
-		if(balance'<'0) {
+		if(balance < 0) {
 			System.out.println("잔액 마이너스!!?: "+balance);
 		}
 	}
 
 	public synchronized void withdraw(int money) {
 		balance -= money;
-		if(balance'<'0) {
+		if(balance < 0) {
 			System.out.println("잔액 마이너스!!?: "+balance);
 		}
 	}
