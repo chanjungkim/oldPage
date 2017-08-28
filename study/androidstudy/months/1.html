@@ -2410,10 +2410,10 @@ public class MyFrame extends JFrame {
 			super.paintComponent(g);
 			graphic = g;
 			setBackground(Color.YELLOW);
-
-			graphic.setColor(Color.RED);
+<span style="color:red;">
+			graphic.setColor(Color.RED); <span class="comment">set후 fill을 해야 색이 적용된다. 빨간 > 사각형(not 사각형 > 빨간)</span>
 			graphic.fillRect(x, y, 30, 150);
-
+</span>
 			repaint();
 		}
 	}
