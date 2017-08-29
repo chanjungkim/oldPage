@@ -238,7 +238,247 @@ public class BankAccount {
 				</ol>
 				<li>화</li>
 				<ol>
-					<li>무진행</li>
+					<li>입력과 출력 1: FileInputStream / FileOutputStream
+<code class="text">
+바이트로 쪼개어(FileInputStream) 다시 조합(FileOutputStream)할 수 있다.
+in = new FileInputStream("Koala.jpg");
+out = new FileOutputStream("file_test.jpg");
+</code>
+<code class="java">
+	package test01;
+
+	import java.io.FileInputStream;
+	import java.io.FileNotFoundException;
+	import java.io.FileOutputStream;
+	import java.io.IOException;
+
+	public class Test {
+		public static void main(String[] args) {
+			FileInputStream in = null;
+			FileOutputStream out = null;
+
+			try {
+				in = new FileInputStream("Koala.jpg");
+				out = new FileOutputStream("file_test.jpg");
+
+				int c;
+				while((c=in.read()) != -1 ){
+					out.write(c);
+				}
+				out.flush(); <span class="comment">// Buffer가 축적해놓은 내용을 다 흘려보내버림. </span>
+				System.out.println("파일 복사 완료");
+			} catch (FileNotFoundException e) {
+				System.out.println("파일 이름 잘못됨. 없는 파일명");
+				e.printStackTrace();
+			} catch ( IOException e ){
+				System.out.println("입출력 에러 발생;;");
+				e.printStackTrace();
+			} finally {
+				if(in != null) {
+					try {
+						in.close();   <span class="comment">// inputStream 반납하고 종료하기 </span>
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+
+				if(out != null) {
+					try {
+						out.close(); <span class="comment"> // inputStream 반납하고 종료하기 </span>
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+	}
+</code>
+<br>
+<code>
+	package test03;
+
+	import java.io.FileInputStream;
+	import java.io.FileNotFoundException;
+	import java.io.IOException;
+
+	public class Test {
+		public static void main(String[] args) {
+			FileInputStream in = null;
+
+			try {
+				in = new FileInputStream("나메모장임.txt");
+
+				byte[] readByte = new byte[1024];
+				String readMsg = "";                      <span class="comment"> // 쪼갠 후 합쳐지지 않은 상태</span>
+
+				try {
+					while(in.read(readByte) != -1) {
+							readMsg += new String(readByte);   <span class="comment">// 합치는 작업</span>
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				System.out.println("읽은 메시지: "+readMsg);
+			}catch(FileNotFoundException e) {
+				e.printStackTrace();
+			}finally {
+				if(in != null) {
+					try {
+						in.close();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+	}
+</code>
+					</li>
+					<li>입력과 출력 2: BufferedReader / BufferedWriter
+<code class="text">
+Buffer를 사용하여 속도를 더 빠르게 할 수 있다.
+
+in = new BufferedInputStream(new FileInputStream("Koala.jpg"));
+out = new BufferedOutputStream(new FileOutputStream("file_test.jpg"));
+</code>
+<br>
+<code class="java">
+	package test02;
+
+	import java.io.BufferedInputStream;
+	import java.io.BufferedOutputStream;
+	import java.io.FileInputStream;
+	import java.io.FileNotFoundException;
+	import java.io.FileOutputStream;
+	import java.io.IOException;
+
+	public class Test {
+		public static void main(String[] args) {
+			BufferedInputStream in = null;                  <span class="comment">// Buffer: 중간 다리(저장소) 역할</span>
+			BufferedOutputStream out = null;
+
+			try {
+<span class="comment">				// FileInputStream이 효율이 떨어지니 BufferedInputStream으로 하자. 반복문 100번 돌릴 거 10번 돌리자. 뭉텅뭉텅</span>
+				in = new BufferedInputStream(new FileInputStream("Koala.jpg"));
+				out = new BufferedOutputStream(new FileOutputStream("file_test.jpg"));
+
+				int c;
+				while((c=in.read()) != -1 ){
+					out.write(c);
+				}
+				System.out.println("파일 복사가 완료되었습니다.");
+			} catch (FileNotFoundException e) {
+				System.out.println("파일 이름 잘못됨. 없는 파일명");
+				e.printStackTrace();
+			} catch ( IOException e ){
+				System.out.println("입출력 에러 발생;;");
+				e.printStackTrace();
+			} finally {
+				if(in != null) {
+					try {
+						in.close();  <span class="comment"> // inputStream 반납하고 종료하기 </span>
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+
+				if(out != null) {
+					try {
+						out.close();  <span class="comment">// inputStream 반납하고 종료하기 </span>
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+	}
+</code>
+					</li>
+					<li>입력과 출력 3: InputStreamReader / OutputStreamWriter
+<code class="text">
+바이트로 쪼개지 않고 문자열(String)으로 처리 가능함.
+
+br = new BufferedReader(new InputStreamReader(new FileInputStream("나메모장임.txt")));
+bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("나메모장임2.txt")));
+</code>
+<br>
+<code class="java">
+	package test04;
+
+	import java.io.BufferedReader;
+	import java.io.BufferedWriter;
+	import java.io.FileInputStream;
+	import java.io.FileNotFoundException;
+	import java.io.FileOutputStream;
+	import java.io.IOException;
+	import java.io.InputStreamReader;
+	import java.io.OutputStreamWriter;
+	<span class="comment">
+	// FileInputStream: 데이터 읽어들이는 핵심 주체
+	// InputStreamReader: 읽은 데이터 문자열로 변환작업 대행
+	// BufferedReader: 데이터 이동 버퍼써서 효율적으로. 빠르게. / 뭉텅 뭉텅 읽자.
+</span>
+	public class Test {
+		public static void main(String[] args) throws IOException {
+			BufferedReader br = null;
+			BufferedWriter bw = null;
+			try {
+				br = new BufferedReader(new InputStreamReader(new FileInputStream("나메모장임.txt")));
+				bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("나메모장임2.txt")));
+
+				String msg = br.readLine(); <span class="comment">// 한 줄 읽을 수 있음</span>
+
+				bw.write(msg);              <span class="comment">// 기록함</span>
+				bw.flush();
+				System.out.println("기록 완료됨:"+msg);
+
+			}catch(FileNotFoundException e) {
+				e.printStackTrace();
+			}finally {
+				if(br != null) {
+					try {
+						br.close();
+						bw.close();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+	}
+</code>
+					<li>File 클래스 사용하기 - 경로, 파일이름, 확장자, 존재여부 등
+<code>
+	package test06;
+
+	import java.io.File;
+
+	public class Test {
+		public static void main(String[] args) {
+			File f = new File("c:/yyj");
+
+			if(f.exists()==false) {
+				f.mkdirs();               <span class="comment"> // make directory </span>
+				System.out.println("폴더를 생성하였습니다.");  <span class="comment"> // c드라이브 하단에 yyj의 폴더가 만들어짐. </span>
+			} else {
+			<span class="comment">	// yyj 폴더 안의 파일이름 배열 얻어오기 </span>
+				String fileNames[] = f.list();
+				for(String fileName: fileNames) {
+					File file = new File("c:/yyj/"+fileName);
+
+					System.out.println("--파일정보출력--");
+					System.out.println(file.getAbsolutePath());
+					System.out.println(file.isDirectory());
+					System.out.println(file.getName());
+					System.out.println(file.exists());
+					System.out.println("------------");
+				}
+			}
+		}
+	}
+</code>
+					</li>
+					</li>
 				</ol>
 				<li>수</li>
 				<ol>
