@@ -525,7 +525,83 @@ bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("나메모�
 					</ol>
 					<li>화</li>
 					<ol>
-						<li>무진행</li>
+						<li>VIEW
+<code class="text">
+가상, 자주 사용하는
+Colum 별칭(as "A") 짓는 것이 필수
+
+[뷰 View : 가상테이블. 실제 테이블은 저장 매체 디스크에 공간이
+할당되어 데이터를 물리적으로 저장하지만 뷰는 아님.]
+: 만약 아래와 같은 select 조회를 자주 활용해야 한다면
+매번 select 명령어를 작성하는 것보다 뷰를 만들어 놓는게 편함.
+
+
+</code>
+<code class="sql">
+select eno, ename, dno, dname, salary
+	from employee natural join department;
+
+create [or replace] view 뷰이름
+	as 조회명령SQL
+
+create view EMP_DEPT_VIEW
+	as select eno, ename, dno, dname, salary
+	from employee natural join department;
+
+</code>
+<code class="text">
+위와 같이 직원정보와 부서정보를 결합한 뷰를 만들어 놓으면
+추후 해당 조회 수행시 아래와 같이 사용 가능함.
+</code>
+<code class="sql">
+> select * from emp_dept_view;
+> select * from emp_dept_view
+	where salary>2000;
+</code>
+<code class="text">
+---------------------------------------------------------------
+단순뷰:기반 테이블이 하나
+복합뷰:기반 테이블 두개 이상 조인
+---------------------------------------------------------------
+[뷰의 필요성]
+- 편의성 : 자주 사용하는 select에 이름 부여해서 마치 테이블인척
+명령어 작성해서 조회가 편리해짐.
+- 보안성 : 모든 사용자에게 테이블 전체 내용을 항상 공개하지 않음.
+사용자에 따라 데이터의 일부만 접근하고 조회할 수 있게 하는
+용도로 사용함.
+----------------------------------------------------------------
+[그룹함수를 사용할 때의 뷰 : 칼럼명 별칭 필수]
+</code>
+<code class="sql">
+> select dno, sum(salary), avg(salary)
+	from employee
+	group by dno;
+
+> create view salary_per_dept
+   as
+   select
+       dno as "부서번호",
+       sum(salary) as "합계",
+       avg(salary) as "평균"
+	from
+       employee
+	group by
+       dno
+   order by
+       dno;
+> select * from salary_per_dept where 부서번호=10;
+-----------------------------------------------------------------
+</code>
+<code class="sql">
+select dno, sum(salary), avg(salary) from employee group  by dno order by dno;
+
+create view salary_per_dept as select dno as "부서번호", sum(salary) as "합계",
+avg(salary) as "평균" from employee group by dno dorder by dno;
+
+where * from salary_per_dept where 부서번호 = 10;
+</code>
+
+						</li>
 					</ol>
 					<li>수</li>
 					<ol>
