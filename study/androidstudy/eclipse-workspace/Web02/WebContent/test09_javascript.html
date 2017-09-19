@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>test10_javascript.html</title>
+	<script type="text/javascript" src="test10_javascript.js"></script>
+	<script type="text/javascript">
+	// 1번이 눌린 경우 : 태그 내부에 스크립트 작성
+	// 2번이 눌린 경우 : <script>에 적힌 함수가 호출됨.
+	// 3번이 눌린 경우 : 외부 js 파일에 작성된 함수 호출됨.
+		function my_click(){
+			alert('2 clicked!!');
+			alert('2 clicked again!!')
+			alert('2 clciekd again and again!!');
+		}
+	</script>
+</head>
+<body>
+	<h2 onclick="alert('1 clicked!!')">1</h2>
+	<h2 onclick="my_click()">2</h2>
+	<h2 onclick="my_click_outer()">3</h2>
+</body>
+</html>

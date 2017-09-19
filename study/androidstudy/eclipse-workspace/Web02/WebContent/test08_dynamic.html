@@ -8,17 +8,21 @@
         background-color: red;
         position: relative;
         /*원래 위치 기준으로 옮김*/
-        top: auto;
+        top: -5px;
         left:-10px;
         /*-webkit-box-flex:5;*/
       }
       .box_blue{
         background-color: blue;
+        /*시작 위치 기준으로부터 옮김*/
         position: absolute;
+        top: 20px;
+        left: 10px;
         width: 100px;
       }
       .box_orange{
         background-color: orange;
+        position: fixed;
         -webkit-box-flex:1;
 
       }
