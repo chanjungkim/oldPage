@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test04_selector4.html</title>
+    <style media="screen">
+      input[type="text"]{
+        background-color: pink;
+      }
+      input[checked="checked"]{
+        border: red double 3px;
+      }
+      #admin{
+        border: green double 3px;
+      }
+      #user{
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="admin">
+    관리자 아이디: <input type="text" checked="checked" name="" value=""><br>
+    패스워드: <input type="password" checked="checked" name="" value=""><br>
+    홈페이지: <input type="url" name="" value=""><br>
+    <form>
+      <hr>
+    <form id="user">
+    회원 아이디: <input type="text" checked="checked" name="" value=""><br>
+    패스워드: <input type="password" checked="checked" name="" value=""><br>
+    홈페이지: <input type="url" name="" value=""><br>
+    <form>
+  </body>
+</html>

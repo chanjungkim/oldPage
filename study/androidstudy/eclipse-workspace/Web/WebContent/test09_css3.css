@@ -1,0 +1,5 @@
+@charset "EUC-KR";
+h2{
+	border: 2px double blue;
+	background-color: yellow;
+}
