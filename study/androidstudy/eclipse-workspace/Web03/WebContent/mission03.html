@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		// 1~100 사이의 랜덤 숫자 추출 부분
+		var num = 1 + Math.abs( Math.floor( Math.random() * 100 ) );
+		var textArea = document.getElementById("text");
+		var str = "System number: "+num +"\n";
+		var sum = 0;
+		var max = 100;
+		var min = 0;
+		var number;
+		var num2;
+	
+		// 숫자 버튼 동적으로 추가 부분
+		for(var i=0; i<10; i++) {
+			var btn = document.createElement("button");
+			btn.innerHTML = "" + i;
+
+			btn.onclick = function(e) {
+				number = parseInt(userNum.innerHTML);			
+				 num2 = parseInt(this.innerHTML);
+				sum = number*10+num2;
+// 				alert(sum+"/"+num);
+				userNum.innerHTML = number*10+num2;
+			}
+			btns.appendChild(btn);
+		}
+		
+		// 숫자버튼 끝에 Ok 버튼 추가하기
+		var okBtn = document.createElement("button");
+		okBtn.innerHTML = "OK";
+		okBtn.onclick = function(e){
+			var number = parseInt(userNum.innerHTML);
+			if( number < num ){
+				min=number+1;
+				str+=sum+"는 너무 작은 수입니다.\n"+"min: "+min+" max: "+max+"\n";
+				textArea.innerHTML = str;
+			}else if( number == num){
+				str+=sum+"는 정답입니다.\n";
+				textArea.innerHTML = str;
+			}else{
+				max = number-1;
+				str+=sum+"는 너무 큰 수입니다.\n"+"min: "+min+" max: "+max+"\n";
+				textArea.innerHTML = str;
+			}
+			userNum.innerHTML = "0";
+		}
+		btns.appendChild(okBtn);
+
+	}
+</script>
+</head>
+<body>
+	<div>
+		<strong>시스템이 숫자를 선택하였습니다. <br> 아래 버튼을 이용해서 맞춰 보세요.
+		</strong>
+	</div>
+	<div>
+		사용자 선택 번호 : <span id="userNum">0</span>
+	</div>
+	<div id="btns"></div>
+	<textarea id="text" rows="10" cols="40"></textarea>
+
+</body>
+</html>

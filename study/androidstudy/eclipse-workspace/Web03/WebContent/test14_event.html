@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>test14_event.html</title>
+<style type="text/css">
+	div{
+		background-color: yellow;
+		border: solid 1px red;
+		width: 200px;
+		height: 200px;
+	}
+</style>
+<script type="text/javascript">
+// 이벤트 종류
+// onkeyup
+// onmousedown
+// onmousemove
+// onmouseout
+// onmouseover
+// onmouseup
+////////////////////////////////////
+	window.onload = function(){
+		var eventTarget = 
+				document.getElementById("eventTarget");
+		
+		eventTarget.onmouseover = function(){
+			this.style.backgroundColor = "lime";
+		};		
+		eventTarget.onmouseout = function(){
+			this.style.backgroundColor = "yellow";
+		};
+		eventTarget.onmousemove = function(e){
+			this.innerHTML = "x:" +e.x+ ",y:" +e.y+ "<br>";
+		}
+	}
+</script>
+</head>
+<body>
+
+	<div id="eventTarget"></div>
+
+</body>
+</html>
