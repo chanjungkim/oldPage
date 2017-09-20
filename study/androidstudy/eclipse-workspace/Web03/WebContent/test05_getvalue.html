@@ -3,12 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script type = "text/javascript">
+      function clickNameBtn(){
+        // Get text from input <= inputName.value;
+        var inputName = document.getElementById('name');
+        var name = inputName.value;
+        alert("이름: "+name);
+      }
+      function clickIntroBtn(){
+        // Get text from TextArea <= inputIntro.value;
+        var inputIntro = document.getElementById('intro');
+        var intro = inputIntro.value;
+        alert("소개내용:"+intro);
+      }
+
+      function clickIntro2Btn(){
+        // Get text from div <= inputIntro.innerHTML;
+        var inputIntro = document.getElementById('intro2');
+        var intro = inputIntro.innerHTML;
+        alert("소개내용:"+intro);
+
+        inputIntro.innerHTML = "나는 양유다!!";
+      }
+    </script>
   </head>
   <body>
-    이름: <input type="text" id="name" size="10"><br>
+    <!-- Input => Single Tag, value = "Content" -->
+    이름: <input type="text" id="name" size="10" value="홍길동"><br>
     <button onclick="clickNameBtn()">이름확인 버튼</button>
     <hr>
-    자기소개: <textarea id="intro" cols="10" rows"5" ></textarea><br>
+    <!-- TextArea => Double Tag, <>Content<> -->
+    자기소개: <textarea id="intro" cols="10" rows"5">안녕</textarea><br>
     <button onclick="clickIntroBtn()">자기소개 버튼</button>
+    <hr>
+    자기소개:
+    <div id="intro2">자기소개 공갑입니다. 입력은 불가합니다.</div><br>
+    <button onclick="clickIntro2Btn()">자기소개2 버튼</button>
+
   </body>
 </html>

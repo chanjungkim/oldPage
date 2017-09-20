@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>test06_checkpw.html</title>
+<script type="text/javascript">
+	function check(){
+		var pw =
+				document.getElementById("pw").value;
+		var pwConfirm =
+				document.getElementById("pwConfirm").value;
+		var checkResult =
+				document.getElementById("checkResult");
+
+		if(pw == "" || pwConfirm == ""){
+			checkResult.innerHTML = "패스워드를 먼저 입력하세요.";
+			checkResult.style.color = "red";
+		}else if(pw != pwConfirm){
+			checkResult.innerHTML = "패스워드가 일치하지 않습니다.";
+			checkResult.style.color = "red";
+		}else{
+			checkResult.innerHTML = "일치합니다.";
+			checkResult.style.color = "green";
+		}
+	}
+</script>
+</head>
+<body>
+	패스워드 입력:
+	<input type="password" id="pw" size="10"><br>
+	패스워드 확인:
+	<input type="password" id="pwConfirm" size="10"><br>
+
+	<button id="btnCheck" onclick="check()">입력완료</button>
+	<div id="checkResult"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>test07_variable.html</title>
+<script type="text/javascript">
+  function cnt1(){
+    var k = 0;
+    k++;
+    alert(k);
+  }
+
+  // 특정 함수에 들어가지 않는 변수는 window 라는 객체의
+  // 멤버 변수가 돼서 현재 화면내에 계속 유지됨.
+  var i = 0;
+  function cnt2(){
+    i++;
+    alert(i);
+  }
+
+  // javascript에서는 String, int 등을 구분하지 않는다.
+  function equal_check(){
+    alert("10" == 10);   // true
+  }
+  // 구분하는 법
+  function equal_check2(){
+    alert("10" === 10);   // false
+  }
+  function eng(){
+    t = 100;  // never created... But you can use like this without initializing.
+    alert(t);
+    s = t+9;
+    alert(s);
+  }
+
+</script>
+</head>
+<body>
+	<button id="btnCnt" onclick="cnt1()">카운트1</button>
+  <button id="btnCnt" onclick="cnt2()">카운트2</button>
+  <hr>
+  <button id="btnCnt" onclick="equal_check()">체크1</button>
+  <button id="btnCnt" onclick="equal_check2()">체크2</button>
+  <hr>
+  <button type="button" onclick="eng()" >엥</button>
+</body>
