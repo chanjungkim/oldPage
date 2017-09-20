@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>test11_object.html</title>
+<script type="text/javascript">
+	window.onload = function(){
+// 		var obj = {name1:value2, name2:value2, ...};
+		var myCar = {
+				'speed':100,
+				'color':'red',
+				'model':'sonata',
+				speedUp : function(){
+					alert("속도업!");
+				}
+			};
+
+		// myCar 객체에 멤버 추가하기
+		myCar['turbo'] = true;
+
+		// myCar 객체의 멤버변수들 사용하기
+		var text = "색상:" +myCar['color']+ "<br>";
+		text += "차종:" +myCar['model']+ "<br>";
+		text += "현재속도:" +myCar['speed']+ "<br>";
+		text += "터보모드:" +myCar['turbo']+ "<br>";
+
+		document.write(text);
+		// myCar 객체의 speedUp 함수 호출
+		myCar.speedUp();
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <script type="text/javascript">
+      // two types of Functions
+      // normal way
+      function func1(){
+        alert("1button clicked")
+      }
+      // direct way without name, no return value.
+      var func2 = function(){
+        ert("2button clicked")
+      }
+      // setInterval 테스트
+    	window.onload = function(){
+    		var i = 1;
+
+
+    // 		setInterval(function(){}, 1000);
+    		setInterval(function(){
+          document.
+    			document.body.innerHTML += "<h1>"+i+"</h1>";
+    			i++;
+    		}, 1000);
+    	}
+    </script>
+  </head>
+  <body>
+    <!-- two types of Buttons -->
+    <button type="button" onclick="func1()">Button1</button>
+    <input type="button" onclick="func2()"value="Button2">
+  </body>
+</html>
