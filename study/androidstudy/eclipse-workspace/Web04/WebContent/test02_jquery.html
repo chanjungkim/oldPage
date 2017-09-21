@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- 이거 등록을 해줘야 jQuery 사용가능-->
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var btn01 = document.getElementById("btn01");
+			btn01.onclick = function(){
+				alert("버튼1 눌렸습니다.");
+			}
+		}
+// 		jQuery 버전
+		$(function(){
+			$("#btn02").click(function(){
+				alert("버튼2 눌렸습니다!");
+			});
+		})
+	</script>
+</head>
+<body>
+	<button id="btn01">버튼1</button>
+	<button id="btn02">버튼2</button>
+</body>
+</html>
