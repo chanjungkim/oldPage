@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('button').click(function(){
+// 			var content = $('div').text();
+// 			var content = $('div').html();
+// 			alert(content);
+
+			var content="";
+			$('div').each(function(){
+// 				content+=$(this).text()+"\n"; 
+				content+=$(this).html()+"\n";
+				alert(content);
+			})
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>html 요소 안의 내용  jquery에서 얻어가기</h1>
+	<div><h2>aaa</h2></div>
+	<div><h2>bbb</h2></div>
+	<div><h2>ccc</h2></div>
+	<button>누르세요.</button>
+</a></body>
+
+</html>

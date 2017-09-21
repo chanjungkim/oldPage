@@ -3,10 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('#loginForm').submit(function(){
+			if($('#id').val()==''){
+				alert('아이디를 입력하세요.');
+				$('#id').focus();
+				return false; // submit 이벤트 막음
+			}
+			
+			if($('#pw').val()==''){
+				alert('아이디를 입력하세요.');
+				$('#pw').focus();
+				return false;
+			}
+			
+			$(this).submit();
+		})
+	})
+</script>
 </head>
 <body>
 	<h2>로그인 화면입니다.</h2>
 	
+	<!-- 서버로 정보를 보내기  전에 여기에서 확인 후 문제 없을 시에 보냄 -->
 	<form action="보낼 대상" id="loginForm">
 		ID: <input type="text" id="id"><br>
 		PW: <input type="password" id="pw"><br>

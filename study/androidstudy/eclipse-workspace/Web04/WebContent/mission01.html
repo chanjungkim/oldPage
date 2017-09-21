@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test12_mission.html</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('#checkBtn').click(function(){
+			var str = "취미: ";
+			$('input:checkbox').each(function(){
+				if(this.checked){
+					str+=(this.value)+" "
+				}
+			})
+			str+="\n"
+			$('input:radio').each(function(){
+				if(this.checked)
+					str+="<br>성별: "+(this.value)
+			})
+			$('#target').html(str);
+		})
+	});
+</script>
+</head>
+<body>
+	<h1>click 이벤트</h1>
+	<form>
+		취미 : <input type="checkbox" name="hobby" value="등산">등산 <input
+			type="checkbox" name="hobby" value="낚시">낚시 <input
+			type="checkbox" name="hobby" value="수영">수영
+		<p />
+		성별 : <input type="radio" name="gender" value="남자" /> 남자 <input
+			type="radio" name="gender" value="여자" /> 여자 <input type="button"
+			value="확인" id="checkBtn" />
+	</form>
+	<h2>선택 결과</h2>
+	<div id="target"></div>
+</body>
+</html>
