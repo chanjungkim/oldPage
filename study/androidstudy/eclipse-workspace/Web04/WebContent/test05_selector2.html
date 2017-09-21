@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+// 자손 선택자(all)
+		$('ol li').css('color', 'red')
+		
+// 자식 선택자(first)
+		$("ol > li").css('backgroundColor', 'lime')
+	})
+</script>
+<body>
+	<h2>jQuery 자식, 자손 선택자</h2>
+	<ol>
+		<li>Java</li>
+		<li>Oracle</li>
+		<li>HTML</li>
+		<ul>
+			<li>Html5</li>
+			<li>css3</li>
+			<li>javaScript</li>
+		</ul>
+	</ol>
+</body>
+</html>

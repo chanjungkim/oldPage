@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test06_selector3.html</title>
+<style type="text/css">
+	.highlight{
+		border: red double 5px;
+		font-size: 25px;
+		color: blue;
+	}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// input태그들 중 type 속성을 가진 요소 선택
+		$('input[type]').css('background','pink');
+		
+		// input태그들 중 type이 password인 요소 선택
+		// css 여러 속성 한꺼번에 바꾸기
+// 		$('input[type=password]').css({'color':'red','fontSize':'30px'});
+		$('input[type=password]').css('color','red').css('fontSize','30px');
+		
+		$('input[value=양유]').addClass('highlight');
+	})
+</script>
+</head>
+<body>
+	<h2>속성 선택자 사용해보기 + css 변경 업그레이드</h2>
+	<form>
+		이름: <input type="text" value="양유"><br>
+		ID : <input type="text"><br>
+		패스워드: <input type="password"><br>
+		취미:
+			<input type="checkbox" value="hiking">등산
+			<input type="checkbox" value="fishing">낚시
+			<input type="checkbox" value="swimming">수영
+			<br>
+		
+		<select>
+			<option>회사원</option>
+			<option>개발자</option>
+			<option>전문직</option>
+			<option>회계사</option>
+			<option>의사</option>
+		</select>	
+	</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>test04_jquery_selector.html</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+// 	html 문서를 한번 구성하고 난후 실행시킬 함수를 등록하는 방법
+//  1. JavaScript
+// 	window.onload = function(){}
+
+//	2. jQuery 고전 방식
+// 	$(document).ready(function(){})
+
+//	3. jQuery 생략된 방식 - (document).ready가 사라짐.
+	$(function(){
+		// 전체선택자 : *
+		$('*').css("color","red");
+	
+		// 태그이름 선택자
+		$('h3').css("textDecoration", "underline");
+		$('h3,h4').css("backgroundColor", "pink");
+		
+		// 클래스 선택자 : .클래스명
+		$('.sample').css('fontSize', '30px');
+		
+		// 아이디 선택자 : #아이디명
+		$("#target").css('color', "blue");
+		
+	})
+</script>
+</head>
+<body>
+	<h3>jQuery 기본 selector</h3>
+	<h4>웹 프로그래밍</h4>
+	<div class="sample">
+		<ol>
+			<li>Java</li>
+			<li>Html5</li>
+			<li>Css</li>
+			<li>JavaScript</li>
+			<li id="target">JQuery</li>
+		</ol>
+	</div>
+</body>
+</html>
