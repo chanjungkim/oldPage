@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		window.onload = function(){
+// 			var books = [{A},{B},{C}]
+			var books = [{
+				"bno:" : 1000,
+				"title:" : "Java의 정석",
+				"author:" : "양유진",
+				"pub:" : "삼이굴판사",
+				"price:" : 27000
+			},{
+				"bno:" : 1001,
+				"title:" : "Java란 무엇인가",
+				"author:" : "양유",
+				"pub:" : "가메굴판사",
+				"price:" : 37000
+			},{
+				"bno:" : 1002,
+				"title:" : "초보를 위한 Java",
+				"author:" : "김찬",
+				"pub:" : "가메가메",
+				"price:" : 37000
+			}];
+			
+			var bookTb = document.getElementById("bookTb");
+			for ( var i = 0 ; i < books.length ; i++){
+				var tr = document.createElement("tr");
+				var td = "";
+				td += "<td>"+books[i]["bno:"]+"</td>";
+				td += "<td>"+books[i]["title:"]+"</td>";
+				td += "<td>"+books[i]["author:"]+"</td>";
+				td += "<td>"+books[i]["pub:"]+"</td>";
+				td += "<td>"+books[i]["price:"]+"</td>";
+				
+				tr.innerHTML = td;
+				
+				bookTb.appendChild(tr);
+			}
+		}
+	</script>
+</head>
+<body>
+	<table id="bookTb" border ="1">
+		<tr>
+			<th>책번호</th>
+			<th>제목</th>
+			<th>저자</th>
+			<th>출판사</th>
+			<th>가격</th>
+		</tr>
+	</table>
+</body>
+</html>
