@@ -1,14 +1,54 @@
 <!DOCTYPE html>
+<style>
+	#dino{
+		background-color: black;
+		width = 50px; 
+ 		height = 50px;
+ 		position: absolute;
+ 		top: 30px; 
+ 		left: 30px;
+	}
+</style>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<style type="text/stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	var x = 30;
+	var y = 30;
+	var dino = document.getElementById("dino");
+	alert('게임 시작!');
 
-</style>
-<script type="text/javascript"></script>
-<body>
-<div id="dino"></div>
+	function on_key_down() {
+		var keycode = event.keyCode;
+		event.returnValue = false; // browser key invalidate
+		if(keycode == 38){ // up
+			y-=10;
+			alert('up!');
+		}else if(keycode == 37){ // left
+			x-=10;
+			alert('left!');
+		}else if(keycode == 39){ // right
+			x+=10;
+			alert('right!');
+		}else if(keycode == 40){ // down
+			y+=10;
+			alert('down!');
+		}
+		alert(x+':'+y);
+		applyPosition(x, y);
+	}	
+	
+	function applyPosition(x, y){
+		dino.style.top = y+"px";
+		dino.style.left = x+"px";
+		alert('ㅋㅋ');
+	}
+</script>
+<body onkeydown='on_key_down()'>
+<div id="dino">ss</div>
+
 </body>
 </html>

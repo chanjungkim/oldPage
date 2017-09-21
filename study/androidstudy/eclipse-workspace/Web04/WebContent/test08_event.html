@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('input').focus(function(){
+			$(this).css('border', 'double red 5px')
+		})
+			
+		$('input').blur(function(){
+			$(this).css('border', '')
+			alert("이름: "+$(this).val())
+		})
+	})
+</script>
+</head>
+<body>
+	이름:<input type="text">
+</body>
+</html>
