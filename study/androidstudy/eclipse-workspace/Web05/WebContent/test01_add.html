@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test01_add.html</title>
+<style type="text/css">
+	div{
+		background-color: yellow;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var newBtn = "<button>갑자기 버튼!?</button>";
+		
+		$('#btnPrepend').click(function(){
+			$('.a').prepend(newBtn);			
+		})
+		
+		$('#btnAppend').click(function(){
+			$('.b').append(newBtn);			
+		})
+		
+		$('#btnBefore').click(function(){
+			$('.c').before(newBtn);			
+		})
+		
+		$('#btnAfter').click(function(){
+			$('.d').after(newBtn);			
+		})
+	})
+</script>
+</head>
+<body>
+	<button id="btnPrepend">prepend</button>
+	<button id="btnAppend">append</button>
+	<button id="btnBefore">before</button>
+	<button id="btnAfter">after</button>
+	<hr>
+
+	<div class="a">prepend 영역</div>
+	<div class="b">append 영역</div>
+	<div class="c">before 영역</div>
+	<div class="d">after 영역</div>
+</body>
+</html>

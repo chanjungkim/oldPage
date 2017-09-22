@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test02_books_jquery.html</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var books = [{
+				"bno" : 1000,
+				"title" : "Java의 정석",
+				"author" : "양유진",
+				"pub" : "삼익출판사",
+				"price" : 27000
+			},{
+				"bno" : 1001,
+				"title" : "Java란 무엇인가",
+				"author" : "양유",
+				"pub" : "가메출판사",
+				"price" : 37000
+			},{
+				"bno" : 1002,
+				"title" : "JSP는 언제 배우나요",
+				"author" : "유진",
+				"pub" : "삼성출판사",
+				"price" : 25000
+			}];
+			
+			$('#btnBookList').click(function(){
+				$('#bookTb tr:gt(0)').remove();
+				
+				for(var i=0; i<books.length; i++){
+					var tr = "<tr>";
+					tr += "<td>"+books[i]['bno']+"</td>";
+					tr += "<td>"+books[i]['title']+"</td>";
+					tr += "<td>"+books[i]['author']+"</td>";
+					tr += "<td>"+books[i]['pub']+"</td>";
+					tr += "<td>"+books[i]['price']+"</td>";
+					tr += "</tr>";
+					
+					// 아래 두개 동일함.
+					$('#bookTb').append(tr);
+// 					$('#bookTb tr:first').after(tr);
+				}
+			})
+		}
+		
+	</script>
+</head>
+<body>
+	<button id="btnBookList">책목록 버튼</button>
+	<table border="1" id="bookTb">
+		<tr>
+			<th>책번호</th>
+			<th>제목</th>
+			<th>저자</th>
+			<th>출판사</th>
+			<th>가격</th>
+		</tr>
+	
+	</table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('div').css('background', 'yellow');
+		
+		$('#btnRemove').click(function(){
+			$('div').remove()
+			$('div').append('<h3>얘가 나타날까요?</h3>')
+		})	
+		$('#btnEmpty').click(function(){
+			$('div').empty();
+			$('div').append('<h3>얘가 나타날까요?</h3>')
+		})
+	})
+	</script>
+	</head>
+<body>
+	<input id="btnRemove" type="button" value="remove">
+	<input id="btnEmpty" type="button" value="empty">
+	<div><h1>Sample Test</h1></div>
+</body>
+</html>

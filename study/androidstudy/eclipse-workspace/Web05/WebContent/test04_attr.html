@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		border: 1px solid red;
+		height: 200px;
+		width: 300px;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('img').attr('width', '100px', 'height', '60px')
+		$('img').click(function(){
+			var src = $(this).attr('src')
+			
+			var clickedImg = "<img src='"+src+"' width='300px' height='200px'>";
+			$('#bigImg').html(clickedImg)
+		})
+	})
+</script>
+</head>
+<body>
+	<img src="img/Hydrangeas.jpg">
+	<img src="img/Jellyfish.jpg">
+	<img src="img/Tulips.jpg">
+	
+	<div id="bigImg"></div>
+</body>
+</html>

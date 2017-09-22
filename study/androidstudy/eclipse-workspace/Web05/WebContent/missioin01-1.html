@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+$(function(){
+	var counter = 0;
+	
+	$(':button').click(function(){
+		var bookNum = counter++;
+		var title = $('#title').val();
+		var author = $('#author').val();
+		var publisher = $('#publisher').val();
+		var price = $('#price').val();
+		$('#bookTb').append("<tr><th>"
+				+bookNum+"</th><th>"
+				+title+"</th><th>"
+				+author+"</th><th>"
+				+publisher+"</th><th>"
+				+price+"</th></tr>"
+		);			
+	})
+})
+</script>
+<body>
+	<div>
+		책번호: <input type="text" id="bookNum">
+		제목: <input type="text" id="title">
+		저자: <input type="text" id="author">
+		출판사: <input type="text" id="publisher">
+		가격: <input type="text" id="price">
+		<input type="button" value="확인">
+	</div>
+	<table border="1" id="bookTb">
+		<tr>
+			<th>책번호</th>
+			<th>제목</th>
+			<th>저자</th>
+			<th>출판사</th>
+			<th>가격</th>
+		</tr>
+	</table>
+</body>
+</html>
