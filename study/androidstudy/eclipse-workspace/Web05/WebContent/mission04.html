@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	fieldset{
+		border: solid black 1px;
+		width: 80%
+	}
+	
+	#title{
+		border: none;
+		position: absolute;
+		top: 0px;
+		left: 20px;
+		background-color: white;
+	}
+
+	table{
+		border: 1px solid black;
+	    border-collapse: collapse;
+	 	width: 100%;   
+	}
+	
+	span{
+		color: red;
+	}
+	
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var date = new Date()
+		$('#date').val(date.toISOString().substring(0, 10));
+		
+		
+		$('#id').on('keyup', function(){
+			var id = ($(this).val());
+			if(id.length < 5){
+				$('#idChecker').text("아이디는 4글자 이상");
+			}else{
+				$('#idChecker').text("");
+			}
+		});
+		
+		$('#pw1').on('keyup', function(){
+			var pw = ($(this).val());
+			if(pw.length < 5){
+				$('#pwChecker').text("비밀번호는 4자 이상");
+			}else{
+				$('#pwChecker').text("");
+			} 
+		})
+		
+		$('#pw2').on('keyup', function(){
+			var pw1= $('#pw1').val();
+			if(pw1!= $(this).val()){
+				$('#pwChecker').text("비밀번호가 일치하지 않습니다.");
+			}else{
+				$('#pwChecker').text("");
+			}
+		})
+		
+		$(":checkBox").on('click', function(){
+			var flag = boxCheck();
+			if(flag){
+				$('#hobbyCheck').text("");
+			}else{
+				$('#hobbyCheck').text("취미는 2개이상 선택");
+			};
+		})
+		
+		$("#email").on('keyup', function(){
+			var email = $(this).val();
+			
+// 			alert(numberCheck(email));
+			
+			if(numberCheck(email)){
+				$('#emailCheck').text("이메일은 문자만 입력");
+			}else{
+				$('#emailCheck').text("");
+			}
+		})
+	})
+	
+	function boxCheck(){
+		var checkList = $(':checkBox:checked');
+		if(checkList.length < 2){
+			return false;
+		}
+		return true;
+	}
+	
+	function numberCheck(str){
+		if(str.length < 2){
+			if(isNaN(parseInt(str))==false){
+				return true;
+			}				
+		}else{
+			for(var i = 1 ; i < str.length ; i++){
+				if(isNaN(parseInt(str.substring(i-1, i)))==false){
+					return true;
+				}	
+			}
+		}
+		return false;
+	}
+</script>
+</head>
+<body>
+	<fieldset><legend>회원가입</legend>
+			<table border="1" >
+				<tr>
+					<td width="20%">ID</td>
+					<td width="80%"><input type="text" id="id" value=""><span id="idChecker">아이디는 4글자 이상</span></td>
+				</tr>
+				<tr>
+					<td>PW</td>
+					<td>
+						<input id="pw1" type="password">
+					</td>
+				</tr>
+				<tr>
+					<td>확인</td>
+					<td>
+						<input id="pw2" type="password"><span id="pwChecker">비밀번호는 4자 이상</span>
+					</td>
+				</tr>
+				<tr>
+					<td>성별</td>
+					<td><input type="radio">남<input type="radio">여</td>			
+				</tr>
+				<tr>
+					<td>취미</td>					
+					<td><input id="hobby"type="checkBox">운동<input type="checkBox">여행<input type="checkBox">독서 <span id="hobbyCheck">취미는 2개이상 선택</span></td>			
+				</tr>
+				<tr>
+					<td>가입일</td>					
+					<td><input id="date" type="text"></td>					
+				</tr>
+				<tr>
+					<td>나이</td>				
+					<td><input type="text"></td>	
+				</tr>
+				<tr>
+					<td>이메일</td>				
+					<td>
+					<input id="email" type="text">@
+					<select>
+						<option>daum.net</option>
+						<option>google.com</option>
+						<option>naver.com</option>
+					</select><span id="emailCheck">이메일은 문자만 입력!</span></td>
+				</tr>
+				<tr>
+					<td>메모</td>
+					<td><textarea colspan="10">안녕</textarea></td>				
+				</tr>
+				<tr>
+					<td colspan="2">
+					<input type="button" value="singup">
+					<input type="button" value="reset">
+					</td>								
+				</tr>
+				<tr></tr>
+				<tr></tr>
+			</table>
+	</fieldset>
+</body>
+</html>

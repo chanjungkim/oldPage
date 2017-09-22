@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	var num = $('#num').text();
+	function count(){
+		num++;
+		$('#num').text(num);
+	}	
+</script>
+</head>
+<body onclick="count()" >
+	<div id="count" style="background-color: pink;"> count = <span id="num">0</span> </div>
+</body>
+</html>

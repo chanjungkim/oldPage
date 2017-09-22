@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#show, img{
+		border: solid red 1px;
+		width:100px;
+		height:200px;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var flag = false;
+		$(':button').click(function(){
+			if(flag==false){
+				$('#show').append('<img src="img/Tulips.jpg">');
+				flag=true;
+			}else{
+				$('#show').empty();
+				flag=false;
+			}
+		})
+	})
+</script>
+</head>
+<body onclick="count()" >
+	<h1>toggleClass 실습</h1>
+	<input type="button" value="클릭하세요.">
+	<div id="show"></div>
+</body>
+</html>
