@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table{
+		border: 1px solid skyblue;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('#pwMsg').text("암호를 입력해주세요.");		
+		$('#pw').keyup(function(){
+			$('pwMsg').text("");
+		})
+		
+		$('#pwConfirm').keyup(function(){
+			if($('#pw').val() == $('#pwConfirm').val()){
+				$('#pwMsg').text("같습니다.");
+				$('#pwMsg').css('color', 'green');
+			}else{
+				$('#pwMsg').text("다릅니다.");
+				$('#pwMsg').css('color', 'red');
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<h2>keyup 이벤트</h2>
+	<table>
+		<tr>
+			<td>암호: </td>
+			<td>
+				<input type="password" id="pw" size="20">
+			</td>
+		</tr>
+		<tr>
+			<td>암호 확인: </td>
+			<td>
+				<input type="password" id="pwConfirm" size="20">
+			</td>
+		</tr>
+	</table>
+	<div id="pwMsg"></div>
+</body>
+</html>

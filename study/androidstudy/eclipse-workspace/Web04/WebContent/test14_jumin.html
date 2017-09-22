@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>test14_jumin.html</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript">
+	// 동적으로 추가된 요소에 이벤트 처리 등록할때는 on 사용함
+		$(function(){			
+			$('#jumin1').on('keyup', function(){
+				if($(this).val().length==6){
+					$('#jumin2').focus();
+				}
+			})
+			
+			$('#jumin2').on('keyup', function(){
+				var jumin2 = $(this).val();
+				if(jumin2.length>1){
+					var gender = jumin2.slice(0,1);
+					if(gender==1 || gender==3){
+// 						$(':radio').val(['남']);
+						$('#radioMan').prop('checked', true);
+						$('#radioWoman').prop('checked', false);
+					}else{
+// 						$(':radio').val(['여']);
+						$('#radioMan').prop('checked', false);
+						$('#radioWoman').prop('checked', true);
+					}
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	주민번호:
+		<input type="text" id="jumin1" size="6">-
+		<input type="text" id="jumin2" size="7">
+	<br>
+	성별 : 
+		<input type="radio" value="남" id="radioMan" disabled>남자
+		<input type="radio" value="여" id="radioWoman" disabled>여자	
+</body>
+</html>
