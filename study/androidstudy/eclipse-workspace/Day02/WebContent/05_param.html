@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check(){
+		if(document.frm.id.value == ''){
+			alert('아이디를 입력해주세요.');
+			document.frm.id.focus();
+			return false;
+		} else if (document.frm.age.value == ""){
+			alert("나이를 입력해주세요.")
+			document.frm.age.focus();
+			return false;
+		} else if(isNaN(document.frm.age.value)){
+			alert("숫자로 입력해주세요.");
+			document.frm.age.focus();
+			return false;
+		}else{
+			return true;
+		}
+	}	
+</script>
+</head>
+<body>
+	<form method="get" action="ParamServlet" name="frm">
+		아이디: <input type="text" name="id">
+		나&nbsp이: <input type="text" name="age">
+		<input type="submit" value="입력" onclick="return check()">
+	</form>
+</body>
+</html>
