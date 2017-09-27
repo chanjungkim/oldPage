@@ -30,6 +30,5 @@ public class HelloServlet01 extends HttpServlet {
 		out.print("</h1></body></html>");
 		out.print("<input type=\"text\">");
 		out.close();
-		request.
 	}
 }
