@@ -1,17 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!-- test01_a.jsp-->
 <%
-	pageContext.setAttribute("attr1", "靻嶌劚1 page Scope");
-	request.setAttribute("attr2", "靻嶌劚2 page Scope");
-	session.setAttribute("attr3", "靻嶌劚3 page Scope");
-	application.setAttribute("attr4", "靻嶌劚4 page Scope");
+	pageContext.setAttribute("attr1", "加己1 page Scope");
+	request.setAttribute("attr2", "加己2 request Scope");
+	session.setAttribute("attr3", "加己3 session Scope");
+	application.setAttribute("attr4", "加己4 application Scope");
 %>
-</body>
-</html>
+
+<jsp:forward page="test01_b.jsp"/>

@@ -1,16 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>test01_b.jsp</title>
 </head>
 <body>
-	<h1>ë‚´ì¥ ê°ì²´ì˜ ì†ì„±ê°’ ëª©ë¡</h1>
-	page attr: <%=pageContext.getAttribute("attr1")%><br>
-	request attr: <%=request.getAttribute("attr2")%><br>
-	session attr: <%=session.getAttribute("attr3")%><br>
-	application attr: <%=application.getAttribute("attr4")%><br>
+<h2>³»Àå °´Ã¼ÀÇ ¼Ó¼º°ª ¸ñ·Ï</h2>
+page attr : <%=pageContext.getAttribute("attr1") %> <br>
+request attr : <%=request.getAttribute("attr2") %> <br>
+session attr : <%=session.getAttribute("attr3") %> <br>
+application : <%=application.getAttribute("attr4") %> <br>
+
 </body>
 </html>
