@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>이곳은 책 관리 메인 페이지입니다.</h1>
-<a href="<%=request.getContextPath()%>/BookServlet?type=bookForm">책 추가하러 가기</a>
-<a href="<%=request.getContextPath()%>/BookServlet?type=bookList">책 목록 보기</a>
+
 </body>
 </html>

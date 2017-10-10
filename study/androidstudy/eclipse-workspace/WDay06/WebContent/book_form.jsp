@@ -1,47 +1,48 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <html>
 <head>
 <title>test04_book_form.jsp</title>
 </head>
 <body>
-<form action="bookServlet" method="post">
-	<table border="1">
-		<tr>
-			<td>√• ¡¶∏Ò : </td>
-			<td>
-				<input type="text" name="title" size="20">
-			</td>
-		</tr>
-		
-		<tr>
-			<td>√‚∆«ªÁ : </td>
-			<td>
-				<input type="text" name="pub" size="20">
-			</td>
-		</tr>
-		
-		<tr>
-			<td>∞°∞› : </td>
-			<td>
-				<input type="text" name="price" size="20">
-			</td>
-		</tr>
-		
-		<tr>
-			<td>√‚∆«ø¨µµ : </td>
-			<td>
-				<input type="text" name="year" size="20">
-			</td>
-		</tr>
-		
-		<tr>
-			<td colspan="2">
-			<input type="submit" value="¿‘∑¬øœ∑·">
-			</td>
-		</tr>
+	<form action="<%=request.getContextPath()%>/BookServlet" method="post">
+		<table border="1">
+			<tr>
+				<td>Ï±Ö Ï†úÎ™© : </td>
+				<td>
+					<input type="text" name="title" size="20">
+				</td>
+			</tr>
 			
-	</table>
+			<tr>
+				<td>Ï∂úÌåêÏÇ¨ : </td>
+				<td>
+					<input type="text" name="pub" size="20">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Í∞ÄÍ≤© : </td>
+				<td>
+					<input type="text" name="price" size="20">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Ï∂úÌåêÏó∞ÎèÑ : </td>
+				<td>
+					<input type="text" name="year" size="20">
+				</td>
+			</tr>
+	
+			<tr>
+				<td colspan="2">
+				<input type="submit" value="ÏûÖÎ†•ÏôÑÎ£å">
+				</td>
+			</tr>
+				
+		</table>
+		<input type="hidden" name="type" value="addBook">
 	</form>
 </body>
 </html>
