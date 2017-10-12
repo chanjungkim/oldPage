@@ -144,7 +144,7 @@ public class BoardDao {
 		return articleList;
 	}
 	
-
+//////////////////////////////////////////////////////////
 	// �۾��� �޼ҵ�
 	public int insert(Article article) {
 		makeConnection();
@@ -173,14 +173,76 @@ public class BoardDao {
 		}
 		return result;
 	}
-	
+//////////////////////////////////////////////////////////
+	// �� �б� �۾��� �ʿ��� �޼ҵ�
+	// 1. ��ȸ�� ����
 	public int updateReadCount(int articleNum) {
 		makeConnection();
+		String sql = 
+			"UPDATE BOARD SET READ_COUNT=READ_COUNT+1 "
+			+ "WHERE ARTICLE_NUM=?";
 		int result = 0;
-		String sql="update board set read_count=read_count+1 where article_num=?";
 		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, articleNum);
+			
+			result = pstmt.executeUpdate(); // SQL ����			
+		} catch (SQLException e) {
+			System.out.println("dao update ����");
+			e.printStackTrace();
+		} finally {
+			closePstmt();
+			closeCon();
+		}
+		return result;
+	}
+	// 2. �ش� ��ȣ�� Article ��ȸ
+	public Article select(int articleNum) {
+		makeConnection();
+		String sql = 
+			"SELECT ARTICLE_NUM,TITLE,WRITER,"
+			+ "CONTENTS,WRITE_DATE,READ_COUNT FROM BOARD "
+			+ "WHERE ARTICLE_NUM=?";
+		Article article = null;
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, articleNum);
+			rs = pstmt.executeQuery(); // SQL ����
+			
+			if(rs.next()) {
+				article = new Article();
+				article.setAritlcleNum(rs.getInt(1));
+				article.setTitle(rs.getString(2));
+				article.setWriter(rs.getString(3));
+				article.setContents(rs.getString(4));
+				article.setWriteDate(rs.getTimestamp(5));
+				article.setReadCount(rs.getInt(6));
+			}
+		} catch (SQLException e) {
+			System.out.println("dao select ����");
+			e.printStackTrace();
+		} finally {
+			closeRs();
+			closePstmt();
+			closeCon();
+		}
+		return article;
+	}	
+	public int update(Article article) {
+		makeConnection();
+		int result = 0;
+		String sql = "update board set title=?, contents=?,"
+		+"write_date = ? where article_num=? and password=?";
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, article.getTitle());
+			pstmt.setString(2, article.getContents());
+			pstmt.setString(2, article.getContents());
+			pstmt.setTimestamp(3, new Timestamp(article.getWriteDate().getTime()));
+			pstmt.setInt(4,  article.getAritlcleNum());
+			pstmt.setString(5,  article.getPassword());
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -190,40 +252,42 @@ public class BoardDao {
 			closePstmt();
 			closeCon();
 		}
-		
 		return result;
 	}
-
-	public Article select(int articleNum) {
+	
+	public int delete(String pw, int articleNum){
 		makeConnection();
 		int result = 0;
-		String sql = "select article_num,title,writer,contents,write_date,read_count from board where article_num=?";
-				
-		Article article = null;
-		
+		String sql = "delete from board where password=? and article_num=?";
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, articleNum);
-			rs = pstmt.executeQuery();
+			pstmt.setString(1, pw);
+			pstmt.setInt(2, articleNum);
 			
-			if(rs.next()) {
-				article = new Article();
-				article.setAritlcleNum(rs.getInt(1));
-				article.setTitle(rs.getString(2));
-				article.setWriter(rs.getString(3));
-				article.setContents(rs.getString(4));
-				article.setWriteDate(rs.getTime(5));
-				article.setReadCount(rs.getInt(6));
-			}
+			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
-			System.out.println("dao select 에러");
 			e.printStackTrace();
 		} finally {
-			closeRs();
 			closePstmt();
 			closeCon();
 		}
 		
-		return null;
+		return result;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -66,18 +66,38 @@ public class BoardService {
 			return false;
 		}		
 	}
-	
+
+	// ������ ������ �� ��ȣ�� ���� DB���� ��������
+	// �� ���� �� �ش� ���� ��ȸ���� �����ϰ� �� ����.
 	public Article readAndReadCount(int articleNum) {
 		Article article = null;
 		if(dao.updateReadCount(articleNum)==1) {
+			// �ùٸ� �۹�ȣ�� �� ��ȸ���� ������.
+			// �׷��� �ش� ���� select �ص� ��.
 			article = dao.select(articleNum);
 		}
 		return article;
 	}
+	
+	// ��ȸ�� ���� ���� �۸� ��ȸ�ϱ�
+	public Article readWithoutReadCount(int articleNum) {
+		return dao.select(articleNum);
+	}
+	
+	public boolean passwordCheckUpdate(Article updateArticle) {
+		updateArticle.setWriteDate(new Date());
+		
+		if(dao.update(updateArticle)==1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	public boolean delete(String pw, int articleNum) {
+		if(dao.delete(pw,articleNum)==1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }
-
-
-
-
-
-
