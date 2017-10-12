@@ -19,13 +19,27 @@ TABLE {
 
 <script type="text/javascript">
 	$(function(){
-		var pwText = $('input[name=memPwd]').val();
+
 		$('#btnCheck').on('click', function(){
-			console.log(pwText.length);
+			var pwText = $('input[name=memPwd]').val();
+			
+			console.log(pwText);
 			if(check("pw", pwText)){
 				$('.pw').hide();
 			}else{
 				$('.pw').show();
+			}
+		})
+		
+		$('input[name=memPwdChk]').on('keyup', function(){
+			var pwText = $('input[name=memPwd]').val();
+			var pwCheckText = $('input[name=memPwdChk]').val();
+			
+			console.log(pwText+" : "+pwCheckText);
+			if(pwText != pwCheckText){
+				$('.pwCheck').show();
+			}else{
+				$('.pwCheck').hide();
 			}
 		})
 	})
@@ -90,7 +104,8 @@ TABLE {
 			<tr height="30">
 				<td align="right" bgcolor="#efefef">암호확인&nbsp;</td>
 				<td valign="top">&nbsp;&nbsp;<font color="red">*</font></td>
-				<td><input type="password" name="memPwdChk" size="16">
+				<td><input type="password" name="memPwdChk" size="16"> <br>
+					<font class="pwCheck" style="color:red;">비밀번호가 일치하지 않습니다</font>
 				</td>
 			</tr>
 
