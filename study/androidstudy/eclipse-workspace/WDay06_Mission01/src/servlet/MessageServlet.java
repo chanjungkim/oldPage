@@ -25,8 +25,8 @@ public class MessageServlet extends HttpServlet {
 		String type = request.getParameter("type"); // getAttribute는 session에서
 		String path = "";
 		
-		if(type.equals("write")) {
-			path = "write.jsp";
+		if(type.equals("write_form")) {
+			path = "write_form.jsp";
 		}else if(type.equals("home")) {
 			// 책 목록을 DB에서 꺼내와야 함
 			List<MessageVO> bookList = dao.selectAll();
@@ -47,7 +47,7 @@ public class MessageServlet extends HttpServlet {
 				
 		if(type.equals("addMessage")) {
 			String title = request.getParameter("title");
-			String userId = "master";
+			String userId = request.getParameter("userId");
 			String message = request.getParameter("message");
 
 			long time = System.currentTimeMillis(); 
@@ -63,17 +63,10 @@ public class MessageServlet extends HttpServlet {
 			request.setAttribute("addResult", addResult);
 			
 			// 책 추가 결과를 
-			path = "board_list.jsp";
+			path = "write_success.jsp";
 		}
 		// VO 객체에 모은 데이터들을 Dao 객체에 전달할 예정
 		RequestDispatcher dispatcher = (RequestDispatcher) request.getRequestDispatcher(path);
-		if(request == null) {
-			System.out.println("request이 null입니다.");
-		}
-		
-		if(response == null) {
-			System.out.println("response가 null입니다.");
-		}
 		dispatcher.forward(request, response);
 	}
 }

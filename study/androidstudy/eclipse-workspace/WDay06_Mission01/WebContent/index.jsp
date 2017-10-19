@@ -12,6 +12,6 @@
 <body>
 <label>아이디</label><input type="text" value="master" name="userId"><br>
 <label>비밀번호</label><input type="text" value="1234" name="userPw">
-<a href="<%=request.getContextPath()%>/MessageServlet?type=home""><Button>로그인</Button></a>
+<a href="<%=request.getContextPath()%>/MessageServlet?type=home"><Button>로그인</Button></a>
 </body>
 </html>

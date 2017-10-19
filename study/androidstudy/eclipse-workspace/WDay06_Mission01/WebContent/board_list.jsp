@@ -37,6 +37,6 @@
 	<%
 	}%>
 </table>
-<a href="<%=request.getContextPath()%>/MessageServlet?type=write"><Button>글쓰기</Button></a>
+<a href="<%=request.getContextPath()%>/MessageServlet?type=write_form"><Button>글쓰기</Button></a>
 </body>
 </html>

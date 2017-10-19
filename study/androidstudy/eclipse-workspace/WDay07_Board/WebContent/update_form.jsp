@@ -23,18 +23,18 @@
 	<input type="hidden" name="type" value="update">
 	<input type="hidden" name="articleNum" 
 					value="<%=original.getAritlcleNum()%>">												
-	<table border="1">
+	<table border="1" width="50%">
 		<tr>
-			<td>力格:</td>
-			<td>
+			<td width="8%">力格:</td>
+			<td width="45%">
 				<input type="text" name="title" 
-					size="10" value="<%=original.getTitle()%>">
+					width="45%" value="<%=original.getTitle()%>">
 			</td>
 		</tr>
 		<tr>
 			<td>菩胶况靛:</td>
 			<td>
-				<input type="password" name="password" size="10">
+				<input style="width:45%" type="password" name="password">
 			</td>
 		</tr>
 		<tr>

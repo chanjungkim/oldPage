@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>삭제가 실패하였습ㄴ다.</h2>
+	<h2>삭제가 실패하였습니다.</h2>
 	<a href="<%=request.getContextPath()%>/board?type=boardList">[게시판 목록]</a>
 </body>
 </html>
