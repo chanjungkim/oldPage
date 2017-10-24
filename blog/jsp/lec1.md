@@ -57,10 +57,11 @@ javac
 # HelloWorld
 간단한 예제로 JSP의 특징을 느껴보겠습니다.
 프로젝트를 아무 이름(예를들면, HelloWorld)으로 만든 후 WebContect에서 마우스 오른쪽 클릭 > New > JSP File(없으면 Other에서)를 눌러 JSP 파일을 .생성합니다.
-그리고 다음의 내용을 적습니다.
+그리고 다음의 body 안쪽 부분을 적어 보니다.
 ```jsp
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 </head>
@@ -75,6 +76,7 @@ javac
 ```jsp
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">    
 <html>
 <head>
 </head>
