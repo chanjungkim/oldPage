@@ -55,6 +55,9 @@ javac
 1. 'File > New > Dynamic Web Project'에서 'Next >'를 끝까지 누른 후 'Generate web.xml deployment descripter'가 나오면 체크 표시 후 Finish를 누릅니다.
 
 # HelloWorld
+간단한 예제로 JSP의 특징을 느껴보겠습니다.
+프로젝트를 아무 이름(예를들면, HelloWorld)으로 만든 후 WebContect에서 마우스 오른쪽 클릭 > New > JSP File(없으면 Other에서)를 눌러 JSP 파일을 .생성합니다.
+그리고 다음의 내용을 적습니다.
 ```jsp
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -66,8 +69,9 @@ javac
 </body>
 </html>
 ```
-보다 시피 HTML문서와 매우 유사하지만 다음과 같이 Java를 혼용하여 사용할 수 있습니다.
+(실행은 run또는 'Ctrl+F11'로 할 수 있습니다.)
 
+보다 시피 HTML문서와 매우 유사하지만 다음과 같이 Java를 혼용하여 사용할 수 있습니다.
 ```jsp
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
