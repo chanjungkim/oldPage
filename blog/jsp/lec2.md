@@ -283,7 +283,15 @@ class Test03{
 ```
 와 같이 import가 자동으로 되는 것을 볼 수 있습니다.
 
-#### 부가 설명
+#### <span style="color:red">부가 설명</span>
+##### public static void 
+```
+main(String[] args){
+    
+}
+```
+클래스를 run시키면 메소드가 호출되어 동작하게 됩니다. 자바에서는 main메소드가 있어야 클래스가 비로소 동작할 수 있게 됩니다. 이것은 하나의 약속이므로 사용 불가피한  메소드입니다.
+
 ##### println()
 ```
 System.out.println()
