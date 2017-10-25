@@ -321,10 +321,10 @@ String str = new String("문자열");
 ```
 처럼 사용이 가능합니다.
 ##### import
-```
+```java
 import java.util.Scanner;
 ```
-이것은 다른 Package(패키지)의 클래스를 연결하여 사용할 수 있도록 해주는 것입니다.
+이것은 다른 Package(패키지)의 클래스를 연결하여 사용할 수 있도록 해주는 것입니다.  .(점)은 하위 폴더를 의미합니다.
 Scanner 클래스를 사용하려면 import를 해줘야합니다.
 
 ### - 논리 연산자와 조건문(Condition)
