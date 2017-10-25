@@ -236,7 +236,9 @@ System.out.println()은 syso를 쓰고 '**Ctrl+Shift**'를 누르면 **sysout - 
 import java.util.Scanner;
 
 class Test02{
-    System.out.println(3+8);
+    public static void main(String[] args){
+        System.out.println(3+8);
+    }
 }
 ```
 
@@ -247,9 +249,11 @@ Console창에는 다음과 같이 출력됩니다.
 덧셈이란 연산은 되었지만 만약 a와 b라는 변수가 있다면 어떻게 연산을 할 수 있을까요?
 ```java=
 class Test02{
-    int a = 3;
-    int b = 5;
-    System.out.println(a+b);
+    public static void main(String[] args){
+        int a = 3;
+        int b = 5;
+        System.out.println(a+b);
+    }
 }
 ```
 결과는 동일하게 8이 나옵니다.
@@ -264,10 +268,12 @@ Scanner sc = new Scanner(System.in);
 Test03.java를 만들고 다음을 작성해봅니다.
 ```java=
 class Test03{
-    Scanner sc = new Scanner(System.in);
-    int a = sc.nextInt();
-    int b = sc.nextInt();
-    System.out.println(a+b);
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
 }
 ```
 그리고 나서 'Ctrl+Shift+O'를 누르면 
@@ -275,10 +281,12 @@ class Test03{
 import java.util.Scanner;
 
 class Test03{
-    Scanner sc = new Scanner(System.in);
-    int a = sc.nextInt();
-    int b = sc.nextInt();
-    System.out.println(a+b);
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
 }
 ```
 와 같이 import가 자동으로 되는 것을 볼 수 있습니다.
