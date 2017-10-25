@@ -284,9 +284,9 @@ class Test03{
 와 같이 import가 자동으로 되는 것을 볼 수 있습니다.
 
 #### <span style="color:red">부가 설명</span>
-##### public static void 
+##### main()
 ```
-main(String[] args){
+public static void main(String[] args){
     
 }
 ```
