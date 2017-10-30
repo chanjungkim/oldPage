@@ -362,7 +362,7 @@ class Test04(){
         if(count > 3){
             System.out.println("count는 3보다 커요");
         }else{
-            System.out.println("count는 3보다 작거나 같아요.)
+            System.out.println("count는 3보다 작거나 같아요.);
         }
     }
 }
@@ -380,7 +380,7 @@ class Test04(){
         }else if(count >= 2){
             System.out.println("count는 2보다 크거나 같아요");            
         }else {
-            System.out.println("count는 2보다 작아요.")
+            System.out.println("count는 2보다 작아요.");
         }
     }
 }
