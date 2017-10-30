@@ -393,7 +393,7 @@ if(count > 3){
     // 그냥 넘어갈 수도...
 }
 ```
-switch에 대해서는 생략하겠습니다.
+switch에 대해서는 생략하겠습니다.-[참고](https://programmers.co.kr/learn/courses/자바-입문/lessons/switch문-119)
 
 ### - 반복문(Loop)
 반복문에는 for문과 while문이 있습니다.
