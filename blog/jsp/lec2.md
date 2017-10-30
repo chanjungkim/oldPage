@@ -327,8 +327,170 @@ import java.util.Scanner;
 이것은 다른 Package(패키지)의 클래스를 연결하여 사용할 수 있도록 해주는 것입니다.  .(점)은 하위 폴더를 의미합니다.
 Scanner 클래스를 사용하려면 import를 해줘야합니다.
 
-### - 논리 연산자와 조건문(Condition)
+### - 비교 연산자, 논리 연산자와 조건문(Condition)
+**비교 연산자**란 비교를 하기 위한 연산자로 흔히 아는 **<, >, =** 이 바로 그 주인공인데요. 컴퓨터에서는 좀 다르게 **==** 가 '같다'라는 의미의 논리 연산자입니다. **=** (대입 연산자)과 구분하기 쉽고, **===** 와 같은 경우는 데이터형까지 비교해주는 비교 연산자로 사용될 수도 있기 때문에 헷갈리지 않도록 합시다. 그 밖에 같거나 크다, 같거나 작다는 **=<, >=** 로 표시합니다(화살표 모양 =>, <=이 안 되도록 사용하면 된다.)
+
+**논리 연산자**는 참, 거짓을 연산하기 위한 즉, 컴퓨터에 있어서는 1과 0을 계산하기 위한 연산자입니다. 흔히 아는 **OR(이거나), AND(그리고)** 인데요. 프로그래밍에선 **||, &&** 로 사용됩니다. **|** 를 pipe[파이프], **&** 를 ampersand[엠퍼샌드]라고도 읽습니다.
+
+이 두가지를 합쳐 조건문을 만들 수 있습니다. 조건문의 종류에는 **if와 switch**가 있습니다. 조건문을 작성하는 형식이 있는데요. 이는 다음과 같습니다.
+
+#### if
+```java=
+if(조건문){
+    // 조건문이 만족하면 실행하는 부분.
+}
+// 조건문이 맞지 않는다면 그냥 넘어감.
+```
+Test04 class파일을 새로 만들고 이를 다음과 같이 작성해봅시다.
+```java=
+class Test04(){
+    int count = 3;
+    
+    public static void main(String[] args){
+        if(count > 3){
+            System.out.println("count는 3보다 커요");
+        }
+    }
+}
+```
+조건이 두 가지로 나뉠 경우(조건을 만족하거나 아니면 만족하지 않거나) 다음과 같이도 쓸 수 있습니다.
+```java=
+class Test04(){
+    int count = 3;
+    
+    public static void main(String[] args){
+        if(count > 3){
+            System.out.println("count는 3보다 커요");
+        }else{
+            System.out.println("count는 3보다 작거나 같아요.)
+        }
+    }
+}
+```
+여러가지의 조건문이 있을 경우에 다음과 같이 사용할 수 있습니다.
+```java=
+class Test04(){
+    int count = 3;
+    
+    public static void main(String[] args){
+        if(count > 7){
+            System.out.println("count는 7보다 커요");
+        }else if(count > 5){
+            System.out.println("count는 5보다 커요");            
+        }else if(count >= 2){
+            System.out.println("count는 2보다 크거나 같아요");            
+        }else {
+            System.out.println("count는 2보다 작아요.")
+        }
+    }
+}
+```
+if 조건문은 위부터 비교하기 시작하므로 count = 8 일경우 첫 조건문을 실행하게 되므로 오류가 생길 수 있으므로 주의해야합니다.
+```java=
+if(count > 3){
+    // 먼저 비교 후 충족하면 실행됨.
+}else if(count > 5){
+    // 그냥 넘어갈 수도...
+}
+```
+switch에 대해서는 생략하겠습니다.
+
 ### - 반복문(Loop)
+반복문에는 for문과 while문이 있습니다.
+
+#### while loop
+while도 if와 비슷합니다. 다만 조건식이 충족한다면 계속 반복된다는 특징이 있습니다.
+Test05 파일을 만들어 다음을 작성해봅시다.
+```java=
+public class Test05{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        // 빨간줄 뜨면 Ctrl+Shift+O로 import 시킴.
+        int count = 1;
+        int input = sc.nextInt();
+        
+        while(count < input){
+            System.out.println("실행됨. count: "+count);
+            count = 1+count;
+        }
+    }
+}
+```
+입력으로 3을 입력해보면 
+```
+3
+실행됨. count: 1
+실행됨. count: 2
+```
+이라고 출력이 되고 5가 입력이 되면
+```
+5
+실행됨. count: 1
+실행됨. count: 2
+실행됨. count: 3
+실행됨. count: 4
+```
+-1이 입력이된다면 다음과 같이 아무것도 출력되지 않을 것입니다.
+```
+-1
+```
+#### for loop
+for loop의 일반적인 형식은 다음과 같습니다.
+```java=
+int n = 종료될 숫자
+for(int i = 시작 숫자 ; i < n ; i++ ){
+    // 조건이 맞으면 실행됨.
+}
+```
+한 번 반복할 때마다 i를 증가시키고 (i < n)이 충족이 되면 루프를 종료시키는 것입니다.
+
+while로도 바꿀 수 있는데.while loop 버전으로 치자면
+```java=
+int i = 시작 숫자;
+int n = 종료될 숫자;
+while(i < n){
+    // 조건이 맞으면 실행됨.
+    i++;
+}
+```
+이 됩니다.
 ### - 클래스와 객체
+
+**클래스**란 저희가 지금까지
+```
+class ...{
+
+}
+```
+라고 파일을 만든 것을 의미합니다. 이 파일 하나를 설계도처럼 사용할 수 있게 됩니다. *.java를 컴파일하게 되면 *.class란 파일이 생성되게 됩니다.
+
+**객체**란 사용되는 클래스를 의미합니다. 예를 들면 String은 다음과 같이 사용했습니다.
+```java=
+public class Test{
+    String str = "Hello";
+    
+    public static void main(String[] args){
+        System.out.println(str);
+    }
+}
+```
+여기에서 String은 class이며 다른 class 안에서 참조형타입으로 사용되었습니다.
+
+또 다른 예로는 Scanner가 있습니다.
+```java=
+public class Test{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(); 
+        System.out.println(sc.next());
+    }
+}
+```
+여기에서 new는 클래스를 객체화(실제 클래스를 사용할 수 있게끔)하는 키워드로
+```
+클래스명 변수명 = new 클래스명();
+```
+과 같은 형식을 취하지 않으면 객체로 사용을 할 수 없습니다.(String은 자주 사용되므로 내부적으로 이 과정을 생략하고도 사용할 수 있게 되었습니다.)
+
+<hr>
 
 다음 글에서는 Java 기초 문법을 토대로 JSP의 기초 문법을 다뤄보도록 하겠습니다. JSP는 Java 뿐만 아니라 HTML, CSS, JavaScript 대한 약간의 이해가 필요하므로 다 같이 살펴보는 시간을 가지겠습니다.
