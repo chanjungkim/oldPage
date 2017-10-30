@@ -1,0 +1,63 @@
+header{
+    font-size: 50px;
+    display: inline;
+    border: 1px solid white;
+    color: black;
+    font-style: normal;
+}
+.logo{
+    border: 2px solid black;
+    padding: 3px;
+}
+.search{
+    margin-left: 400px;
+    margin-bottom: 10px;
+}
+.menu ol{
+    font-size: 20px;
+    padding: 15px;
+    width: 100px;
+    height: 100%;
+    border-right: 1px solid #F55;
+    float: left;
+}
+body{
+    background-color: gray;
+    color: black;
+}
+#horiNav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#horiNav li {
+    float: left;
+}
+
+#horiNav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#horiNav li a:hover {
+    background-color: #111;
+}
+.youtubeWrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+.youtubeWrap iframe {
+  position: absolute;
+  margin:  30px 0px 0px 30px;
+  width: 70%;
+  height: 70%;
+}
+article{
+    padding-left: 150px;
+}
