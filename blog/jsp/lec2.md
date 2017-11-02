@@ -1,4 +1,4 @@
-지난 글에서는 'JSP소개 & 기본 세팅(JDK, Tomcat, Eclipse)'에 대해 살펴보았습니다. 이번 글에 대해서는 Dynamic Web Project 안에서 Java 기초 문법에 대해 간단히 알아보겠습니다.
+안녕하세요? C-an입니다. 지난 글에서는 'JSP소개 & 기본 세팅(JDK, Tomcat, Eclipse)'에 대해 살펴보았습니다. 이번 글에 대해서는 Dynamic Web Project 안에서 Java 기초 문법에 대해 간단히 알아보겠습니다.
 
 
 1. <span style="color:#BBB">JSP소개 & 기본 세팅(JDK, Tomcat, Eclipse)</span>
