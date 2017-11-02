@@ -189,7 +189,7 @@ test02.html를 새로 만들어 다음을 작성해봅시다.
 </body>
 </html>
 ```
-id는 이름 그대로 태그마다 단 하나만 주어지고 class는 그룹을 지정할 때 사용되며 두 개 이상의 그룹에 속할 수 있습니다.
+id는 이름 그대로 태그마다 단 하나만 주어지고 class는 그룹을 지정할 때 사용되며 두 개 이상의 그룹에 속할 수 있습니다.(이름은 제가 아무거나 지은 것입니다.)
 
 #### padding과 margin
 모든 태그에는 영역을 갖고 있는데요. 그것은 크게 자기자신의 본 크기 그리고 padding과 margin이라는 것으로 구분이 됩니다.
@@ -197,12 +197,60 @@ pad는 무엇을 채울 때 쓰죠? margin은 여백이란 뜻이고요. 그것�
 
 <img src="http://www.avajava.com/tutorials/cascading-style-sheets/how-are-margins-borders-padding-and-content-related/how-are-margins-borders-padding-and-content-related-01.gif" style="width:500px;height:300px;">
 
+
 위의 사진처럼 padding은 border와 content안을 채우는 영역이고 margin은 border외부를 차지하는 영역입니다. border는 선 두께라고 생각하시면 되겠습니다.
 
 #### 절대 위치
 ```htmlmixed=
-
+<!Doctype html>
+<html>
+<head>
+    <title>JSP 스터디</title>
+<style>
+    div{
+    	background-color: blue;
+       
+        width: 500px;
+        height: 500px;
+    }
+    h1{
+    	background-color: red;
+    }
+    #first{
+    	margin:0;
+    	padding:10px;
+    }
+    #second{
+    	margin:10px;
+    	padding:0px;
+    }
+    #third{
+    	margin:10px;
+    	padding:10px;
+    }
+    #fourth{
+    	position:absolute;
+    	left: 50px;
+    	top: 10px;
+    	
+    	
+    	background-color: yellow;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <h1 id="first">영역</h1>
+        <h1 id="second">영역</h1>
+        <h1 id="third">영역</h1>
+        <h1 id="fourth">영역</h1>
+    </div>
+</body>
+</html>
 ```
+[크롬 개발자 도구](https://www.jbfactory.net/10866)를 참고 하시면 브라우저의 각 태그들의 padding, margin 등의 영역 크기를 직접 볼 수 있으며 편집도 가능합니다.
+
+**HTML**에 **CSS**를 사용하여 스타일도 주고 배치도 어느 정도 해결하였지만 글씨를 클릭하여 이동 시킨다든지 엔터를 누르면 글씨가 사라진다든지하는 이벤트 혹은 동작을 부분이 빠져있는데요. 그것은 우리가 JavaScript로 해결을 할 수 있습니다.
 
 ## JavaScript 기초
 ```htmlmixed=
