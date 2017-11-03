@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- id는 우리가 짓는 것임 -->
+	<bean id = "kkk" class="ver4_1.KoreaTire"></bean> 
+	<!-- 홑태그를 사용해도 괜찮음 -->
+	<bean id = "ccc" class="ver4_1.ChinaTire"/> 
+	
+	<bean id = "sonata" class="ver4_1.Car">
+		<constructor-arg ref="ccc"/>
+	</bean>
+</beans>

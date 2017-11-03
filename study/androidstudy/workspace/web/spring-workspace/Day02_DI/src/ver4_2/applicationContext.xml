@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id = "kkk" class="ver4_2.KoreaTire"></bean>
+	<bean id = "ccc" class="ver4_2.ChinaTire"></bean>
+	
+	<bean id = "sonata" class="ver4_2.Car">
+		<!-- name은 class안의 set의 이름과 동일해야함 -->
+		<property name="tire" ref="ccc"></property>
+		<!-- 객체를 집어 넣지 않는 경우 value로 가능 -->
+		<property name="color" value="녹색"></property>
+	</bean>
+</beans>
