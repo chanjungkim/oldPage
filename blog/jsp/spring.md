@@ -25,43 +25,50 @@
 
 <div id="context">
 <h4>Spring context</h4>
-<pre>
+
+```
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-context</artifactId>
     <version>4.2.5.RELEASE</version>
 </dependency>
-</pre>
+```
+
 </div>
 <div id="core">
 <h4>Spring core</h4>
-<pre>
+
+```
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-core</artifactId>
     <version>4.2.5.RELEASE</version>
 </dependency>
-</pre>
+```
+
 </div>
 <div id="jdbc">
 <h4>Spring jdbc</h4>
-<pre>
+```
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-jdbc</artifactId>
     <version>4.2.5.RELEASE</version>
 </dependency>
-</pre>
+```
+
 </div>
 <div id="dbcp">
 <h4>Commons-dbcp</h4>
-<pre>
+
+```
 <dependency>
     <groupId>commons-dbcp</groupId>
     <artifactId>commons-dbcp</artifactId>
     <version>1.4</version>
 </dependency>
-</pre>
+```
+
 </div>
 <div id="mysql">
 <h4>MySQL connector</h4>
@@ -77,7 +84,8 @@ Project Folder Right Click > Build Path > Configure Build Path > Add External JA
 </ol>
 <h4>BookDaoSpring.java</h4>
 <div id="dao">
-<pre>
+
+```
 public class BookDaoSpring {
     // dao relies on this Object
     private JdbcTemplate jdbcTemplate;
@@ -101,11 +109,13 @@ public class BookDaoSpring {
                 book.getWriter());
     }
 }
-</pre>
+```
+
 </div>
 <h4>Test.java</h4>
 <div id="test">
-<pre>
+
+```
 public class Test {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("test02_spring/applicationContext.xml");
@@ -115,29 +125,31 @@ public class Test {
 	<!-- aaa -->System.out.println("insert Result"+dao.insert(book));
     }
 }
-</code></pre>
+```
+
 </div>
 <h4>applicationContext.xml</h4>
 
 Right Click its package > New > Spring Bean Configuration File > name it 'applicationContext'
 
 <div id="context2">
-<pre>
+
+```
 	<bean id="ddd" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 		<property name="url" value="jdbc:mysql://127.0.0.1./spring"/>
 		<property name="username" value="root"/>
 		<property name="password" value="sds1501"/>
 	</bean>
-<!-- -->
-	<bean id="jjjj" class="org.springframework.jdbc.core.JdbcTemplate">
-<!-- -->
-            <property name="dataSource" ref="ddd"/>
-	</bean>
-<!-- -->
-        <bean id="dao" class="test02_spring.BookDaoSpring">
-<!-- -->            <property name="jdbcTemplate" ref="jjjj"/>
-        </bean>
 
-</pre>
+	<bean id="jjjj" class="org.springframework.jdbc.core.JdbcTemplate">
+
+        	<property name="dataSource" ref="ddd"/>
+	</bean>
+
+	<bean id="dao" class="test02_spring.BookDaoSpring">
+        	<property name="jdbcTemplate" ref="jjjj"/>
+        </bean>
+```
+
 </div>
