@@ -1,10 +1,4 @@
 INDEX VERSION 1.130+C:\Users\student\Documents\Github\chanjungkim.github.io\study\androidstudy\workspace\web\spring-workspace\.metadata\.plugins\org.eclipse.jdt.core
-1345629319.index
-898916508.index
 3075595889.index
-928317688.index
-2247131342.index
 3755017210.index
 475255631.index
-2005499024.index
-2513835178.index
