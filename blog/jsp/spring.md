@@ -12,7 +12,8 @@
     </li>
 </ul>
 <h3>Add these on POM.xml</h3>
-```xml
+
+```
 <project>
     ...
     </build>
@@ -21,6 +22,7 @@
     </dependencies>
 </project>
 ```
+
 <div id="context">
 <h4>Spring context</h4>
 <pre>
