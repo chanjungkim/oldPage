@@ -135,21 +135,21 @@ Right Click its package > New > Spring Bean Configuration File > name it 'applic
 <div id="context2">
 
 ```
-	<bean id="ddd" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://127.0.0.1./spring"/>
-		<property name="username" value="root"/>
-		<property name="password" value="sds1501"/>
-	</bean>
+<bean id="ddd" class="org.apache.commons.dbcp.BasicDataSource">
+	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+	<property name="url" value="jdbc:mysql://127.0.0.1./spring"/>
+	<property name="username" value="root"/>
+	<property name="password" value="sds1501"/>
+</bean>
 
-	<bean id="jjjj" class="org.springframework.jdbc.core.JdbcTemplate">
+<bean id="jjjj" class="org.springframework.jdbc.core.JdbcTemplate">
 
-        	<property name="dataSource" ref="ddd"/>
-	</bean>
+	<property name="dataSource" ref="ddd"/>
+</bean>
 
-	<bean id="dao" class="test02_spring.BookDaoSpring">
-        	<property name="jdbcTemplate" ref="jjjj"/>
-        </bean>
+<bean id="dao" class="test02_spring.BookDaoSpring">
+	<property name="jdbcTemplate" ref="jjjj"/>
+</bean>
 ```
 
 </div>
