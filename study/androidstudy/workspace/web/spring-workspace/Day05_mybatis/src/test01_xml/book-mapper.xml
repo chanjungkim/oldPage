@@ -5,10 +5,32 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="yyj">
     <insert id="insert" parameterType="BookVO">
         INSERT INTO BOOK(TITLE,PUBLISHER,PRICE,WRITER)
-            VALUES(#{title}, #{publisher}, #{price}, #{writer})
+            VALUES(#{jTitle}, #{jPublisher}, #{jPrice}, #{jWriter})
     </insert>
      
-    <select id="selectList" resultType="BookVO">
+<!--     <select id="selectList" resultType="BookVO"> -->
+<!--         SELECT <include refid="columnAlias"/> FROM BOOK -->
+<!--     </select> -->
+     
+<!--     <sql id="columnAlias"> -->
+<!--         BOOK_NUM AS "jBookNum", TITLE AS "jTitle", -->
+<!--         PUBLISHER AS "jPublisher", PRICE AS "jPrice", -->
+<!--         WRITER AS "jWriter" -->
+<!--     </sql> -->
+ 
+    <select id="selectList" resultMap="bookResultMap">
         SELECT * FROM BOOK
     </select>
+     
+    <select id="selectBook" resultMap="bookResultMap">
+        SELECT * FROM BOOK WHERE BOOK_NUM=#{bookNum}
+    </select>
+     
+    <resultMap type="BookVO" id="bookResultMap">
+        <result column="BOOK_NUM" property="jBookNum"/>
+        <result column="TITLE" property="jTitle"/>
+        <result column="PUBLISHER" property="jPublisher"/>
+        <result column="PRICE" property="jPrice"/>
+        <result column="WRITER" property="jWriter"/>      
+    </resultMap>
 </mapper>

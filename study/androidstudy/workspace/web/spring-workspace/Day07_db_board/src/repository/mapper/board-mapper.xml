@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="repository.mapper.BoardMapper">
+<!--     <insert id="insert" parameterType="ArticleVO" useGeneratedKeys="true" keyProperty="jArticleNum"> -->
+<!--         INSERT INTO BOOK(DATE, VIEW, WRITER, PASSWORD, TITLE, CONTENTS) -->
+<!--         VALUES(#{jDate}, #{jView}, #{jWriter}, #{jPassword}, #{jTitle}, #{jContents}) -->
+<!--     </insert> -->
+
+    <select id="selectAll" resultMap="articleResultMap">
+        SELECT ARTICLE_NUM, DATE, VIEW, WRITER, TITLE FROM ARTICLE
+    </select>
+     
+    <resultMap id="articleResultMap" type="ArticleVO">
+        <result column="ARTICLE_NUM" property="jArticleNum"/>
+        <result column="DATE" property="jDate"/>
+        <result column="VIEW" property="jView"/>
+        <result column="PASSWORD" property="jPASSWORD"/>
+        <result column="WRITER" property="jWriter"/>
+        <result column="TITLE" property="jTitle"/>
+        <result column="CONTENTS" property="jContents"/>
+    </resultMap>
+</mapper>

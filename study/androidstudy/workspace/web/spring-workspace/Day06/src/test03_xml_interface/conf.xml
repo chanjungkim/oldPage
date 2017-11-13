@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<environments>
+		<environment>
+			<transactionmanager type="JDBC"/>
+			<dataSource type = "POOLED">
+				<property name="driver"/>
+				
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="teset03_xml_interface/book-mapper.xml"/>
+	</mappers>
+
+</beans>

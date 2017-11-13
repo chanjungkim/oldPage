@@ -3,11 +3,13 @@ package test01_xml;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-
+ 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+ 
+import vo.BookVO;
  
 public class BookDao {
     private SqlSessionFactory factory;
@@ -41,5 +43,10 @@ public class BookDao {
     public List<BookVO> selectList(){
         SqlSession session = factory.openSession();
         return session.selectList("yyj.selectList");
+    }
+     
+    public BookVO select(int bookNum) {
+        SqlSession session = factory.openSession();
+        return session.selectOne("yyj.selectBook", bookNum);
     }
 }

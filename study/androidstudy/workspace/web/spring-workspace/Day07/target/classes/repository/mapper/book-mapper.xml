@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="repository.mapper.BookMapper">
+    <insert id="insert" parameterType="BookVO" useGeneratedKeys="true" keyProperty="jBookNum">
+        INSERT INTO BOOK(TITLE,PUBLISHER,PRICE,WRITER)
+        VALUES(#{jTitle}, #{jPublisher}, #{jPrice}, #{jWriter})
+    </insert>
+     
+    <select id="selectAll" resultMap="bookResultMap">
+        SELECT * FROM BOOK  
+    </select>
+     
+    <resultMap type="BookVO" id="bookResultMap">
+        <result column="BOOK_NUM" property="jBookNum"/>
+        <result column="TITLE" property="jTitle"/>
+        <result column="PUBLISHER" property="jPublisher"/>
+        <result column="PRICE" property="jPrice"/>
+        <result column="WRITER" property="jWriter"/>
+    </resultMap>
+</mapper>
