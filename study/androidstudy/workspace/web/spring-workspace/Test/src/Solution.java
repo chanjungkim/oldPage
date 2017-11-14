@@ -7,8 +7,9 @@ import java.util.Queue;
 public class Solution {
 	static int[][] map;
 	static boolean[][] isVisited;
-	static int count = 0;
+	static int countGraph = 0;
 	static int isConnected;
+	static int numOfVertices;
 	static Pair start;
 	public static void main(String[] args) {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,7 +22,7 @@ public class Solution {
 			e.printStackTrace();
 		}
 
-		int numOfVertices = Integer.parseInt(in[0]);
+		numOfVertices = Integer.parseInt(in[0]);
 		map = new int[numOfVertices][numOfVertices];
 		
 		int n = Integer.parseInt(in[1]);
@@ -55,9 +56,22 @@ public class Solution {
 		System.out.println(start.y+", "+start.x+"¿¡¼­ start");
 		
 		bfs(start.x, start.y);
+		
+		System.out.println(countGraph);
 	}
 	public static void bfs(int y, int x) {
-		Queue<Pair> queue = new LinkedList<>();
+		Queue<Integer> queue = new LinkedList<>();
+		
+		for(int i = y ; i < numOfVertices ; i++) {
+			for(int j = 0 ; j < numOfVertices ; j++) {
+				while(!queue.isEmpty()) {
+					if(map[i][j] == 1) {
+						bfs(i, j);
+						map[i][j] = 0;
+					}
+				}
+			}
+		}
 	}
 }
 class Pair{
