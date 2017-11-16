@@ -1,22 +1,26 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.LinkedHashSet;
+import java.util.StringTokenizer;
 
 public class Solution {
-	static int ans;
-	static int n;
-	
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		StringBuilder sb = new StringBuilder("");
 		
-		long total = Long.parseLong(br.readLine());
-//		long count = 0;
-		br.close();
+		LinkedHashSet<Short> list = new LinkedHashSet<>();
 		
-		if(total%2==1) {
-			System.out.println("SK");
-		}else {
-			System.out.println("CY");
+		while(st.hasMoreTokens()) {
+			Short s = Short.parseShort(st.nextToken());
+
+			if(!list.contains(s)) {
+				list.add(s);
+				sb.append(s+" ");
+			}
 		}
+		System.out.println(sb);
+		br.close();
 	}
 }
