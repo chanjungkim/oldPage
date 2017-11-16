@@ -20,6 +20,9 @@
 			<input type="submit" value="LOGIN">
 			</td>			
 		</tr>
+		<tr>
+			<input type="button" value="Sign up"/>
+		</tr>
 	</table>
 	</form>
 </body>
