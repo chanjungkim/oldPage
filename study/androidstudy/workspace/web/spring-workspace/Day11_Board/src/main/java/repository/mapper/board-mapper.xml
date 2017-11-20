@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0/"
+
+<mapper namespace="repository.mapper.BoardMapper">
+	<insert id="insert" parameterType="BoardVO">
+	INSERT INTO BOARD(TITLE, WRITER, CONTENT, READ_COUNT, WRITER_DATE) 
+	VALUES(#{title}, #{writer}, #{content}, #{readCoutn}, #{writeDate})
+	</insert>
+	
+	<select id="selectTotalCount" resultType="int">
+	SELECT COUNT(*) FROM BOARD
+	</select>
+	
+	<select id="select" parameterType="int" resultMap="boardResultMap"/>
+	
+	<reseultMap type-"BoardVO" id="boardResultMap">
+		<result property="title" column="TITLE"/>
+		<result property="boardNum" column="BOARD_NUM"/>
+		<result property="writer" colum="WRITER"/>
+		<result property="writeDate" column="WRITE_DATE"/>
+		<result property="readCount" column="READ_COUNT"/>
+		<result property="content" column="CONTENT" /> 
+	</reseultMap>
