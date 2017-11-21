@@ -15424,3 +15424,115 @@ org.eclipse.core.runtime.CoreException: Launch configuration Test (7) references
 2017-11-20 15:28:32,393 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-11-20 15:28:32,395 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Test\src\test\resources
 2017-11-20 15:49:42,310 [Worker-14] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-20 16:21:25,319 [Worker-10] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-20 17:38:39,970 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:39,976 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Test\src\main\resources
+2017-11-20 17:38:39,979 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:39,982 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Test\src\test\resources
+2017-11-20 17:38:41,078 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:41,081 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day05_mybatis\src\main\resources
+2017-11-20 17:38:41,083 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:41,085 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day05_mybatis\src\test\resources
+2017-11-20 17:38:41,301 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:41,304 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day06\src\main\resources
+2017-11-20 17:38:41,306 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:41,307 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day06\src\test\resources
+2017-11-20 17:38:43,319 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:43,321 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day07\src\main\resources
+2017-11-20 17:38:43,322 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:43,324 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day07\src\test\resources
+2017-11-20 17:38:44,242 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:44,245 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day07_db_board\src\main\resources
+2017-11-20 17:38:44,247 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:44,249 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day07_db_board\src\test\resources
+2017-11-20 17:38:45,319 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:45,321 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day08_AOP\src\main\resources
+2017-11-20 17:38:45,323 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:45,326 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day08_AOP\src\test\resources
+2017-11-20 17:38:47,273 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:47,275 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day08_AOP_Annotation\src\main\resources
+2017-11-20 17:38:47,281 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:47,283 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day08_AOP_Annotation\src\test\resources
+2017-11-20 17:38:48,051 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:48,053 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day09\src\main\resources
+2017-11-20 17:38:48,057 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:48,059 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day09\src\test\resources
+2017-11-20 17:38:49,430 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:49,432 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day10_MVC\src\main\resources
+2017-11-20 17:38:49,433 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:49,435 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day10_MVC\src\test\resources
+2017-11-20 17:38:51,054 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:51,056 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day10_MVC2\src\main\resources
+2017-11-20 17:38:51,059 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:51,061 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day10_MVC2\src\test\resources
+2017-11-20 17:38:53,942 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:53,952 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 17:38:53,956 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:53,958 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 17:38:54,341 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:54,343 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day11_SimpleBoard\src\main\resources
+2017-11-20 17:38:54,345 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:38:54,347 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day11_SimpleBoard\src\test\resources
+2017-11-20 17:38:56,090 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 17:38:56,090 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\MavenArtifactId\src\main\resources
+2017-11-20 17:38:56,092 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 17:38:56,093 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\MavenArtifactId\src\test\resources
+2017-11-20 17:40:44,266 [Worker-46] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\.metadata\com.genuitec.eclipse.webclipse.livepreview\0\store
+2017-11-20 17:40:44,472 [Worker-46] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\.metadata\com.genuitec.eclipse.webclipse.livepreview\1\store
+2017-11-20 17:48:44,129 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-20 17:54:09,321 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-20 17:56:01,307 [Worker-11] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-20 17:56:17,187 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:17,193 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day05_mybatis\src\main\resources
+2017-11-20 17:56:17,197 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:17,199 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day05_mybatis\src\test\resources
+2017-11-20 17:56:17,975 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:17,977 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day06\src\main\resources
+2017-11-20 17:56:17,980 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:17,981 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day06\src\test\resources
+2017-11-20 17:56:19,743 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:19,745 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day07\src\main\resources
+2017-11-20 17:56:19,747 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:19,749 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day07\src\test\resources
+2017-11-20 17:56:20,625 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:20,627 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day07_db_board\src\main\resources
+2017-11-20 17:56:20,629 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:20,632 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day07_db_board\src\test\resources
+2017-11-20 17:56:21,467 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:21,469 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day08_AOP\src\main\resources
+2017-11-20 17:56:21,471 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:21,473 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day08_AOP\src\test\resources
+2017-11-20 17:56:22,919 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:22,921 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day08_AOP_Annotation\src\main\resources
+2017-11-20 17:56:22,923 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:22,925 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day08_AOP_Annotation\src\test\resources
+2017-11-20 17:56:23,556 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:23,559 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day09\src\main\resources
+2017-11-20 17:56:23,560 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:23,563 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day09\src\test\resources
+2017-11-20 17:56:24,650 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:24,652 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day10_MVC\src\main\resources
+2017-11-20 17:56:24,656 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:24,658 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day10_MVC\src\test\resources
+2017-11-20 17:56:25,831 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:25,833 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day10_MVC2\src\main\resources
+2017-11-20 17:56:25,835 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:25,837 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day10_MVC2\src\test\resources
+2017-11-20 17:56:26,454 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:26,471 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 17:56:26,474 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:26,477 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 17:56:34,699 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:34,715 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day11_SimpleBoard\src\main\resources
+2017-11-20 17:56:34,717 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:34,719 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Day11_SimpleBoard\src\test\resources
+2017-11-20 17:56:35,292 [Worker-16] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\.metadata\com.genuitec.eclipse.webclipse.livepreview\0\store
+2017-11-20 17:56:35,481 [Worker-16] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\.metadata\com.genuitec.eclipse.webclipse.livepreview\1\store
+2017-11-20 17:56:37,849 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 17:56:37,849 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\MavenArtifactId\src\main\resources
+2017-11-20 17:56:37,851 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 17:56:37,851 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\MavenArtifactId\src\test\resources
+2017-11-20 17:56:38,448 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:38,450 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Test\src\main\resources
+2017-11-20 17:56:38,451 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-20 17:56:38,453 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\student\Documents\Github\oldPage\study\androidstudy\workspace\web\spring-workspace\Test\src\test\resources
